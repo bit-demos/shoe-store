@@ -28,8 +28,8 @@
         "rootDir": "shoe-store/entity/shoes"
     },
     "readme": {
-        "scope": "",
-        "version": "0.0.1",
+        "scope": "learn-bit-react.shoe-store",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "readme"
     },
