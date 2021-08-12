@@ -1,0 +1,101 @@
+/**
+ * this is the main configuration file of your bit workspace.
+ * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
+ **/ {
+  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+  /**
+   * main configuration of the Bit workspace.
+   **/
+  "teambit.workspace/workspace": {
+    /**
+     * the name of the component workspace. used for development purposes.
+     **/
+    "name": "Learn Bit - React",
+    /**
+     * set the icon to be shown on the Bit server.
+     **/
+    "icon": "https://static.bit.dev/bit-logo.svg",
+    /**
+     * default directory to place a component during `bit import` and `bit create`.
+     * the following placeholders are available:
+     * name - component name includes namespace, e.g. 'ui/button'.
+     * scopeId - full scope-id includes the owner, e.g. 'teambit.compilation'.
+     * scope - scope name only, e.g. 'compilation'.
+     * owner - owner name in bit.dev, e.g. 'teambit'.
+     **/
+    "defaultDirectory": "{scope}/{name}",
+    /**
+     * default scope for all components in workspace.
+     **/
+    "defaultScope": "learn-bit-react.shoe-store"
+  },
+  /**
+   * main configuration for component dependency resolution.
+   **/
+  "teambit.dependencies/dependency-resolver": {
+    /**
+     * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
+     */
+    "packageManager": "teambit.dependencies/pnpm",
+    "policy": {
+      "dependencies": {
+        "@learn-bit-react/base-ui.env.learn-bit-react": "1.0.0",
+        "@teambit/documenter.theme.theme-context": "3.0.9",
+        "@teambit/ui.mdx-layout": "0.0.346",
+        "@teambit/ui.react-router.link": "0.0.368",
+        "@testing-library/jest-dom": "5.12.0",
+        "@testing-library/react": "11.2.6",
+        "@testing-library/react-hooks": "5.1.1",
+        "classnames": "2.3.1",
+        "react-helmet": "6.1.0",
+        "react-router": "5.2.0",
+        "react-router-dom": "5.2.0"
+      },
+      "peerDependencies": {
+        "react": "16.13.1",
+        "react-dom": "16.13.1"
+      }
+    }
+  },
+
+  /**
+   * Registers the Apps aspects
+   **/
+  "learn-bit-react.shoe-store/apps/shoe-store": {},
+
+  /**
+   * Generator Aspects to generate custom components.
+   **/
+  "teambit.generator/generator": {
+    "aspects": ["learn-bit-react.base-ui/component-generator"]
+  },
+  "learn-bit-react.base-ui/component-generator": {},
+
+  /**
+   * workspace variants allow to set different subsets of configuration for components in your
+   * workspace. this is extremely useful for upgrading, aligning and building components with a new
+   * set of dependencies. a rule can be a directory or a component-id/namespace, in which case,
+   * wrap the rule with curly brackets (e.g. `"{ui/*}": {}`)
+   * see https://harmony-docs.bit.dev/aspects/variants for more info.
+   **/
+  "teambit.workspace/variants": {
+    "{ui/**}": {
+      "learn-bit-react.base-ui/env/learn-bit-react": {}
+    },
+    "{styles/**}, {themes/*}, , {figma/*}": {
+      "teambit.react/react": {}
+    },
+    "{env/*}, {apps/*}": {
+      "teambit.harmony/aspect": {}
+    },
+    "{component-generator}, {workspace-generator}": {
+      "teambit.harmony/aspect": {}
+    },
+    "{entity/*}": {
+      "teambit.harmony/node": {}
+    },
+    "{content/*}": {
+      "teambit.mdx/mdx": {}
+    }
+  }
+}
