@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/ {
+ **/{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -40,6 +40,7 @@
     "policy": {
       "dependencies": {
         "@learn-bit-react/base-ui.env.learn-bit-react": "1.0.0",
+        "@learn-bit-react/base-ui.styles.colors": "1.0.4",
         "@teambit/documenter.theme.theme-context": "3.0.9",
         "@teambit/ui.mdx-layout": "0.0.346",
         "@teambit/ui.react-router.link": "0.0.368",
@@ -55,22 +56,28 @@
         "react": "16.13.1",
         "react-dom": "16.13.1"
       }
-    }
+    },
+    "packageManagerArgs": [],
+    "devFilePatterns": [
+      "**/*.spec.ts"
+    ],
+    "strictPeerDependencies": true,
+    "installFromBitDevRegistry": true,
+    "savePrefix": ""
   },
-
   /**
    * Registers the Apps aspects
    **/
   "learn-bit-react.shoe-store/apps/shoe-store": {},
-
   /**
    * Generator Aspects to generate custom components.
    **/
   "teambit.generator/generator": {
-    "aspects": ["learn-bit-react.base-ui/component-generator"]
+    "aspects": [
+      "learn-bit-react.base-ui/component-generator"
+    ]
   },
   "learn-bit-react.base-ui/component-generator": {},
-
   /**
    * workspace variants allow to set different subsets of configuration for components in your
    * workspace. this is extremely useful for upgrading, aligning and building components with a new
