@@ -11,7 +11,7 @@
 {
     "apps/shoe-store": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.13",
+        "version": "1.0.14",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/apps/shoe-store"
     },

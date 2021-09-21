@@ -17,10 +17,11 @@ export function ShoeStoreApp() {
           <Header
             logoText="Bit Shoe Store"
             src="https://static.bit.dev/bit-logo.svg"
-            alt="Bit Logo">
-            <Link href="/mens">Mens</Link>
-            <Link href="/womens">Womens</Link>
-            <Link href="/specials">Children</Link>
+            alt="Bit Logo"
+          >
+            <Link href="/men">Men</Link>
+            <Link href="/women">Women</Link>
+            <Link href="/children">Children</Link>
           </Header>
 
           <Switch>
@@ -34,7 +35,8 @@ export function ShoeStoreApp() {
           <Footer
             logoText="Bit Shoe Store"
             src="https://static.bit.dev/bit-logo.svg"
-            alt="Bit Logo">
+            alt="Bit Logo"
+          >
             <Link href="/privacy">Privacy</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>
