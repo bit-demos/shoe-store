@@ -5,13 +5,14 @@ labels: ['card', 'grid']
 
 import { ShoesCardGrid } from './shoes-card-grid';
 import { mockShoes } from '@learn-bit-react/shoe-store.entity.shoes';
-
-## React Component for rendering a grid of shoe products cards
+import { MemoryRouter } from 'react-router';
 
 A basic grid that renders card components for the shoe product
 
-### Component usage
+### Renders an array of shoes from mock JSON
 
-```js
-<ShoesCardGrid list={mockShoes()} />
+```js live
+<MemoryRouter>
+  <ShoesCardGrid list={mockShoes()} />
+</MemoryRouter>
 ```
