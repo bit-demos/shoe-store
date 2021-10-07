@@ -1,4 +1,4 @@
-{
+[{
     title: 'Nike Air',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air trainers in pink, yellow and purple',
@@ -78,4 +78,4 @@
     buttonText: 'buy now',
     size: [36, 37, 38, 39],
     availableColors: ['black', 'brown', 'white']
-  }
+  }]
