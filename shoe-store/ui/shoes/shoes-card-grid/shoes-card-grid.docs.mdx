@@ -4,8 +4,9 @@ labels: ['card', 'grid']
 ---
 
 import { ShoesCardGrid } from './shoes-card-grid';
-import { mockShoes } from '@learn-bit-react/shoe-store.entity.shoes';
+import { mockShoesHome } from '@learn-bit-react/shoe-store.entity.shoes';
 import { MemoryRouter } from 'react-router';
+import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
 
 A basic grid that renders card components for the shoe product
 
@@ -13,6 +14,10 @@ A basic grid that renders card components for the shoe product
 
 ```js live
 <MemoryRouter>
-  <ShoesCardGrid list={mockShoes()} />
+  <ShoesCardGrid list={mockShoesHome()} />
 </MemoryRouter>
 ```
+
+### Design
+
+<FigmaEmbed src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYOdxHWPVnxBcTAYw0zPyXf%2Fstore%3Fnode-id%3D6%253A462" />

@@ -4,6 +4,6 @@ import { BasicShoesCardGrid } from './shoes-card-grid.composition';
 
 it('should render with the correct text', () => {
   const { getByText } = render(<BasicShoesCardGrid />);
-  const rendered = getByText('Guchi');
+  const rendered = getByText('Nike Air');
   expect(rendered).toBeTruthy();
 });

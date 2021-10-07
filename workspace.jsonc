@@ -40,7 +40,25 @@
     "policy": {
       "dependencies": {
         "@learn-bit-react/base-ui.env.learn-bit-react": "1.0.0",
+        "@learn-bit-react/base-ui.figma.figma-embed": "0.0.4",
+        "@learn-bit-react/base-ui.styles.button": "0.0.8",
         "@learn-bit-react/base-ui.styles.colors": "1.0.4",
+        "@learn-bit-react/base-ui.themes.theme": "1.0.7",
+        "@learn-bit-react/base-ui.ui.button": "2.0.1",
+        "@learn-bit-react/base-ui.ui.hero": "1.0.12",
+        "@learn-bit-react/base-ui.ui.img-grid": "1.0.14",
+        "@learn-bit-react/base-ui.ui.layout": "1.0.10",
+        "@learn-bit-react/base-ui.ui.link": "1.0.14",
+        "@learn-bit-react/ecommerce.ui.footer": "1.0.10",
+        "@learn-bit-react/ecommerce.ui.header": "1.0.12",
+        "@learn-bit-react/ecommerce.ui.logo-text": "1.0.9",
+        "@learn-bit-react/ecommerce.ui.product.available-colors": "0.0.8",
+        "@learn-bit-react/ecommerce.ui.product.currency": "0.0.1",
+        "@learn-bit-react/ecommerce.ui.product.price": "1.0.8",
+        "@learn-bit-react/ecommerce.ui.product.product-card": "1.0.13",
+        "@learn-bit-react/ecommerce.ui.store-hero": "0.0.12",
+        "@teambit/design.ui.avatar": "0.0.446",
+        "@teambit/design.ui.owner-avatar": "0.0.446",
         "@teambit/documenter.theme.theme-context": "3.0.9",
         "@teambit/ui.mdx-layout": "0.0.346",
         "@teambit/ui.react-router.link": "0.0.368",
@@ -87,7 +105,7 @@
    **/
   "teambit.workspace/variants": {
     "{ui/**}": {
-      "learn-bit-react.base-ui/env/learn-bit-react": {}
+      "learn-bit-react.base-ui/env/learn-bit-react@1.0.10": {}
     },
     "{styles/**}, {themes/*}, , {figma/*}": {
       "teambit.react/react": {}
@@ -103,6 +121,9 @@
     },
     "{content/*}, {readme}": {
       "teambit.mdx/mdx": {}
+    },
+    "{ui/product/currency}": {
+      "defaultScope": "learn-bit-react.ecommerce"
     }
   }
 }

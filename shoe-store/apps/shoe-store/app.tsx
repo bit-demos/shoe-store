@@ -1,14 +1,17 @@
 import React from 'react';
-import classNames from 'classnames';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { HomeShoes } from '@learn-bit-react/shoe-store.ui.pages.home-shoes';
-import { AboutShoes } from '@learn-bit-react/shoe-store.ui.pages.about-shoes';
+import { Home } from '@learn-bit-react/shoe-store.ui.pages.home';
+import { Women } from '@learn-bit-react/shoe-store.ui.pages.women';
+import { Men } from '@learn-bit-react/shoe-store.ui.pages.men';
+import { Children } from '@learn-bit-react/shoe-store.ui.pages.children';
+import { About } from '@learn-bit-react/shoe-store.ui.pages.about';
 import { Header } from '@learn-bit-react/ecommerce.ui.header';
 import { Footer } from '@learn-bit-react/ecommerce.ui.footer';
 import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { Theme } from '@learn-bit-react/base-ui.themes.theme';
 import styles from './shoe-store.module.scss';
+
 export function ShoeStoreApp() {
   return (
     <BrowserRouter>
@@ -26,10 +29,19 @@ export function ShoeStoreApp() {
 
           <Switch>
             <Route path="/about" exact>
-              <AboutShoes />
+              <About />
+            </Route>
+            <Route path="/women">
+              <Women />
+            </Route>
+            <Route path="/children">
+              <Children />
+            </Route>
+            <Route path="/men">
+              <Men />
             </Route>
             <Route path="/">
-              <HomeShoes />
+              <Home />
             </Route>
           </Switch>
           <Footer

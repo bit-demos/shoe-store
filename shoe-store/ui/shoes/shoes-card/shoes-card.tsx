@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from '@learn-bit-react/base-ui.ui.link';
+import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { Card } from '@learn-bit-react/base-ui.ui.card';
 import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { Text } from '@learn-bit-react/base-ui.ui.text';
-import { Price } from '@learn-bit-react/ecommerce.ui.product.price';
+import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
-import { AvailableColors } from '@learn-bit-react/ecommerce.ui.product.available-colors';
 import styles from './shoes-card.module.scss';
 
 export type ShoesCardProps = {
   /**
-   * text for the button
+   * text for button
    */
   buttonText: string;
   /**
@@ -37,10 +36,6 @@ export type ShoesCardProps = {
    * size of shoes available
    */
   size: number[];
-  /**
-   * color of shoes available
-   */
-  availableColors: string[];
 };
 
 export function ShoesCard({
@@ -49,13 +44,12 @@ export function ShoesCard({
   title,
   text,
   price,
-  buttonText,
-  availableColors
+  buttonText
 }: ShoesCardProps) {
   return (
     <Card>
       <div className={styles.card}>
-        <div className="prod-title">
+        <div className={styles.header}>
           <Heading element="h3" className={styles.title}>
             {title}
           </Heading>
@@ -64,18 +58,11 @@ export function ShoesCard({
         <div className="prod-img">
           <Img alt={alt} src={src} className={styles.img} />
         </div>
-        <div className={styles.info}>
-          <AvailableColors availableColors={availableColors} />
-        </div>
         <div className={styles.footer}>
-          <Price price={price} className={styles.price} />
-          <Link
-            href={`/${title.toLowerCase()}`}
-            buttonClass
-            variation="primary"
-            className={styles.button}>
+          <Currency price={price} className={styles.price} />
+          <Button primary className={styles.button}>
             {buttonText}
-          </Link>
+          </Button>
         </div>
       </div>
     </Card>

@@ -21,7 +21,7 @@ export function ShoesCardGrid({ list, className }: ShoesCardGridProps) {
               <ShoesCard
                 {...item.product}
                 size={item.size}
-                availableColors={item.availableColors}
+                buttonText="Add to Cart"
               />
             </div>
           ))}

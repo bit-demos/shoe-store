@@ -86,118 +86,20 @@
   --bg6: #2b2b2b;
 }
 
-// Light Theme
+// General Colors
 
-body[data-theme='light'] .colors,
-.colors {
-  --primary-20: var(--p20);
-  --primary-50: var(--p50);
-  --primary-60: var(--p60);
-
-  --secondary-20: var(--w10);
-  --secondary-40: var(--w10);
-  --secondary-50: var(--w10);
-  --secondary-60: var(--w10);
-
-  --light-20: var(--w10);
-  --light-30: var(--w20);
-  --light-50: var(--d20);
-
-  --dark-20: var(--d20);
-  --dark-30: var(--d30);
-  --dark-50: var(--d50);
-
-  // text colors
-  --text-primary: var(--d60);
-  --text-secondary: var(--l70);
-  --text-disabled: var(--b50);
-  --text-error: var(--r50);
-  --text-link: var(--p50);
-  --border-card: var(--d15);
-
-  // social colors
-  --twitter: #1da1f2;
-  --slack: #4a154b;
-  --github: #24292e;
-
-  // old colors
-  --primary-color: var(--p50);
-  --secondary-color: var(--w10);
-  --tertiary-color: var(--pink50);
-  --complimentary-color: var(--d40);
-  --text-color: var(--d50);
-
-  // bit colors
-  --text-color: var(--d50);
-  --text-color-heavy: var(--d60);
-  --text-color-light: var(--d40);
-  --text-inactive: var(--d20);
-  --text-inactive-heavy: var(--d30);
-
-  --border-color: var(--d20);
-  --border-color-heavy: var(--d30);
-  --border-color-light: var(--d15);
-  --border-color-lightest: var(--d10);
-
-  // -- primary -- //
-  --primary-color: var(--r30);
-  --primary-heavy: var(--r20);
-  --primary-light: var(--r40);
-  --primary-text: var(--r30);
-  --primary-text-heavy: var(--r20);
-  --text-on-primary: var(--w10);
-  --primary-bg: var(--r50);
-  --primary-bg-heavy: var(--r40);
-
-  // -- secondary -- //
-  --secondary-color: var(--w10);
-  --secondary-heavy: var(--w10);
-  --secondary-light: var(--w10);
-  --secondary-text: var(--w10);
-  --secondary-text-heavy: var(--w10);
-  --text-on-secondary: var(--p50);
-  --secondary-bg: var(--w10);
-  --secondary-bg-heavy: var(--w10);
-
-  // intractable item
-  --bg-color: var(--w10); // when resting
-  --bg-heavy: var(--w20); // when hovering, focus
-  --bg-heaviest: var(--d10); // when active (clicked)
-
-  --bg-bedrock: var(--w10); // i.e. <body/> background
-  --bg-navigation: var(--w20); // i.e. <body/> background
-  --bg-overlay: var(--w10); // e.g. button, input, etc
-  --bg-modal: var(--w10); // e.g. button, input, etc
-  --bg-tooltip: var(--w10); // e.g. button, input, etc
-  --bg-tooltip-heavy: var(--w20);
-  --bg-dent: var(--w20);
-
-  // -- error -- //
-  // might replace with 'error' theme
+body .colors {
+  // error colors
   --error-color: var(--r50);
   --error-heavy: var(--r60);
   --error-light: var(--r40);
   --error-bg: var(--r20);
   --error-bg-heavy: var(--r30);
-}
 
-// Dark Theme
-
-body[data-theme='dark'] .colors {
-  --light-10: var(--dark-10);
-  --light-30: var(--dark-30);
-  --light-50: var(--dark-50);
-
-  --text-color: var(--d10);
-  --text-color-heavy: var(--w20);
-  --text-color-light: var(--d30);
-  --text-inactive: var(--d40);
-  --text-inactive-heavy: var(--d30);
-
-  --border-color: var(--d50);
-  --border-color-heavy: var(--d40);
-  --border-color-light: var(--d60);
-  --border-color-lightest: var(--d60); //TBD
+  // social colors
+  --twitter: #1da1f2;
+  --slack: #4a154b;
+  --github: #24292e;
 
   // -- primary -- //
   --primary-color: var(--p50);
@@ -218,12 +120,65 @@ body[data-theme='dark'] .colors {
   --text-on-secondary: var(--p50);
   --secondary-bg: var(--w10);
   --secondary-bg-heavy: var(--w10);
+}
+
+// Light Theme
+
+body[data-theme='light'] .colors,
+.colors {
+  --light-20: var(--w10);
+  --light-30: var(--w20);
+  --light-50: var(--d20);
+
+  --dark-20: var(--d20);
+  --dark-30: var(--d30);
+  --dark-50: var(--d50);
+
+  // text colors
+  --text-primary: var(--d60);
+  --text-secondary: var(--l70);
+  --text-disabled: var(--b50);
+  --text-error: var(--r50);
+  --text-link: var(--p50);
+  --border-card: var(--d15);
+
+  // intractable item
+  --bg-color: var(--w10); // when resting
+  --bg-heavy: var(--w20); // when hovering, focus
+  --bg-heaviest: var(--d10); // when active (clicked)
+  --bg-bedrock: var(--w10); // i.e. <body/> background
+  --bg-navigation: var(--w20); // i.e. <body/> background
+  --bg-overlay: var(--w10); // e.g. button, input, etc
+  --bg-modal: var(--w10); // e.g. button, input, etc
+  --bg-tooltip: var(--w10); // e.g. button, input, etc
+  --bg-tooltip-heavy: var(--w20);
+  --bg-dent: var(--w20);
+}
+
+// Dark Theme
+
+body[data-theme='dark'] .colors {
+  --light-10: var(--dark-10);
+  --light-30: var(--dark-30);
+  --light-50: var(--dark-50);
+
+  --text-color: var(--d10);
+  --text-color-heavy: var(--w20);
+  --text-color-light: var(--d30);
+  --text-inactive: var(--d40);
+  --text-inactive-heavy: var(--d30);
+
+  --border-color: var(--d50);
+  --border-color-heavy: var(--d40);
+  --border-color-light: var(--d60);
+  --border-color-lightest: var(--d60); //TBD
 
   // -- background -- //
 
   --bg-color: var(--d70); // default background
   --bg-heavy: var(--d60); // e.g. when active hovering
-  --bg-bedrock: var(--d70); // i.e. <body/> background
+  --bg-bedrock: var(--d70); // i.e. <body/>
+  --bg-heaviest: var(--d10); // when active (clicked)
   --navigation: var(--d60); // i.e. <body/> background
   --bg-overlay: var(--d60); // e.g. button, input, etc
   --bg-modal: var(--d60); // e.g. button, input, etc
@@ -231,14 +186,6 @@ body[data-theme='dark'] .colors {
   --bg-tooltip-heavy: var(--d50);
   --bg-dent: var(--d60);
 
-  // -- error -- //
-  --error-color: var(--r30);
-  --error-heavy: var(--r20);
-  --error-light: var(--r40);
-  --error-bg: var(--r70);
-  --error-bg-heavy: var(--r60);
-
-  background-color: var(--background-color);
   .content {
     color: #fff;
   }
