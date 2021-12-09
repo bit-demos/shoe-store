@@ -2,13 +2,6 @@ import React from 'react';
 import { ShoesCard } from './shoes-card';
 import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
 
-export const Design = () => (
-  <FigmaEmbed
-    style={{ width: '420px' }}
-    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYOdxHWPVnxBcTAYw0zPyXf%2Fstore%3Fnode-id%3D5%253A408"
-  />
-);
-
 export const BasicShoesCard = () => (
   <ShoesCard
     title="Nike Air"
@@ -18,5 +11,12 @@ export const BasicShoesCard = () => (
     price={160}
     buttonText="add to cart"
     size={[36, 38]}
+  />
+);
+
+export const Design = () => (
+  <FigmaEmbed
+    style={{ width: '420px' }}
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYOdxHWPVnxBcTAYw0zPyXf%2Fstore%3Fnode-id%3D5%253A408"
   />
 );

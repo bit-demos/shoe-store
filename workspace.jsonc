@@ -56,6 +56,7 @@
         "@learn-bit-react/ecommerce.ui.product.currency": "0.0.1",
         "@learn-bit-react/ecommerce.ui.product.price": "1.0.8",
         "@learn-bit-react/ecommerce.ui.product.product-card": "1.0.13",
+        "@learn-bit-react/ecommerce.ui.product.product-card-grid": "1.0.10",
         "@learn-bit-react/ecommerce.ui.store-hero": "0.0.12",
         "@teambit/design.ui.avatar": "0.0.446",
         "@teambit/design.ui.owner-avatar": "0.0.446",
@@ -123,6 +124,9 @@
       "teambit.mdx/mdx": {}
     },
     "{ui/product/currency}": {
+      "defaultScope": "learn-bit-react.ecommerce"
+    },
+    "{ui/product/hooks/use-product}": {
       "defaultScope": "learn-bit-react.ecommerce"
     }
   }
