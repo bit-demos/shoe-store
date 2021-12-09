@@ -33,6 +33,24 @@
         "mainFile": "index.ts",
         "rootDir": "readme"
     },
+    "ui/counter": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/counter"
+    },
+    "ui/forms/input": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/ui/forms/input"
+    },
+    "ui/forms/select": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/ui/forms/select"
+    },
     "ui/pages/about": {
         "scope": "learn-bit-react.shoe-store",
         "version": "0.0.2",
@@ -69,11 +87,35 @@
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/men"
     },
+    "ui/pages/product": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "shoe-store/ui/pages/product"
+    },
     "ui/pages/women": {
         "scope": "learn-bit-react.shoe-store",
         "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/women"
+    },
+    "ui/product/hooks/use-product": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/product/hooks/use-product"
+    },
+    "ui/product/product-details": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/product/product-details"
+    },
+    "ui/product/rating": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/product/rating"
     },
     "ui/shoes/shoes-card": {
         "scope": "learn-bit-react.shoe-store",
@@ -86,6 +128,12 @@
         "version": "1.0.16",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/shoes/shoes-card-grid"
+    },
+    "ui/text": {
+        "scope": "learn-bit-react.base-ui",
+        "version": "1.0.11",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/ui/text"
     },
     "$schema-version": "14.9.0"
 }

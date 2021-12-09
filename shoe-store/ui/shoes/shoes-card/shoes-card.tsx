@@ -5,6 +5,7 @@ import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { Text } from '@learn-bit-react/base-ui.ui.text';
 import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
+import { Link } from '@learn-bit-react/base-ui.ui.link';
 import styles from './shoes-card.module.scss';
 
 export type ShoesCardProps = {
@@ -53,16 +54,16 @@ export function ShoesCard({
           <Heading element="h3" className={styles.title}>
             {title}
           </Heading>
-          <Text text={text} className={styles.text} />
+          <Text className={styles.text}>{text}</Text>
         </div>
         <div className="prod-img">
           <Img alt={alt} src={src} className={styles.img} />
         </div>
         <div className={styles.footer}>
           <Currency price={price} className={styles.price} />
-          <Button primary className={styles.button}>
-            {buttonText}
-          </Button>
+          <Link className={styles.button} href="/product">
+            See Product Details
+          </Link>
         </div>
       </div>
     </Card>

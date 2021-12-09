@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Home } from '@learn-bit-react/shoe-store.ui.pages.home';
 import { Women } from '@learn-bit-react/shoe-store.ui.pages.women';
 import { Men } from '@learn-bit-react/shoe-store.ui.pages.men';
+import { Product } from '@learn-bit-react/shoe-store.ui.pages.product';
 import { Children } from '@learn-bit-react/shoe-store.ui.pages.children';
 import { About } from '@learn-bit-react/shoe-store.ui.pages.about';
 import { Header } from '@learn-bit-react/ecommerce.ui.header';
@@ -39,6 +40,9 @@ export function ShoeStoreApp() {
             </Route>
             <Route path="/men">
               <Men />
+            </Route>
+            <Route path="/product">
+              <Product />
             </Route>
             <Route path="/">
               <Home />

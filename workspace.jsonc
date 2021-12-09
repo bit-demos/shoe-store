@@ -39,7 +39,7 @@
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
-        "@learn-bit-react/base-ui.env.learn-bit-react": "1.0.0",
+        "@learn-bit-react/base-ui.env.learn-bit-react": "1.0.11",
         "@learn-bit-react/base-ui.figma.figma-embed": "0.0.4",
         "@learn-bit-react/base-ui.styles.button": "0.0.8",
         "@learn-bit-react/base-ui.styles.colors": "1.0.4",
@@ -68,6 +68,7 @@
         "@testing-library/react-hooks": "5.1.1",
         "classnames": "2.3.1",
         "react-helmet": "6.1.0",
+        "react-rating-stars-component": "2.2.0",
         "react-router": "5.2.0",
         "react-router-dom": "5.2.0"
       },
@@ -106,7 +107,7 @@
    **/
   "teambit.workspace/variants": {
     "{ui/**}": {
-      "learn-bit-react.base-ui/env/learn-bit-react@1.0.10": {}
+      "learn-bit-react.base-ui/env/learn-bit-react@1.0.11": {}
     },
     "{styles/**}, {themes/*}, , {figma/*}": {
       "teambit.react/react": {}
