@@ -1,7 +1,8 @@
 import { Shoes } from './shoes';
 
-export const mockShoesData = [
+export const mockShoesDataWomen = [
   {
+    id: 'w-1',
     title: 'Guchi',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air trainers in pink, yellow and purple',
@@ -12,6 +13,7 @@ export const mockShoesData = [
     availableColors: ['navy']
   },
   {
+    id: 'w-2',
     title: 'Chanel',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse in red and black',
@@ -22,6 +24,7 @@ export const mockShoesData = [
     availableColors: ['black', 'beige', 'white', 'brown']
   },
   {
+    id: 'w-3',
     title: 'Jimmy Shoes',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Yeezy in white',
@@ -32,6 +35,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'beige']
   },
   {
+    id: 'w-4',
     title: 'Wed Me',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike M35',
@@ -42,6 +46,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'w-5',
     title: 'Rub Sands',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air Classic in white',
@@ -52,6 +57,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'w-6',
     title: 'Wedgers',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Adidas Ultra in yellow',
@@ -63,6 +69,7 @@ export const mockShoesData = [
   },
 
   {
+    id: 'w-7',
     title: 'Zara',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair Nike Air 2 in black and red',
@@ -73,6 +80,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'w-8',
     title: 'Skins',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Louis in beige nad brown',
@@ -83,6 +91,7 @@ export const mockShoesData = [
     availableColors: ['black', 'brown', 'white']
   },
   {
+    id: 'w-9',
     title: 'Pebbles',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air Force 1 in red and white',
@@ -93,6 +102,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white']
   },
   {
+    id: 'w-10',
     title: 'Silver Slips',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Nike Magic in black',
@@ -103,6 +113,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white']
   },
   {
+    id: 'w-11',
     title: 'Lagoon',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair Nike Jordans in blue, black and white',
@@ -113,6 +124,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'navy']
   },
   {
+    id: 'w-12',
     title: 'Dianas',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse 2 in black with red heart',
@@ -123,6 +135,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'brown']
   },
   {
+    id: 'w-13',
     title: 'Beckers',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Nike Magic in black',
@@ -133,6 +146,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'w-14',
     title: 'Doc Martins',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair Nike Jordans in blue, black and white',
@@ -143,6 +157,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'w-15',
     title: 'Camper',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse 2 in black with red heart',
@@ -155,7 +170,7 @@ export const mockShoesData = [
 ];
 
 export function mockShoesWomen() {
-  return mockShoesData.map((plainShoes) => {
+  return mockShoesDataWomen.map((plainShoes) => {
     return Shoes.from(plainShoes);
   });
 }

@@ -34,7 +34,11 @@ export function Rating({ stars = 1, setStars = false }: ProductDetailsProps) {
             </button>
           );
         } else {
-          return <span className={styles.rating}>&#9733;</span>;
+          return (
+            <span key={index} className={styles.rating}>
+              &#9733;
+            </span>
+          );
         }
       })}
     </div>

@@ -7,7 +7,7 @@ import styles from './counter.module.scss';
 export type CounterProps = {};
 
 export function Counter({}: CounterProps) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   function handleClickAdd() {
     if (count <= 20) {
@@ -15,7 +15,7 @@ export function Counter({}: CounterProps) {
     }
   }
   function handleClickSubtract() {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   }
@@ -28,7 +28,7 @@ export function Counter({}: CounterProps) {
       <Input
         className={styles.input}
         type="number"
-        min="0"
+        min="1"
         max="20"
         value={count}
         width="100px"

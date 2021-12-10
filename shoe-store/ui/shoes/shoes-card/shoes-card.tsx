@@ -5,14 +5,15 @@ import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { Text } from '@learn-bit-react/base-ui.ui.text';
 import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
-import { Link } from '@learn-bit-react/base-ui.ui.link';
+import { Link } from '@teambit/base-react.navigation.link';
+
 import styles from './shoes-card.module.scss';
 
 export type ShoesCardProps = {
   /**
-   * text for button
+   * id of product
    */
-  buttonText: string;
+  id: string;
   /**
    * products price
    */
@@ -45,7 +46,7 @@ export function ShoesCard({
   title,
   text,
   price,
-  buttonText
+  id
 }: ShoesCardProps) {
   return (
     <Card>
@@ -61,7 +62,7 @@ export function ShoesCard({
         </div>
         <div className={styles.footer}>
           <Currency price={price} className={styles.price} />
-          <Link className={styles.button} href="/product">
+          <Link className={styles.button} href={`/product/${id}`}>
             See Product Details
           </Link>
         </div>

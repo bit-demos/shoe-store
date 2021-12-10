@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
 import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { Text } from '@learn-bit-react/base-ui.ui.text';
@@ -7,11 +7,15 @@ import { Rating } from '@learn-bit-react/shoe-store.ui.product.rating';
 import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
 import { Counter } from '@learn-bit-react/shoe-store.ui.counter';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
-import { Select } from '@learn-bit-react/shoe-store.ui.forms.select';
+import { SelectSize } from '@learn-bit-react/shoe-store.ui.select-size';
 
 import styles from './product-details.module.scss';
 
 export type ProductDetailsProps = {
+  /**
+   * id of the product
+   */
+  id: string;
   /**
    * name of the product
    */
@@ -44,9 +48,10 @@ export type ProductDetailsProps = {
    * product sizes
    */
   sizes: Array<number>;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 export function ProductDetails({
+  id,
   name,
   description,
   sizes,
@@ -56,6 +61,14 @@ export function ProductDetails({
   alt,
   src
 }: ProductDetailsProps) {
+  const [addedToCart, setAddedToCart] = useState(false);
+  function handleClick(id) {
+    setAddedToCart(true);
+  }
+
+  const [size, setSize] = useState(sizes[0]);
+  const [color, setColor] = useState(colors[0]);
+  const [count, setCount] = useState(1);
   return (
     <div className={styles.productDetails}>
       <Img className={styles.img} src={src} alt={alt} />
@@ -65,15 +78,33 @@ export function ProductDetails({
         <Currency price={price} />
         <Text>{description}</Text>
         <div>
-          <Counter />
-          <Select className={styles.select} options={sizes} />
+          <Counter setCount={setCount} count={count} />
+          <SelectSize
+            setSize={setSize}
+            className={styles.select}
+            sizes={sizes}
+          />
         </div>
         <Text>Available in additional colors: </Text>
         <AvailableColors
+          color={color}
           className={styles.availableColors}
           availableColors={colors}
+          setColor={setColor}
         />
-        <Button primary>Add to Cart</Button>
+        <Button
+          primary
+          onClick={() => {
+            handleClick(id);
+          }}
+        >
+          Add to Cart
+        </Button>
+        {addedToCart ? (
+          <Text>
+            Added to cart {count} x {name} of {size} in {color} color
+          </Text>
+        ) : null}
       </div>
     </div>
   );

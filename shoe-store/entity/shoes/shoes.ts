@@ -6,6 +6,7 @@ import {
 export type PlainShoes = {
   size: number[];
   availableColors: string[];
+  id: string;
 } & ProductFromApi;
 
 export class Shoes {
@@ -18,7 +19,11 @@ export class Shoes {
     /**
      * color of the shoe
      */
-    readonly availableColors: string[]
+    readonly availableColors: string[],
+    /**
+     * id of the shoe
+     */
+    readonly id: string
   ) {}
 
   /**
@@ -35,7 +40,8 @@ export class Shoes {
     return {
       ...this.product,
       size: this.size,
-      availableColors: this.availableColors
+      availableColors: this.availableColors,
+      id: this.id
     };
   }
 
@@ -53,7 +59,8 @@ export class Shoes {
     const shoes = new Shoes(
       Product.fromApiObject(plainShoes),
       plainShoes.size,
-      plainShoes.availableColors
+      plainShoes.availableColors,
+      plainShoes.id
     );
     return shoes;
   }

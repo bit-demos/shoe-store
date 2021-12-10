@@ -99,6 +99,12 @@
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/women"
     },
+    "ui/product/available-colors": {
+        "scope": "learn-bit-react.ecommerce",
+        "version": "0.0.8",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/product/available-colors"
+    },
     "ui/product/hooks/use-product": {
         "scope": "",
         "version": "",
@@ -116,6 +122,12 @@
         "version": "",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/rating"
+    },
+    "ui/select-size": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/select-size"
     },
     "ui/shoes/shoes-card": {
         "scope": "learn-bit-react.shoe-store",

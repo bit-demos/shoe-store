@@ -3,6 +3,7 @@ import { ProductDetails } from './product-details';
 
 export const BasicProductDetails = () => (
   <ProductDetails
+    id={'m-1'}
     name="Nike Air"
     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus"
     alt="Nike Air"

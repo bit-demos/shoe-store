@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, useParams } from 'react-router-dom';
 import { Home } from '@learn-bit-react/shoe-store.ui.pages.home';
 import { Women } from '@learn-bit-react/shoe-store.ui.pages.women';
 import { Men } from '@learn-bit-react/shoe-store.ui.pages.men';
@@ -11,6 +11,7 @@ import { Footer } from '@learn-bit-react/ecommerce.ui.footer';
 import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { Theme } from '@learn-bit-react/base-ui.themes.theme';
+
 import styles from './shoe-store.module.scss';
 
 export function ShoeStoreApp() {
@@ -41,7 +42,7 @@ export function ShoeStoreApp() {
             <Route path="/men">
               <Men />
             </Route>
-            <Route path="/product">
+            <Route path="/product/:id">
               <Product />
             </Route>
             <Route path="/">

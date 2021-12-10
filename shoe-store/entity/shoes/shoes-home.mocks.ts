@@ -1,7 +1,8 @@
 import { Shoes } from './shoes';
 
-export const mockShoesData = [
+export const mockShoesDataHome = [
   {
+    id: 'h-1',
     title: 'Nike Air',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air trainers in pink, yellow and purple',
@@ -12,6 +13,7 @@ export const mockShoesData = [
     availableColors: ['navy']
   },
   {
+    id: 'h-2',
     title: 'Grungers',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse in red and black',
@@ -22,6 +24,7 @@ export const mockShoesData = [
     availableColors: ['black', 'beige', 'white', 'brown']
   },
   {
+    id: 'h-3',
     title: 'Syrps',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Yeezy in white',
@@ -32,6 +35,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'beige']
   },
   {
+    id: 'h-4',
     title: 'Vans',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike M35',
@@ -42,6 +46,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'h-5',
     title: 'Timberland',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air Classic in white',
@@ -52,6 +57,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'h-6',
     title: 'Wedgers',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Adidas Ultra in yellow',
@@ -63,6 +69,7 @@ export const mockShoesData = [
   },
 
   {
+    id: 'h-7',
     title: 'Vans Casual',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair Nike Air 2 in black and red',
@@ -73,6 +80,7 @@ export const mockShoesData = [
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
+    id: 'h-8',
     title: 'New Balance',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Louis in beige nad brown',
@@ -85,7 +93,7 @@ export const mockShoesData = [
 ];
 
 export function mockShoesHome() {
-  return mockShoesData.map((plainShoes) => {
+  return mockShoesDataHome.map((plainShoes) => {
     return Shoes.from(plainShoes);
   });
 }
