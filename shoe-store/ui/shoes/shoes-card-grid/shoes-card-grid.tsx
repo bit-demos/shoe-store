@@ -17,8 +17,8 @@ export function ShoesCardGrid({ list, className }: ShoesCardGridProps) {
       {list.length > 0 ? (
         <div className={classNames(styles.grid, className)}>
           {list.map((item) => (
-            <div className={styles['product-card']} key={item.id}>
-              <ShoesCard {...item.product} size={item.size} id={item.id} />
+            <div className={styles['product-card']} key={item.product.id}>
+              <ShoesCard {...item.product} id={item.product.id} />
             </div>
           ))}
         </div>

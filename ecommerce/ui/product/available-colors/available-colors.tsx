@@ -8,16 +8,22 @@ export type AvailableColorsProps = {
    * color of shoes available
    */
   availableColors: string[];
+  /**
+   * a function that registers the selected color.
+   */
+  colorSelected: (color) => void;
 } & React.HTMLAttributes<HTMLElement>;
 
 export function AvailableColors({
   availableColors,
-  className
+  className,
+  colorSelected
 }: AvailableColorsProps) {
   const [color, setColor] = useState(availableColors[0]);
 
   function handleClick(e) {
     setColor(e.target.computedName);
+    colorSelected(e.target.computedName);
   }
 
   return (

@@ -7,19 +7,29 @@ export type SelectSizeProps = {
   /**
    * a text to be rendered in the component.
    */
-  sizes: number[];
+  availableSizes: number[];
+  /**
+   * a function that registers the selected size.
+   */
+  sizeSelected: (size) => void;
 } & React.SelectHTMLAttributes<HTMLSelectElement>;
 
-export function SelectSize({ sizes, ...rest }: SelectSizeProps) {
-  const [size, setSize] = useState(sizes[0]);
+export function SelectSize({
+  availableSizes,
+  sizeSelected,
+  ...rest
+}: SelectSizeProps) {
+  const [size, setSize] = useState(availableSizes[0]);
 
   function handleChange(e) {
     setSize(e.target.value);
+    sizeSelected(e.target.value);
   }
+
   return (
     <Select
       className={styles.select}
-      options={sizes}
+      options={availableSizes}
       onChange={handleChange}
       {...rest}
     />

@@ -1,0 +1,81 @@
+.button {
+  text-align: center;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  font-weight: 450;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    color: var(--secondary-50, #fff);
+    background-color: var(--primary-50, #6c5ce7);
+    border: 1px solid var(--primary-50, #6c5ce7);
+    box-shadow: none;
+
+    &:hover {
+      border: 1px solid var(--primary-60, #5d4aec);
+      color: var(--secondary-50, #fff);
+      background-color: var(--primary-60, #5d4aec);
+      text-decoration: none;
+    }
+    &:active {
+      border: 1px solid var(--primary-60, #5d4aec);
+      background-color: var(--primary-50, #6c5ce7);
+      color: var(--secondary-50, #fff);
+    }
+    &:disabled {
+      color: #babec9;
+      background-color: #f6f6f6;
+      border: 1px solid #babec9;
+    }
+  }
+
+  &.secondary {
+    border: 1px solid var(--primary-50, #5d4aec);
+    color: var(--primary-50, #5d4aec);
+    background-color: var(--secondary-40, #fff);
+    box-shadow: none;
+
+    &:hover {
+      color: var(--primary-50, #5d4aec);
+      background-color: var(--secondary-50, #fff);
+      text-decoration: none;
+    }
+    &:active {
+      background-color: var(--primary-20, #eceaff);
+      color: var(--primary-50, #5d4aec);
+    }
+    &:disabled {
+      color: #babec9;
+      background-color: #fff;
+      border: 1px solid #babec9;
+    }
+  }
+  &.white {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25),
+      0px -1px 1px rgba(0, 0, 0, 0.09);
+    border: 1px #babec9;
+    color: var(--primary-50, #5d4aec);
+    background-color: #fff;
+    box-shadow: none;
+
+    &:hover {
+      background-color: var(--primary-20, #eceaff);
+    }
+    &:active {
+      background-color: var(--primary-20, #eceaff);
+    }
+    &:disabled {
+      color: #babec9;
+      background-color: #fff;
+      border: none;
+    }
+  }
+}

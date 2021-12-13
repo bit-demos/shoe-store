@@ -8,89 +8,85 @@ import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
 import { Counter } from '@learn-bit-react/shoe-store.ui.counter';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { SelectSize } from '@learn-bit-react/shoe-store.ui.select-size';
+import { Shoe, Shoes } from '@learn-bit-react/shoe-store.entity.shoes';
 
 import styles from './product-details.module.scss';
 
 export type ProductDetailsProps = {
   /**
-   * id of the product
+   * product
    */
-  id: string;
-  /**
-   * name of the product
-   */
-  name: string;
-  /**
-   * src for image
-   */
-  src: string;
-  /**
-   * alt for image
-   */
-  alt: string;
-  /**
-   * description of the product
-   */
-  description: string;
-  /**
-   * colors for product
-   */
-  colors: Array<string>;
-  /**
-   * price of the product
-   */
-  price: number;
-  /**
-   * product rating
-   */
-  rating: number;
-  /**
-   * product sizes
-   */
-  sizes: Array<number>;
+  product: Shoes;
+  // id: string;
+  // title: string;
+  // text: string;
+  // alt: string;
+  // src: string;
+  // price: number;
+  // availableSizes: number[];
+  // availableColors: string[];
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export function ProductDetails({
-  id,
-  name,
-  description,
-  sizes,
-  colors,
-  rating,
-  price,
-  alt,
-  src
+  // id,
+  // alt,
+  // src,
+  // title,
+  // text,
+  // availableSizes,
+  // availableColors
+  product
 }: ProductDetailsProps) {
+  // use add to cart state
   const [addedToCart, setAddedToCart] = useState(false);
+  // use shoe state to store the shoe selected
+  const [shoe, setShoe] = useState<Shoe>({} as Shoe);
+  // destruction product so easier to use below
+  const {
+    product: { id, src, title, text, price, alt, rating },
+    availableColors,
+    availableSizes
+  } = product;
+
+  // when button is clicked perform perform this action
   function handleClick(id) {
     setAddedToCart(true);
+    // context.addToCart(shoe); // comes from context
   }
 
-  const [size, setSize] = useState(sizes[0]);
-  const [color, setColor] = useState(colors[0]);
-  const [count, setCount] = useState(1);
+  function sizeChanged(size) {
+    setShoe({ ...shoe, size: size });
+  }
+
+  function colorChanged(color) {
+    setShoe({ ...shoe, color: color });
+  }
+
+  function quantityChanged(quantity) {
+    setShoe({ ...shoe, quantity: quantity });
+  }
+
   return (
     <div className={styles.productDetails}>
       <Img className={styles.img} src={src} alt={alt} />
       <div className={styles.details}>
-        <Heading element="h2">{name}</Heading>
+        <Heading element="h2">{title}</Heading>
         <Rating stars={rating} />
         <Currency price={price} />
-        <Text>{description}</Text>
+        <Text>{shoe.text}</Text>
         <div>
-          <Counter setCount={setCount} count={count} />
+          <Counter quantitySelected={quantityChanged} />
           <SelectSize
-            setSize={setSize}
+            sizeSelected={sizeChanged}
             className={styles.select}
-            sizes={sizes}
+            availableSizes={availableSizes}
           />
         </div>
         <Text>Available in additional colors: </Text>
         <AvailableColors
-          color={color}
+          colorSelected={colorChanged}
           className={styles.availableColors}
-          availableColors={colors}
-          setColor={setColor}
+          availableColors={availableColors}
         />
         <Button
           primary
@@ -100,11 +96,9 @@ export function ProductDetails({
         >
           Add to Cart
         </Button>
-        {addedToCart ? (
-          <Text>
-            Added to cart {count} x {name} of {size} in {color} color
-          </Text>
-        ) : null}
+        Selected: shoe size: {shoe.size}, color: {shoe.color}, quantity:
+        {shoe.quantity}
+        {addedToCart ? <Text>Added to cart</Text> : null}
       </div>
     </div>
   );

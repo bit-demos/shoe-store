@@ -1,16 +1,23 @@
 import React from 'react';
+import { mockShoesHome } from '@learn-bit-react/shoe-store.entity.shoes';
+import { Shoes } from '@learn-bit-react/shoe-store.entity.shoes';
 import { ProductDetails } from './product-details';
 
-export const BasicProductDetails = () => (
-  <ProductDetails
-    id={'m-1'}
-    name="Nike Air"
-    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus"
-    alt="Nike Air"
-    src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHNuZWFrZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    price={160}
-    sizes={[36, 38]}
-    rating={4}
-    colors={['red', 'blue']}
-  />
+const shoesMock: Shoes = new Shoes(
+  {
+    id: 'm-15',
+    title: 'Camper',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
+    alt: 'Pair of Converse 2 in black with red heart',
+    src: 'https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+    price: 280,
+    rating: 5
+  },
+  [40, 41, 42, 43, 44],
+  ['red', 'blue', 'green']
+);
+export const BasicProductDetails = () => <ProductDetails product={shoesMock} />;
+
+export const BasicProductDetails2 = () => (
+  <ProductDetails product={mockShoesHome()[0]} />
 );

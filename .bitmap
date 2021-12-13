@@ -21,6 +21,12 @@
         "mainFile": "index.ts",
         "rootDir": "shoe-store/entity/most-wanted-shoes"
     },
+    "entity/product": {
+        "scope": "learn-bit-react.ecommerce",
+        "version": "1.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/entity/product"
+    },
     "entity/shoes": {
         "scope": "learn-bit-react.shoe-store",
         "version": "1.0.6",
@@ -32,6 +38,12 @@
         "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "readme"
+    },
+    "ui/button": {
+        "scope": "learn-bit-react.base-ui",
+        "version": "2.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/ui/button"
     },
     "ui/counter": {
         "scope": "",
@@ -50,6 +62,12 @@
         "version": "",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/forms/select"
+    },
+    "ui/link": {
+        "scope": "learn-bit-react.base-ui",
+        "version": "1.0.17",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/ui/link"
     },
     "ui/pages/about": {
         "scope": "learn-bit-react.shoe-store",

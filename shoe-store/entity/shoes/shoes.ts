@@ -4,9 +4,8 @@ import {
 } from '@learn-bit-react/ecommerce.entity.product';
 
 export type PlainShoes = {
-  size: number[];
+  availableSizes: number[];
   availableColors: string[];
-  id: string;
 } & ProductFromApi;
 
 export class Shoes {
@@ -15,22 +14,18 @@ export class Shoes {
     /**
      * size of the shoe
      */
-    readonly size: number[],
+    readonly availableSizes: number[],
     /**
      * color of the shoe
      */
-    readonly availableColors: string[],
-    /**
-     * id of the shoe
-     */
-    readonly id: string
+    readonly availableColors: string[]
   ) {}
 
   /**
    * determines if a certain size of available
    */
   isSizeAvailable(wantedSize: number) {
-    return !!this.size.find((size) => size === wantedSize);
+    return !!this.availableSizes.find((size) => size === wantedSize);
   }
 
   /**
@@ -39,9 +34,8 @@ export class Shoes {
   toObject() {
     return {
       ...this.product,
-      size: this.size,
-      availableColors: this.availableColors,
-      id: this.id
+      availableSizes: this.availableSizes,
+      availableColors: this.availableColors
     };
   }
 
@@ -58,9 +52,8 @@ export class Shoes {
   static from(plainShoes: PlainShoes) {
     const shoes = new Shoes(
       Product.fromApiObject(plainShoes),
-      plainShoes.size,
-      plainShoes.availableColors,
-      plainShoes.id
+      plainShoes.availableSizes,
+      plainShoes.availableColors
     );
     return shoes;
   }

@@ -4,66 +4,17 @@ import { useParams } from 'react-router-dom';
 import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
 import styles from './product.module.scss';
 
-export type ProductProps = {
-  /**
-   * id of the product
-   */
-  id: string;
-  /**
-   * name of the product
-   */
-  name: string;
-  /**
-   * src for image
-   */
-  src: string;
-  /**
-   * alt for image
-   */
-  alt: string;
-  /**
-   * description of the product
-   */
-  description: string;
-  /**
-   * colors for product
-   */
-  colors: Array<string>;
-  /**
-   * price of the product
-   */
-  price: number;
-  /**
-   * product rating
-   */
-  rating: number;
-  /**
-   * product sizes
-   */
-  sizes: Array<number>;
-};
-
-export function getShoe(shoeId) {
-  return allShoes.find(({ id }) => shoeId === id);
+function getShoe(shoeId: string) {
+  return allShoes.find(({ product }) => shoeId === product.id) || allShoes[0];
 }
 
-export function Product({}: ProductProps) {
-  const { id } = useParams();
+export function Product() {
+  const { id } = useParams() as { id: string };
   const shoe = getShoe(id);
 
   return (
     <div className={styles.product}>
-      <ProductDetails
-        id={shoe.id}
-        name={shoe.title}
-        description={shoe.text}
-        alt={shoe.alt}
-        src={shoe.src}
-        price={shoe.price}
-        sizes={shoe.size}
-        rating={4}
-        colors={shoe.availableColors}
-      />
+      <ProductDetails product={shoe} />
       <h2>reviews component</h2>
       <h2>featured-products component</h2>
       <h3>banner component</h3>

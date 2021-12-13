@@ -9,7 +9,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1602237197229-1cdbc1f6ccd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 80,
     buttonText: 'add to cart',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['navy']
   },
   {
@@ -20,7 +20,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1575065115517-3150b3b7ff9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 90,
     buttonText: 'buy now',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'beige', 'white', 'brown']
   },
   {
@@ -31,7 +31,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1605317143724-025ceb00651c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 60,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'beige']
   },
   {
@@ -42,7 +42,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1594843954296-52fbba31a52f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 50,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
@@ -53,7 +53,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1573309463328-ec43614b3def?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 90,
     buttonText: 'add to cart',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
@@ -64,7 +64,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1503449377594-32dd9ac4467c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 80,
     buttonText: 'buy now',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'blue']
   },
 
@@ -76,7 +76,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1590483736622-39da8acf7eb8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 70,
     buttonText: 'add to cart',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
@@ -87,7 +87,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1507464098880-e367bc5d2c08?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 110,
     buttonText: 'buy now',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'brown', 'white']
   },
   {
@@ -98,7 +98,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1621840184719-bc5b5deefd43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white']
   },
   {
@@ -109,7 +109,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1510279503388-9d13cbd5356d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 280,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white']
   },
   {
@@ -120,7 +120,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1626951197366-9d88889e3774?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'navy']
   },
   {
@@ -131,7 +131,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1515349541556-ef8cc276e382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'brown']
   },
   {
@@ -142,7 +142,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1464893223020-1360cd8e64cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
@@ -153,7 +153,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1552912276-56ef47874741?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 280,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
@@ -164,7 +164,7 @@ export const mockShoesDataChildren = [
     src: 'https://images.unsplash.com/photo-1462146449396-2d7d4ba877d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 280,
     buttonText: 'I want them',
-    size: [36, 37, 38, 39],
+    availableSizes: [36, 37, 38, 39],
     availableColors: ['black', 'pink', 'white', 'blue']
   }
 ];
