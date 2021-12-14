@@ -1,22 +1,31 @@
 ---
-description: 'A Input component'
-labels: ['label1', 'label2', 'label3']
+description: 'A basic Input component'
+labels: ['input']
 ---
 
 import { Input } from './input';
 
-## React Component for rendering text
+## Input Component
 
-A basic div that renders some text
+All props from the `<input>` element are supported. See compositions to see an example of input using state.
 
-### Component usage
+### Renders a basic Input
+
 ```js
-<Input text="hello from Input" />
+<Input />
 ```
 
-### Using props to customize the text
+### Renders an Input with placeholder and id
 
-Modify the text to see it change live:
 ```js live
-<Input text="hello from Input" />
+<Input placeholder="write something here" id="my-input" />
+```
+
+### Renders an Input with placeholder and label
+
+```js live
+<>
+  <label htmlFor="input">Input</label>
+  <Input placeholder="write something here" id="input" />
+</>
 ```

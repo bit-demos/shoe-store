@@ -7,7 +7,8 @@ import {
   PrimaryButtonDisabled,
   WhiteButton,
   WhiteButtonDisabled,
-  ButtonAsLink
+  ButtonAsInternalLink,
+  ButtonAsATag
 } from './button.composition';
 
 it('should render a button with the class of primary and contain some text', () => {
@@ -55,11 +56,20 @@ it('should render a disabled button with the class of white and contain some tex
   expect(rendered).toHaveTextContent('White');
 });
 
-it('should render a button as a Link, checks for <a> tag, href attribute and primary class and that it contains some text', () => {
-  const { getByText } = render(<ButtonAsLink />);
-  const rendered = getByText('Link');
+it('should render a button as an Internal Link, checks for <a> tag, href attribute and primary class and that it contains some text', () => {
+  const { getByText } = render(<ButtonAsInternalLink />);
+  const rendered = getByText('Internal Link');
   expect(rendered).toHaveClass('primary');
   expect(rendered).toContainHTML('a');
   expect(rendered).toContainHTML('href');
-  expect(rendered).toHaveTextContent('Link');
+  expect(rendered).toHaveTextContent('Internal Link');
 });
+
+// it('should render a button as an external Link, checks for <a> tag, href attribute and primary class and that it contains some text', () => {
+//   const { getByText } = render(<ButtonAsATag />);
+//   const rendered = getByText('External Link');
+//   expect(rendered).toHaveClass('primary');
+//   expect(rendered).toContainHTML('a');
+//   expect(rendered).toContainHTML('href');
+//   expect(rendered).toHaveTextContent('External Link');
+// });

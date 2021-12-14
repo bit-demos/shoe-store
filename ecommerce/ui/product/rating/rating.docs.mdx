@@ -1,22 +1,21 @@
 ---
-description: 'A Rating component'
-labels: ['label1', 'label2', 'label3']
+description: 'Stars rating for static and dynamic ratings'
+labels: ['rating', 'stars']
 ---
 
 import { Rating } from './rating';
 
-## React Component for rendering text
+- `stars` props is used to pass in the amount of stars to render.
+- `setStars` prop is used to set the amount of stars to store in state.
 
-A basic div that renders some text
+### Rating of 5 stars
 
-### Component usage
-```js
-<Rating text="hello from Rating" />
+```js live
+<Rating stars={5} />
 ```
 
-### Using props to customize the text
+### Value is in state and can be set on click
 
-Modify the text to see it change live:
 ```js live
-<Rating text="hello from Rating" />
+<Rating stars={5} setStars={true} />
 ```

@@ -15,9 +15,9 @@ export function Product() {
   return (
     <div className={styles.product}>
       <ProductDetails product={shoe} />
-      <h2>reviews component</h2>
+      {/* <h2>reviews component</h2>
       <h2>featured-products component</h2>
-      <h3>banner component</h3>
+      <h3>banner component</h3> */}
     </div>
   );
 }

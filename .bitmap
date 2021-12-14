@@ -33,6 +33,12 @@
         "mainFile": "index.ts",
         "rootDir": "shoe-store/entity/shoes"
     },
+    "env/learn-bit-react": {
+        "scope": "learn-bit-react.base-ui",
+        "version": "1.0.11",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/env/learn-bit-react"
+    },
     "readme": {
         "scope": "learn-bit-react.shoe-store",
         "version": "0.0.6",

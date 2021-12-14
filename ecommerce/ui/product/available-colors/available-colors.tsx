@@ -5,7 +5,7 @@ import styles from './available-colors.module.scss';
 
 export type AvailableColorsProps = {
   /**
-   * color of shoes available
+   * array of available colors
    */
   availableColors: string[];
   /**
@@ -27,28 +27,26 @@ export function AvailableColors({
   }
 
   return (
-    <>
-      <ul className={classNames(styles['color-list'], className)}>
-        {availableColors.map((availableColor) => {
-          return (
-            <li
-              className={classNames(
-                styles['color-list-item'],
-                color === availableColor ? styles.active : ''
-              )}
-              key={availableColor}
-            >
-              <span
-                aria-label={availableColor}
-                data-testid={availableColor}
-                style={{ backgroundColor: availableColor }}
-                onClick={handleClick}
-                className={classNames(styles['color-circle'])}
-              ></span>
-            </li>
-          );
-        })}
-      </ul>
-    </>
+    <ul className={classNames(styles['color-list'], className)}>
+      {availableColors.map((availableColor) => {
+        return (
+          <li
+            className={classNames(
+              styles['color-list-item'],
+              color === availableColor ? styles.active : ''
+            )}
+            key={availableColor}
+          >
+            <span
+              aria-label={availableColor}
+              data-testid={availableColor}
+              style={{ backgroundColor: availableColor }}
+              onClick={handleClick}
+              className={classNames(styles['color-circle'])}
+            ></span>
+          </li>
+        );
+      })}
+    </ul>
   );
 }

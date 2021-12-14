@@ -1,16 +1,22 @@
 .productDetails {
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
+  max-width: 800px;
 }
 .details {
   margin-left: 40px;
+}
+
+.rating {
+  margin-bottom: 10px;
 }
 
 .img {
   width: auto;
   max-width: 400px;
   height: auto;
-  height: 400px;
+  max-height: 400px;
 }
 .availableColors {
   margin-bottom: 20px;

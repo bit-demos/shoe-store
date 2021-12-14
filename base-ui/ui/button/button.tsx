@@ -22,7 +22,7 @@ export type ButtonOwnProps<E extends React.ElementType = React.ElementType> = {
    */
   white?: boolean;
   /**
-   * uses any element instead of button such as an <a> tag for external links
+   * renders the Link component instead of the button
    */
   link?: boolean;
   /**
@@ -66,24 +66,24 @@ export function Button<E extends React.ElementType = typeof defaultElement>({
     <>
       {!link ? (
         <TagName
-          {...rest}
           className={classNames(
             styles.button,
             styles[buttonClassName],
             className
           )}
+          {...rest}
         >
           {children}
         </TagName>
       ) : (
         <Link
-          {...rest}
           href={href}
           className={classNames(
             styles.button,
             styles[buttonClassName],
             className
           )}
+          {...rest}
         >
           {children}
         </Link>

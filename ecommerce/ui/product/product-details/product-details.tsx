@@ -17,38 +17,18 @@ export type ProductDetailsProps = {
    * product
    */
   product: Shoes;
-  // id: string;
-  // title: string;
-  // text: string;
-  // alt: string;
-  // src: string;
-  // price: number;
-  // availableSizes: number[];
-  // availableColors: string[];
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export function ProductDetails({
-  // id,
-  // alt,
-  // src,
-  // title,
-  // text,
-  // availableSizes,
-  // availableColors
-  product
-}: ProductDetailsProps) {
-  // use add to cart state
+export function ProductDetails({ product }: ProductDetailsProps) {
   const [addedToCart, setAddedToCart] = useState(false);
-  // use shoe state to store the shoe selected
   const [shoe, setShoe] = useState<Shoe>({} as Shoe);
-  // destruction product so easier to use below
+
   const {
     product: { id, src, title, text, price, alt, rating },
     availableColors,
     availableSizes
   } = product;
 
-  // when button is clicked perform perform this action
   function handleClick(id) {
     setAddedToCart(true);
     // context.addToCart(shoe); // comes from context
@@ -71,7 +51,7 @@ export function ProductDetails({
       <Img className={styles.img} src={src} alt={alt} />
       <div className={styles.details}>
         <Heading element="h2">{title}</Heading>
-        <Rating stars={rating} />
+        <Rating stars={rating} className={styles.rating} />
         <Currency price={price} />
         <Text>{shoe.text}</Text>
         <div>
@@ -96,9 +76,9 @@ export function ProductDetails({
         >
           Add to Cart
         </Button>
-        Selected: shoe size: {shoe.size}, color: {shoe.color}, quantity:
-        {shoe.quantity}
-        {addedToCart ? <Text>Added to cart</Text> : null}
+        {/* Selected: shoe size: {shoe.size}, color: {shoe.color}, quantity: 
+        {shoe.quantity}*/}
+        <Text>Added to cart</Text>
       </div>
     </div>
   );

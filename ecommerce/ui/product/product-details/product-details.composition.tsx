@@ -18,6 +18,6 @@ const shoesMock: Shoes = new Shoes(
 );
 export const BasicProductDetails = () => <ProductDetails product={shoesMock} />;
 
-export const BasicProductDetails2 = () => (
+export const ProductDetailsFromMockData = () => (
   <ProductDetails product={mockShoesHome()[0]} />
 );

@@ -1,10 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { BasicInput } from './input.composition';
+import { InputWithPlaceholder, InputWithLabel } from './input.composition';
 
-it('should render with the correct text', () => {
-  const { getByText } = render(<BasicInput/>);
-  const rendered = getByText('hello from Input');
+it('should render with a placeholder', () => {
+  const { getByPlaceholderText } = render(<InputWithPlaceholder />);
+  const rendered = getByPlaceholderText('write something here');
   expect(rendered).toBeTruthy();
 });
 
+it('should render with a label', () => {
+  const { getByLabelText } = render(<InputWithLabel />);
+  const rendered = getByLabelText('Label for Input');
+  expect(rendered).toBeTruthy();
+});

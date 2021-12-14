@@ -1,22 +1,18 @@
 ---
 description: 'A Counter component'
-labels: ['label1', 'label2', 'label3']
+labels: ['counter', 'state']
 ---
 
 import { Counter } from './counter';
 
-## React Component for rendering text
+## Counter Component which increments and decrements the value
 
-A basic div that renders some text
+`quantitySelected` prop is included to pass the state of the component to the parent component
 
-### Component usage
-```js
-<Counter text="hello from Counter" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
 ```js live
-<Counter text="hello from Counter" />
+<Counter
+  quantitySelected={(count) => {
+    alert(count);
+  }}
+/>
 ```

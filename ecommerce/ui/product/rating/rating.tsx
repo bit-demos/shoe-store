@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { useState } from 'react';
 
 import styles from './rating.module.scss';
@@ -12,13 +13,17 @@ export type ProductDetailsProps = {
    * number of stars
    */
   setStars?: boolean;
-};
+} & React.HTMLAttributes<HTMLElement>;
 
-export function Rating({ stars = 1, setStars = false }: ProductDetailsProps) {
+export function Rating({
+  stars = 1,
+  setStars = false,
+  className
+}: ProductDetailsProps) {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   return (
-    <div className="star-rating">
+    <div className={classNames(styles.starRating, className)}>
       {[...Array(stars)].map((star, index) => {
         index += 1;
         if (setStars) {

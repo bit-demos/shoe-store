@@ -25,14 +25,14 @@ export const WhiteButtonDisabled = () => (
   </Button>
 );
 
-export const ButtonAsLink = () => (
-  <Button primary as="a" href="/">
-    Link
+export const ButtonAsInternalLink = () => (
+  <Button primary link href="/">
+    Internal Link
   </Button>
 );
 
-export const ButtonAsInternalLink = () => (
-  <Button primary link href="/">
-    Link
-  </Button>
-);
+// export const ButtonAsATag = () => (
+//   <Button primary as="a" href="/">
+//     External Link
+//   </Button>
+// );

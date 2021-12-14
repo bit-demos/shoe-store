@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Link as BaseLink } from '@teambit/base-react.navigation.link';
+// replace link when ESM is supported
+// import { Link as BaseLink } from '@teambit/base-react.navigation.link';
+import { Link as BaseLink } from '@teambit/base-ui.routing.link';
 
 import styles from './link.module.scss';
 

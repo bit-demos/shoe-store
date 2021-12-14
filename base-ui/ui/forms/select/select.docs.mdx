@@ -5,20 +5,26 @@ labels: ['label1', 'label2', 'label3']
 
 import { Select } from './select';
 
-## React Component for rendering text
-
-A basic div that renders some text
-
-### Component usage
-
-```js
-<Select options={['32', '33', '34']} />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
+## Select with an array of options as numbers
 
 ```js live
-<Select options={['32', '33', '34']} />
+<Select options={[32, 33, 34]} />
+```
+
+## Select with an array of options as text
+
+```js live
+<Select options={['apple', 'banana', 'orange']} />
+```
+
+## Select with an array of options as text
+
+```js live
+<>
+  <label htmlFor="fruit-select">Choose a fruit:</label>
+  <Select
+    id="fruit-select"
+    options={['--Please choose an option--', 'apple', 'banana', 'orange']}
+  />
+</>
 ```

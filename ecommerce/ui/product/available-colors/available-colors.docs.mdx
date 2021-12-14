@@ -5,10 +5,17 @@ labels: ['colors', 'product']
 
 import { AvailableColors } from './available-colors';
 
-Takes an array of availableColors and maps over it to create circles with background color of the colors in array. This can be used to show the colors available of the products.
+Takes an array of availableColors and maps over it to create circles with background color of the colors in array. This can be used to show the available colors of a product.
 
 ### Renders an array of available colors
 
+`colorSelected` prop is used to pass state of the selected color to the parent component. Here we use an alert to show the selected color.
+
 ```js live
-<AvailableColors availableColors={['red', 'green', 'blue']} />
+<AvailableColors
+  availableColors={['red', 'green', 'blue']}
+  colorSelected={(color) => {
+    alert(color);
+  }}
+/>
 ```

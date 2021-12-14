@@ -6,7 +6,7 @@ import styles from './counter.module.scss';
 
 export type CounterProps = {
   /**
-   * a function that registers the selected color.
+   * a function that registers the quantity
    */
   quantitySelected: (count) => void;
 };

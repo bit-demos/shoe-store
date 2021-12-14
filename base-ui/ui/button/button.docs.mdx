@@ -24,7 +24,17 @@ Add the disabled attribute to the button to disable it.
 <Button disabled>disabled</Button>
 ```
 
-### Renders a Link that looks like a Button
+### Renders a Link Component that looks like a Button
+
+`link` prop allows you to render the `<Link>` component instead of the `<button>` tag for rendering internal links that look like buttons. Button attributes are removed and any attributes of the `<Link>` Component can be used such as `href`.
+
+```js live
+<Button primary link href="/">
+  Link
+</Button>
+```
+
+<!-- ### Renders a Link that looks like a Button
 
 `as` prop allows you to add any HTML tag such as an `a` tag. Button attributes are removed and any attributes of the element specified can be used such as `href` for `a` elements.
 
@@ -32,7 +42,7 @@ Add the disabled attribute to the button to disable it.
 <Button primary as="a" href="/">
   Link
 </Button>
-```
+``` -->
 
 ## Designs
 

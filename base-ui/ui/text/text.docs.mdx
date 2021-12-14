@@ -5,10 +5,16 @@ labels: ['paragraph']
 
 import { Text } from './text';
 
-A basic `<p>` element that renders some text
+Text can be rendered in a p element or span element. The default is set to p if no element prop is added
 
-### Renders a text
+### Renders a text as a p element
 
 ```js live
-<Text text="hello from Text" />
+<Text>text as a p tag</Text>
+```
+
+### Renders a text as a span element
+
+```js live
+<Text element="span">text as a span tag</Text>
 ```
