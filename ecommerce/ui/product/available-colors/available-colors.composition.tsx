@@ -4,7 +4,7 @@ import { AvailableColors } from './available-colors';
 export const BasicAvailableColors = () => (
   <AvailableColors
     colorSelected={(color) => {
-      console.log('selected color:', color);
+      alert(color);
     }}
     availableColors={['red', 'green', 'blue']}
   />

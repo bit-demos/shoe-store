@@ -51,11 +51,17 @@
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/button"
     },
-    "ui/counter": {
+    "ui/product/counter": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "ecommerce/ui/counter"
+        "rootDir": "ecommerce/ui/product/counter"
+    },
+    "ui/footer": {
+        "scope": "learn-bit-react.ecommerce",
+        "version": "1.0.10",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/footer"
     },
     "ui/forms/input": {
         "scope": "",
@@ -129,12 +135,6 @@
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/available-colors"
     },
-    "ui/product/hooks/use-product": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "ecommerce/ui/product/hooks/use-product"
-    },
     "ui/product/product-details": {
         "scope": "",
         "version": "",
@@ -147,11 +147,11 @@
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/rating"
     },
-    "ui/select-size": {
+    "ui/product/select-size": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "ecommerce/ui/select-size"
+        "rootDir": "ecommerce/ui/product/select-size"
     },
     "ui/shoes/shoes-card": {
         "scope": "learn-bit-react.shoe-store",

@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/{
+ **/ {
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -46,7 +46,6 @@
         "@learn-bit-react/base-ui.ui.hero": "1.0.12",
         "@learn-bit-react/base-ui.ui.img-grid": "1.0.14",
         "@learn-bit-react/base-ui.ui.layout": "1.0.10",
-        "@learn-bit-react/ecommerce.ui.footer": "1.0.10",
         "@learn-bit-react/ecommerce.ui.header": "1.0.12",
         "@learn-bit-react/ecommerce.ui.logo-text": "1.0.9",
         "@learn-bit-react/ecommerce.ui.product.currency": "0.0.1",
@@ -83,9 +82,7 @@
       }
     },
     "packageManagerArgs": [],
-    "devFilePatterns": [
-      "**/*.spec.ts"
-    ],
+    "devFilePatterns": ["**/*.spec.ts"],
     "strictPeerDependencies": true,
     "installFromBitDevRegistry": true,
     "savePrefix": ""
@@ -98,9 +95,7 @@
    * Generator Aspects to generate custom components.
    **/
   "teambit.generator/generator": {
-    "aspects": [
-      "learn-bit-react.base-ui/component-generator"
-    ]
+    "aspects": ["learn-bit-react.base-ui/component-generator"]
   },
   "learn-bit-react.base-ui/component-generator": {},
   /**
@@ -129,8 +124,11 @@
     "{content/*}, {readme}": {
       "teambit.mdx/mdx": {}
     },
-    "{ui/product/currency}": {
+    "ecommerce": {
       "defaultScope": "learn-bit-react.ecommerce"
+    },
+    "base-ui": {
+      "defaultScope": "learn-bit-react.base-ui"
     },
     "{ui/product/hooks/use-product}": {
       "defaultScope": "learn-bit-react.ecommerce"

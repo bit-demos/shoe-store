@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
-import { Input } from '@learn-bit-react/shoe-store.ui.forms.input';
+import { Input } from '@learn-bit-react/base-ui.ui.forms.input';
 import styles from './counter.module.scss';
 
 export type CounterProps = {

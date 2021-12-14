@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Select } from '@learn-bit-react/shoe-store.ui.forms.select';
+import { Select } from '@learn-bit-react/base-ui.ui.forms.select';
 
 import styles from './select-size.module.scss';
 

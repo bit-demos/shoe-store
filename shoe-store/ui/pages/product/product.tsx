@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductDetails } from '@learn-bit-react/shoe-store.ui.product.product-details';
+import { ProductDetails } from '@learn-bit-react/ecommerce.ui.product.product-details';
 import { useParams } from 'react-router-dom';
 import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
 import styles from './product.module.scss';

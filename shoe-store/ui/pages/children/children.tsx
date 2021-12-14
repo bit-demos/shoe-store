@@ -2,10 +2,7 @@ import React from 'react';
 import { ShoesCardGrid } from '@learn-bit-react/shoe-store.ui.shoes.shoes-card-grid';
 import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { StoreHero } from '@learn-bit-react/ecommerce.ui.store-hero';
-import { ImgGrid } from '@learn-bit-react/base-ui.ui.img-grid';
-import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { mockShoesChildren } from '@learn-bit-react/shoe-store.entity.shoes';
-import { mockMostWantedShoes } from '@learn-bit-react/shoe-store.entity.most-wanted-shoes';
 import styles from './children.module.scss';
 
 export function Children() {

@@ -8,7 +8,6 @@ import {
   WhiteButton,
   WhiteButtonDisabled,
   ButtonAsInternalLink,
-  ButtonAsATag
 } from './button.composition';
 
 it('should render a button with the class of primary and contain some text', () => {

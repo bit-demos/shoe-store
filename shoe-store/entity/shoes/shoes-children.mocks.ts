@@ -8,9 +8,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Nike Air trainers in pink, yellow and purple',
     src: 'https://images.unsplash.com/photo-1602237197229-1cdbc1f6ccd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 80,
-    buttonText: 'add to cart',
+    rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['navy']
+    availableColors: ['navy'],
   },
   {
     id: 'c-2',
@@ -19,9 +19,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Converse in red and black',
     src: 'https://images.unsplash.com/photo-1575065115517-3150b3b7ff9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 90,
-    buttonText: 'buy now',
+    rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'beige', 'white', 'brown']
+    availableColors: ['black', 'beige', 'white', 'brown'],
   },
   {
     id: 'c-3',
@@ -30,9 +30,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Yeezy in white',
     src: 'https://images.unsplash.com/photo-1605317143724-025ceb00651c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 60,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'beige']
+    availableColors: ['black', 'pink', 'beige'],
   },
   {
     id: 'c-4',
@@ -41,9 +41,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Nike M35',
     src: 'https://images.unsplash.com/photo-1594843954296-52fbba31a52f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 50,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue']
+    availableColors: ['black', 'pink', 'white', 'blue'],
   },
   {
     id: 'c-5',
@@ -52,9 +52,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Nike Air Classic in white',
     src: 'https://images.unsplash.com/photo-1573309463328-ec43614b3def?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 90,
-    buttonText: 'add to cart',
+    rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue']
+    availableColors: ['black', 'pink', 'white', 'blue'],
   },
   {
     id: 'c-6',
@@ -63,9 +63,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Adidas Ultra in yellow',
     src: 'https://images.unsplash.com/photo-1503449377594-32dd9ac4467c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 80,
-    buttonText: 'buy now',
+    rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue']
+    availableColors: ['black', 'pink', 'white', 'blue'],
   },
 
   {
@@ -75,9 +75,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair Nike Air 2 in black and red',
     src: 'https://images.unsplash.com/photo-1590483736622-39da8acf7eb8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 70,
-    buttonText: 'add to cart',
+    rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue']
+    availableColors: ['black', 'pink', 'white', 'blue'],
   },
   {
     id: 'c-8',
@@ -86,9 +86,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Nike Louis in beige nad brown',
     src: 'https://images.unsplash.com/photo-1507464098880-e367bc5d2c08?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 110,
-    buttonText: 'buy now',
+    rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'brown', 'white']
+    availableColors: ['black', 'brown', 'white'],
   },
   {
     id: 'c-9',
@@ -97,9 +97,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Nike Air Force 1 in red and white',
     src: 'https://images.unsplash.com/photo-1621840184719-bc5b5deefd43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white']
+    availableColors: ['black', 'pink', 'white'],
   },
   {
     id: 'c-10',
@@ -108,9 +108,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Nike Nike Magic in black',
     src: 'https://images.unsplash.com/photo-1510279503388-9d13cbd5356d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 280,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white']
+    availableColors: ['black', 'pink', 'white'],
   },
   {
     id: 'c-11',
@@ -119,9 +119,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair Nike Jordans in blue, black and white',
     src: 'https://images.unsplash.com/photo-1626951197366-9d88889e3774?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'navy']
+    availableColors: ['black', 'pink', 'white', 'navy'],
   },
   {
     id: 'c-12',
@@ -130,9 +130,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Converse 2 in black with red heart',
     src: 'https://images.unsplash.com/photo-1515349541556-ef8cc276e382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'brown']
+    availableColors: ['black', 'pink', 'white', 'brown'],
   },
   {
     id: 'c-13',
@@ -141,9 +141,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Nike Nike Magic in black',
     src: 'https://images.unsplash.com/photo-1464893223020-1360cd8e64cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
     price: 280,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue']
+    availableColors: ['black', 'pink', 'white', 'blue'],
   },
   {
     id: 'c-14',
@@ -152,9 +152,9 @@ export const mockShoesDataChildren = [
     alt: 'Pair Nike Jordans in blue, black and white',
     src: 'https://images.unsplash.com/photo-1552912276-56ef47874741?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 280,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue']
+    availableColors: ['black', 'pink', 'white', 'blue'],
   },
   {
     id: 'c-15',
@@ -163,10 +163,10 @@ export const mockShoesDataChildren = [
     alt: 'Pair of Converse 2 in black with red heart',
     src: 'https://images.unsplash.com/photo-1462146449396-2d7d4ba877d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     price: 280,
-    buttonText: 'I want them',
+    rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue']
-  }
+    availableColors: ['black', 'pink', 'white', 'blue'],
+  },
 ];
 
 export function mockShoesChildren() {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SelectSize } from './select-size';
 
 export function BasicSelectSize() {
@@ -6,7 +6,7 @@ export function BasicSelectSize() {
     <>
       <SelectSize
         sizeSelected={(size) => {
-          console.log(size);
+          alert(size);
         }}
         availableSizes={[45, 46, 47]}
       />

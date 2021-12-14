@@ -1,5 +1,5 @@
 export enum ProductType {
-  product = 'product'
+  product = 'product',
 }
 
 export type ProductFromApi = {
@@ -9,7 +9,7 @@ export type ProductFromApi = {
   src: string;
   price: number;
   id: string;
-  rating?: number;
+  rating: number;
 };
 
 export class Product {
@@ -41,18 +41,10 @@ export class Product {
     /**
      * rating of the product
      */
-    readonly rating: number
+    public rating: number
   ) {}
 
   static fromApiObject(object: ProductFromApi) {
-    return new Product(
-      object.title,
-      object.text,
-      object.alt,
-      object.src,
-      object.price,
-      object.id,
-      object.rating
-    );
+    return new Product(object.title, object.text, object.alt, object.src, object.price, object.id, object.rating);
   }
 }

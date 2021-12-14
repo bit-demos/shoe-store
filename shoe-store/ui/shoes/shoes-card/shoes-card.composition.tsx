@@ -1,6 +1,6 @@
 import React from 'react';
-import { ShoesCard } from './shoes-card';
 import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
+import { ShoesCard } from './shoes-card';
 
 export const BasicShoesCard = () => (
   <ShoesCard

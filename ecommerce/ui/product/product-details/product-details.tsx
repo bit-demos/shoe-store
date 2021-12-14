@@ -3,11 +3,11 @@ import { Img } from '@learn-bit-react/base-ui.ui.img';
 import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { Text } from '@learn-bit-react/base-ui.ui.text';
 import { AvailableColors } from '@learn-bit-react/ecommerce.ui.product.available-colors';
-import { Rating } from '@learn-bit-react/shoe-store.ui.product.rating';
+import { Rating } from '@learn-bit-react/ecommerce.ui.product.rating';
 import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
-import { Counter } from '@learn-bit-react/shoe-store.ui.counter';
+import { Counter } from '@learn-bit-react/ecommerce.ui.product.counter';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
-import { SelectSize } from '@learn-bit-react/shoe-store.ui.select-size';
+import { SelectSize } from '@learn-bit-react/ecommerce.ui.product.select-size';
 import { Shoe, Shoes } from '@learn-bit-react/shoe-store.entity.shoes';
 
 import styles from './product-details.module.scss';
@@ -31,6 +31,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
 
   function handleClick(id) {
     setAddedToCart(true);
+    console.log(shoe);
     // context.addToCart(shoe); // comes from context
   }
 
@@ -53,16 +54,18 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         <Heading element="h2">{title}</Heading>
         <Rating stars={rating} className={styles.rating} />
         <Currency price={price} />
-        <Text>{shoe.text}</Text>
+        <Text>{text}</Text>
         <div>
           <Counter quantitySelected={quantityChanged} />
+          <label htmlFor="size">Choose a size: </label>
           <SelectSize
+            id="size"
             sizeSelected={sizeChanged}
             className={styles.select}
             availableSizes={availableSizes}
           />
         </div>
-        <Text>Available in additional colors: </Text>
+        <Text>Choose a color: </Text>
         <AvailableColors
           colorSelected={colorChanged}
           className={styles.availableColors}
@@ -76,9 +79,18 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         >
           Add to Cart
         </Button>
-        {/* Selected: shoe size: {shoe.size}, color: {shoe.color}, quantity: 
-        {shoe.quantity}*/}
-        <Text>Added to cart</Text>
+        {/* {addedToCart ? <Text>shoe size: {shoe.size}</Text> : null}
+
+        {addedToCart ? <Text>color: {shoe.color}</Text> : null}
+
+        {addedToCart ? (
+          <Text>
+            quantity:
+            {shoe.quantity}
+          </Text>
+        ) : null} */}
+
+        {addedToCart ? <Text>Added to cart {title} Shoes</Text> : null}
       </div>
     </div>
   );
