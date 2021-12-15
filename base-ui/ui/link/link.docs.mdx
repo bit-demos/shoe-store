@@ -35,10 +35,7 @@ const {
   generateNodeModulesPattern
 } = require('@teambit/dependencies.modules.packages-excluder');
 
-const packagesToExclude = [
-  '@learn-bit-react/base-ui.ui.link',
-  '@teambit/base-react.navigation.link'
-];
+const packagesToExclude = ['@learn-bit-react/base-ui.ui.link', '@teambit'];
 
 module.exports = {
   ...reactJestConfig,

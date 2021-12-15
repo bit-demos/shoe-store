@@ -7,7 +7,9 @@ const {
 
 const packagesToExclude = [
   '@learn-bit-react/base-ui.ui.link',
-  '@teambit/base-react.navigation.link'
+  '@teambit',
+  '@teambit/base-react.navigation.link',
+  '@teambit/ui-foundation.ui.navigation.react-router.routing-adapter'
 ];
 
 module.exports = {
