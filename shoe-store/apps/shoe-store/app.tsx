@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, useParams } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import { ReactRouterRoutingProvider } from '@teambit/ui-foundation.ui.navigation.react-router.routing-adapter';
 import { Home } from '@learn-bit-react/shoe-store.ui.pages.home';
 import { Women } from '@learn-bit-react/shoe-store.ui.pages.women';
 import { Men } from '@learn-bit-react/shoe-store.ui.pages.men';
@@ -16,7 +17,7 @@ import styles from './shoe-store.module.scss';
 
 export function ShoeStoreApp() {
   return (
-    <BrowserRouter>
+    <ReactRouterRoutingProvider useBrowserRouter>
       <Theme colors={styles.colors}>
         <Layout>
           <Header
@@ -60,6 +61,6 @@ export function ShoeStoreApp() {
           </Footer>
         </Layout>
       </Theme>
-    </BrowserRouter>
+    </ReactRouterRoutingProvider>
   );
 }

@@ -6,7 +6,6 @@ const {
 } = require('@teambit/dependencies.modules.packages-excluder');
 
 const packagesToExclude = [
-  '@teambit',
   '@learn-bit-react/base-ui.ui.link',
   '@teambit/base-react.navigation.link'
 ];

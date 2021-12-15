@@ -23,7 +23,7 @@ export class LearnBitReactMain {
 
       // react.overrideTsConfig(tsconfig),
       // react.overrideDevServerConfig(webpackConfig),
-      // react.overrideJestConfig(require.resolve('./jest/jest.config')),
+      react.overrideJestConfig(require.resolve('./jest/jest.config')),
 
       /**
        * override the ESLint default config here then check your files for lint errors

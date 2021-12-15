@@ -1,14 +1,102 @@
 ---
 description: 'A Link component for rendering extenal links'
-labels: ['link']
+labels: ['link', 'router']
 ---
 
 import { Link } from './link';
 
-A link component that renders a React Router link.
+Uses the Router Link component created by teambit. It gets its underlying implementation from context, so it can work in any component and any application.
 
 ### Renders a link
 
 ```js live
 <Link href="/home">Home</Link>
+```
+
+### Renders an external link
+
+```js live
+<Link href="https://www.bit.dev" external>
+  Bit
+</Link>
+```
+
+Check out the [teambit router link component documentation](https://bit.dev/teambit/base-react/navigation/link) for more information on the link comoponent.
+
+### Ignoring from Jest
+
+As the Link comopnent is using ESM we need to do some extra work in the environment to make sure Jest ignores it and therefore will work correctly. This will mean that your tests will be ignored for the components added to the `pakagesToExclude` array.
+
+- In your environment component you can add the following to the `jest.config.js` file:
+
+```js
+const reactJestConfig = require('@teambit/react/jest/jest.config');
+const {
+  generateNodeModulesPattern
+} = require('@teambit/dependencies.modules.packages-excluder');
+
+const packagesToExclude = [
+  '@learn-bit-react/base-ui.ui.link',
+  '@teambit/base-react.navigation.link'
+];
+
+module.exports = {
+  ...reactJestConfig,
+  transformIgnorePatterns: [
+    '^.+\\.module\\.(css|sass|scss)$',
+    generateNodeModulesPattern({ packages: packagesToExclude })
+  ]
+};
+```
+
+- Make sure you install the pacakges-excluder component
+
+```bash
+bit install @teambit/dependencies.modules.packages-excluder
+```
+
+- Include the Jest Config in your enviornment's `main.runtime.ts` file.
+
+```js
+react.overrideJestConfig(require.resolve('./jest/jest.config')),
+```
+
+To see a working example of this checkout our [enviroment component](https://bit.dev/learn-bit-react/base-ui/env/learn-bit-react/~code/learn-bit-react.main.runtime.ts) and our [Jest Config](https://bit.dev/learn-bit-react/base-ui/env/learn-bit-react/~code/jest/jest.config.js)
+
+### Using the Provider
+
+Use the Provider to wrap any of your compositions that use the link component so that routing works correctly within Bit allowing you to make use of route params etc
+
+```jsx
+import { ReactRouterRoutingProvider } from '@teambit/ui-foundation.ui.navigation.react-router.routing-adapter';
+
+export const ShoeStoreBasic = () => {
+  return (
+    <MemoryRouter>
+      <ReactRouterRoutingProvider>
+        <ShoeStoreApp></ShoeStoreApp>
+      </ReactRouterRoutingProvider>
+    </MemoryRouter>
+  );
+};
+```
+
+At app level you can wrap the entire app in the provider and pass in the `useBrowserRouter` prop.
+
+```js
+
+import { ReactRouterRoutingProvider } from '@teambit/ui-foundation.ui.navigation.react-router.routing-adapter';
+
+export function ShoeStoreApp() {
+  return (
+    <ReactRouterRoutingProvider useBrowserRouter>
+      <Switch>
+        <Route path="/product:id">
+          <Product />
+        </Route>
+      ...
+      </Switch>
+    </RoutingProvider>
+  ;)
+};
 ```
