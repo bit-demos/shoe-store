@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
 import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { Text } from '@learn-bit-react/base-ui.ui.text';
@@ -48,22 +49,35 @@ export function ProductDetails({ product }: ProductDetailsProps) {
   }
 
   return (
-    <div className={styles.productDetails}>
-      <Img className={styles.img} src={src} alt={alt} />
-      <div className={styles.details}>
-        <Heading element="h2">{title}</Heading>
-        <Rating stars={rating} className={styles.rating} />
-        <Currency price={price} />
-        <Text>{text}</Text>
+    <div
+      className={classNames(
+        styles.productDetails,
+        'flex flex-col pt-6 md:flex-row '
+      )}
+    >
+      <Img
+        className={classNames(styles.img, 'mx-auto md:mx-0')}
+        src={src}
+        alt={alt}
+      />
+      <div className={classNames(styles.details, 'xs:p-16 md:pl-16')}>
+        <Heading element="h2" className="text-5xl mb-8">
+          {title}
+        </Heading>
+        <Rating stars={rating} className="mb-4" />
+        <Currency price={price} className="mb-4 text-2xl" />
+        <Text className="mb-4">{text}</Text>
         <div>
-          <Counter quantitySelected={quantityChanged} />
-          <label htmlFor="size">Choose a size: </label>
-          <SelectSize
-            id="size"
-            sizeSelected={sizeChanged}
-            className={styles.select}
-            availableSizes={availableSizes}
-          />
+          <Counter quantitySelected={quantityChanged} className="my-4" />
+          <div className="my-4">
+            <label htmlFor="size">Choose a size: </label>
+            <SelectSize
+              id="size"
+              sizeSelected={sizeChanged}
+              className={styles.select}
+              availableSizes={availableSizes}
+            />
+          </div>
         </div>
         <Text>Choose a color: </Text>
         <AvailableColors

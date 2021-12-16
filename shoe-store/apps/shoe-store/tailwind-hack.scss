@@ -1,0 +1,39 @@
+.flex {
+  display: flex;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-row {
+    flex-direction: row;
+  }
+  .pl-16 {
+    padding-left: 4rem;
+  }
+}

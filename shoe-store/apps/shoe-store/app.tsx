@@ -12,8 +12,10 @@ import { Footer } from '@learn-bit-react/ecommerce.ui.footer';
 import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { Theme } from '@learn-bit-react/base-ui.themes.theme';
-
 import styles from './shoe-store.module.scss';
+
+// hack to use tailwindcss classes: remove when we can add tailwindcss to an app aspect
+import './tailwind-hack.scss';
 
 export function ShoeStoreApp() {
   return (

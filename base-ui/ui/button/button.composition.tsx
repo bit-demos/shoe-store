@@ -30,9 +30,10 @@ export const ButtonAsInternalLink = () => (
     Internal Link
   </Button>
 );
+export const CounterButton = () => <Button counter>+</Button>;
 
-// export const ButtonAsATag = () => (
-//   <Button primary as="a" href="/">
-//     External Link
-//   </Button>
-// );
+export const Tailwind = () => (
+  <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-20">
+    Tailwind Button
+  </Button>
+);

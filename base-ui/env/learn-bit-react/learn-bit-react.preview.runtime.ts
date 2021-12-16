@@ -3,6 +3,8 @@ import { ReactAspect, ReactPreview } from '@teambit/react';
 import { MemoryRouter } from 'react-router';
 import { LearnBitReactAspect } from './learn-bit-react.aspect';
 import { Theme } from '@learn-bit-react/base-ui.themes.theme';
+// import '@learn-bit-react/base-ui.configs.tailwind-config/styles.css'; // <-- this is for shareable tw styles from a component
+import './tailwind/styles.css'; // <-- this is for locally defined tailwind styles
 
 export class MyReactPreview {
   static runtime = PreviewRuntime;

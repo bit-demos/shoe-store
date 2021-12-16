@@ -22,6 +22,10 @@ export type ButtonOwnProps<E extends React.ElementType = React.ElementType> = {
    */
   white?: boolean;
   /**
+   * sets the button as a counter button
+   */
+  counter?: boolean;
+  /**
    * renders the Link component instead of the button
    */
   link?: boolean;
@@ -54,12 +58,18 @@ export function Button<E extends React.ElementType = typeof defaultElement>({
   secondary = false,
   white = false,
   link = false,
+  counter = false,
   as,
   href = '',
   className,
   ...rest
 }: ButtonProps<E>) {
-  const buttonClassName = createClassNames({ primary, secondary, white });
+  const buttonClassName = createClassNames({
+    primary,
+    secondary,
+    white,
+    counter
+  });
   const TagName = as || defaultElement;
 
   return (
