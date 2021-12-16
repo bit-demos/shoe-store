@@ -28,12 +28,25 @@
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.p-16 {
+  padding-left: 1.5rem;
+}
+.mx-auto {
+  padding-right: 1.5rem;
+}
+.product_product__3tH8m {
+  padding: 0 1.5rem;
+}
 
 @media screen and (min-width: 768px) {
-  .flex-row {
+  .flex-col {
     flex-direction: row;
   }
+  .product_product__3tH8m {
+    padding: 0;
+  }
+
   .pl-16 {
-    padding-left: 4rem;
+    padding: 4rem;
   }
 }
