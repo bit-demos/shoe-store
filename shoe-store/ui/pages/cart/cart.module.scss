@@ -1,0 +1,18 @@
+.cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.product {
+  margin-right: 20px;
+}
+.button {
+  margin-left: 20px;
+}
