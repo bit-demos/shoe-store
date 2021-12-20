@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
-import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { RemoveFromCart } from '@learn-bit-react/ecommerce.ui.cart.remove-from-cart';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
 import styles from './cart.module.scss';

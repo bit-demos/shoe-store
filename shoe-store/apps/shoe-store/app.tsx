@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ReactRouterRoutingProvider } from '@teambit/ui-foundation.ui.navigation.react-router.routing-adapter';
 import { Home } from '@learn-bit-react/shoe-store.ui.pages.home';
