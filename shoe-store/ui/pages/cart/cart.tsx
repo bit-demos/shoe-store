@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
+import { RemoveFromCart } from '@learn-bit-react/ecommerce.ui.cart.remove-from-cart';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
 import styles from './cart.module.scss';
 
@@ -32,14 +33,7 @@ export function Cart({ children }: CartProps) {
                 </ul>
               </div>
               <div className={styles.button}>
-                <Button
-                  secondary
-                  onClick={() =>
-                    context.removeProductFromCart(cartItem.product.id)
-                  }
-                >
-                  Remove from Cart
-                </Button>
+                <RemoveFromCart cartItem={cartItem.product.id} />
               </div>
             </div>
           </li>

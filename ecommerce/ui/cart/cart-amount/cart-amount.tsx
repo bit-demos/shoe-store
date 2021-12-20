@@ -9,5 +9,5 @@ export type CartAmountProps = {
 };
 
 export function CartAmount({ cartItemNumber }: CartAmountProps) {
-  return <header className="main-navigation">Cart ({cartItemNumber})</header>;
+  return <div className={styles.cartAmount}>Cart ({cartItemNumber})</div>;
 }

@@ -6,7 +6,7 @@ export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 export type CartContextProps = {};
 
 const addProductToCart = (
-  product,
+  product, // should be just product
   selectedSize,
   selectedColor,
   selectedQuantity,
@@ -25,7 +25,6 @@ const addProductToCart = (
 };
 
 const removeProductFromCart = (productId, state) => {
-  console.log('Removing product with id: ' + productId);
   const updatedCart = [...state.cart];
   const updatedItemIndex = updatedCart.findIndex(
     (item) => item.product.id === productId

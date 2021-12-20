@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ReactRouterRoutingProvider } from '@teambit/ui-foundation.ui.navigation.react-router.routing-adapter';
 import { Home } from '@learn-bit-react/shoe-store.ui.pages.home';
@@ -14,20 +14,17 @@ import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { Theme } from '@learn-bit-react/base-ui.themes.theme';
 import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
-import { GlobalState } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
+import { CartState } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 import { CartAmount } from '@learn-bit-react/ecommerce.ui.cart.cart-amount';
 import styles from './shoe-store.module.scss';
 
 // hack to use tailwindcss classes: remove when we can add tailwindcss to an app aspect
 import './tailwind-hack.scss';
 
-const UpdatedCart = (props) => (
-  <header className="updatedCart">Cart ({props.cartItemNumber})</header>
-);
-
 export function ShoeStoreApp() {
+  const context = useContext(CartContext);
   return (
-    <GlobalState>
+    <CartState>
       <ReactRouterRoutingProvider useBrowserRouter>
         <Theme colors={styles.colors}>
           <Layout>
@@ -87,6 +84,6 @@ export function ShoeStoreApp() {
           </Layout>
         </Theme>
       </ReactRouterRoutingProvider>
-    </GlobalState>
+    </CartState>
   );
 }

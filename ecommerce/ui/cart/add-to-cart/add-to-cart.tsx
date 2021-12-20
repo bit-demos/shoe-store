@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 
 import styles from './add-to-cart.module.scss';
 
 export type AddToCartProps = {
+  // generic type
   /**
    * product
    */
-  product: Object;
+  product: Object; // change type
   /**
    * selected size
    */
-  selectedSize: number;
+  selectedSize: number; // remove
   /**
    * selected color
    */
@@ -29,23 +30,22 @@ export function AddToCart({
   selectedColor,
   selectedQuantity
 }: AddToCartProps) {
+  const context = useContext(CartContext);
+
   return (
-    <CartContext.Consumer>
-      {(context) => (
-        <Button
-          primary
-          onClick={() =>
-            context.addProductToCart(
-              product,
-              selectedSize,
-              selectedColor,
-              selectedQuantity
-            )
-          }
-        >
-          Add to Cart
-        </Button>
-      )}
-    </CartContext.Consumer>
+    <Button
+      className={styles.addToCart}
+      primary
+      onClick={() =>
+        context.addProductToCart(
+          product,
+          selectedSize,
+          selectedColor,
+          selectedQuantity
+        )
+      }
+    >
+      Add to Cart
+    </Button>
   );
 }

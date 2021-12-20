@@ -72,6 +72,13 @@
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/cart/cart-context"
     },
+    "ui/cart/remove-from-cart": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "learn-bit-react.ecommerce",
+        "mainFile": "index.ts",
+        "rootDir": "ecommerce/ui/cart/remove-from-cart"
+    },
     "ui/footer": {
         "scope": "learn-bit-react.ecommerce",
         "version": "1.0.14",
