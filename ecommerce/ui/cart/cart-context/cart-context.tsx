@@ -15,6 +15,10 @@ export type CartContextType<TItemType> = {
   /**
    * products in cart
    */
+  products: [];
+  /**
+   * products in cart
+   */
   cart: CartListItem<TItemType>[];
   /**
    * adds products to cart
@@ -27,6 +31,7 @@ export type CartContextType<TItemType> = {
 };
 
 const defaultContext: CartContextType<any> = {
+  products: [],
   cart: [],
   addProductToCart: () => {},
   removeProductFromCart: () => {}

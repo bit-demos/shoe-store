@@ -10,26 +10,26 @@ export type AddToCartProps = {
    * product
    */
   product: Object; // change type
-  /**
-   * selected size
-   */
-  selectedSize: number; // remove
-  /**
-   * selected color
-   */
-  selectedColor: string;
-  /**
-   * quantity
-   */
-  selectedQuantity: number;
+  // /**
+  //  * selected size
+  //  */
+  // selectedSize: number; // remove
+  // /**
+  //  * selected color
+  //  */
+  // selectedColor: string;
+  // /**
+  //  * quantity
+  //  */
+  // selectedQuantity: number;
 };
 
 export function AddToCart({
-  product,
-  selectedSize,
-  selectedColor,
-  selectedQuantity
-}: AddToCartProps) {
+  product
+}: // selectedSize,
+// selectedColor,
+// selectedQuantity
+AddToCartProps) {
   const context = useContext(CartContext);
 
   return (

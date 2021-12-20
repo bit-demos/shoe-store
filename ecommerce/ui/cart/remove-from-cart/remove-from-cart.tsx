@@ -14,7 +14,11 @@ export type RemoveFromCartProps = {
 export function RemoveFromCart({ cartItem }: RemoveFromCartProps) {
   const context = useContext(CartContext);
   return (
-    <Button secondary onClick={() => context.removeProductFromCart(cartItem)}>
+    <Button
+      className={styles.button}
+      secondary
+      onClick={() => context.removeProductFromCart(cartItem)}
+    >
       Remove from Cart
     </Button>
   );
