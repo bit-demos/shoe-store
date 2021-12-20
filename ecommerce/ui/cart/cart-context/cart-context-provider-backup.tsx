@@ -2,42 +2,46 @@
 
 import React, { useReducer } from 'react';
 import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes'; // remove
+import { CartContextType, CartListItem } from './cart-context';
+
 import {
-  CreateCartContext,
+  CartContext,
   cartReducer,
   ADD_PRODUCT,
   REMOVE_PRODUCT
 } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 
-export type CartContextProps = {};
+export type CartContextProps<TItemType> = {
+  productId: string;
+  context: React.Context<CartContextType<TItemType>>;
+};
 
-export const CartState = (props) => {
-  //add type <TItemType>
+export function CartContextProvider<TItemType>(product: TItemType) {
   const products = allShoes;
   const [cartState, dispatch] = useReducer(cartReducer, { cart: [] });
 
   const addProductToCart = (
-    product, // give product a type <TItemType>
-    selectedSize, // remove all these
-    selectedColor,
-    selectedQuantity
+    product // give product a type <TItemType>
+    // selectedSize, // remove all these
+    // selectedColor,
+    // selectedQuantity
   ) => {
     setTimeout(() => {
       dispatch({
         type: ADD_PRODUCT,
-        product, // just product
-        selectedSize,
-        selectedColor,
-        selectedQuantity
+        product // just product
+        // selectedSize,
+        // selectedColor,
+        // selectedQuantity
         //
       });
     }, 100);
   };
 
-  const removeProductFromCart = (productId) => {
+  const removeProductFromCart = (id) => {
     // make it just id must have id
     setTimeout(() => {
-      dispatch({ type: REMOVE_PRODUCT, productId: productId });
+      dispatch({ type: REMOVE_PRODUCT, productId: id });
     }, 100);
   };
 
@@ -50,7 +54,7 @@ export const CartState = (props) => {
         removeProductFromCart: removeProductFromCart
       }}
     >
-      {props.children}
+      {children}
     </CartContext.Provider>
   );
-};
+}

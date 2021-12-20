@@ -38,10 +38,10 @@ export function AddToCart({
       primary
       onClick={() =>
         context.addProductToCart(
-          product,
-          selectedSize,
-          selectedColor,
-          selectedQuantity
+          product
+          // selectedSize,
+          // selectedColor,
+          // selectedQuantity
         )
       }
     >

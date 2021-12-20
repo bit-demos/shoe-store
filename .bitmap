@@ -79,6 +79,13 @@
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/cart/remove-from-cart"
     },
+    "ui/cart/shoe-cart-context": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "learn-bit-react.shoe-store",
+        "mainFile": "index.ts",
+        "rootDir": "shoe-store/ui/cart/shoe-cart-context"
+    },
     "ui/footer": {
         "scope": "learn-bit-react.ecommerce",
         "version": "1.0.14",
