@@ -13,7 +13,6 @@ import { Footer } from '@learn-bit-react/ecommerce.ui.footer';
 import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { Theme } from '@learn-bit-react/base-ui.themes.theme';
-import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 import { CartState } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 import { CartAmount } from '@learn-bit-react/ecommerce.ui.cart.cart-amount';
 import styles from './shoe-store.module.scss';
@@ -22,7 +21,6 @@ import styles from './shoe-store.module.scss';
 import './tailwind-hack.scss';
 
 export function ShoeStoreApp() {
-  const context = useContext(CartContext);
   return (
     <CartState>
       <ReactRouterRoutingProvider useBrowserRouter>
@@ -37,15 +35,7 @@ export function ShoeStoreApp() {
               <Link href="/women">Women</Link>
               <Link href="/children">Children</Link>
               <Link href="/cart">
-                <CartContext.Consumer>
-                  {(context) => (
-                    <CartAmount
-                      cartItemNumber={context.cart.reduce((count, curItem) => {
-                        return count + curItem.quantity;
-                      }, 0)}
-                    ></CartAmount>
-                  )}
-                </CartContext.Consumer>
+                <CartAmount />
               </Link>
             </Header>
 
