@@ -1,22 +1,14 @@
 ---
-description: 'A ShoesDetails component'
-labels: ['label1', 'label2', 'label3']
+description: 'Component that shoes the details of a single product'
+labels: ['details', 'shoe']
 ---
 
 import { ShoesDetails } from './shoes-details';
 
-## React Component for rendering text
-
-A basic div that renders some text
+Shoes the shoe details that can then be added to the product page or other pages
 
 ### Component usage
+
 ```js
-<ShoesDetails text="hello from ShoesDetails" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<ShoesDetails text="hello from ShoesDetails" />
+<ShoesDetails catalogShoe={allShoes[0]} />
 ```

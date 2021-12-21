@@ -1,22 +1,31 @@
 ---
-description: 'A AddShoeToCart component'
-labels: ['label1', 'label2', 'label3']
+description: 'Component that adds a shoe to the cart'
+labels: ['button', 'cart']
 ---
 
 import { AddShoeToCart } from './add-shoe-to-cart';
 
-## React Component for rendering text
+Uses the design button from base-ui scope along with functionality to add a shoe to the cart.
 
-A basic div that renders some text
+### Component Properties
+
+Includes an item with the following properties:
+
+- a shoe which contains all properties found in the Shoe entity component
+- size selected
+- color selected
+
+Inculdes the quantity of shoes to be added to cart. This can be replaced with value from a counter component if being used.
 
 ### Component usage
+
 ```js
-<AddShoeToCart text="hello from AddShoeToCart" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<AddShoeToCart text="hello from AddShoeToCart" />
+<AddShoeToCart
+  item={{
+    ...catalogShoe.shoe,
+    size: 36,
+    color: 'red'
+  }}
+  quantity={1}
+/>
 ```

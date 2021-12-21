@@ -1,22 +1,16 @@
 ---
-description: 'A AmountOfShoesInCart component'
+description: 'Shows the total amount of shoes in the cart'
 labels: ['label1', 'label2', 'label3']
 ---
 
 import { AmountOfShoesInCart } from './amount-of-shoes-in-cart';
 
-## React Component for rendering text
-
-A basic div that renders some text
+Calculates the amount of shoes in the cart.
 
 ### Component usage
+
 ```js
-<AmountOfShoesInCart text="hello from AmountOfShoesInCart" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<AmountOfShoesInCart text="hello from AmountOfShoesInCart" />
+<ShoeCartContextProvider>
+  <AmountOfShoesInCart />
+</ShoeCartContextProvider>
 ```

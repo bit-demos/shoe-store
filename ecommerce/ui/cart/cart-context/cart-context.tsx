@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 export interface CartItemBase {
-  id?: string;
+  id: string;
 }
 
 export type CartListItem<TItemType extends CartItemBase> = {
@@ -16,7 +16,7 @@ export type CartListItem<TItemType extends CartItemBase> = {
 
 export type CartContextType<TItemType extends CartItemBase> = {
   /**
-   * products in cart
+   * items in cart
    */
   cart: CartListItem<TItemType>[];
   /**

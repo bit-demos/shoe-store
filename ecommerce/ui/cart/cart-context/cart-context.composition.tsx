@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { CreateCartContext } from './cart-context';
 import {
   Product,
   mockProductFromApi
 } from '@learn-bit-react/ecommerce.entity.product';
+import { CreateCartContext } from './cart-context';
 import { CartContextProvider } from './cart-context-provider';
 
 const contextObject = CreateCartContext<Product>();

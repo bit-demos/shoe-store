@@ -4,15 +4,16 @@ import { RemoveShoeFromCart } from '@learn-bit-react/shoe-store.ui.cart.remove-s
 import { Img } from '@learn-bit-react/base-ui.ui.img';
 import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
 import { Heading } from '@learn-bit-react/base-ui.ui.heading';
+import { EmptyCart } from '@learn-bit-react/ecommerce.ui.cart.empty-cart';
 import styles from './cart.module.scss';
 
 export type CartProps = {} & React.HTMLAttributes<HTMLElement>;
 
-export function Cart({ children }: CartProps) {
+export function Cart({}: CartProps) {
   const context = useContext(ShoeCartContext);
   return (
     <main>
-      {context.cart.length <= 0 && <p>No Item in the Cart!</p>}
+      {context.cart.length <= 0 && <EmptyCart />}
       <ul>
         {context.cart.map((cartItem, index) => (
           <li key={cartItem.item.id + index}>

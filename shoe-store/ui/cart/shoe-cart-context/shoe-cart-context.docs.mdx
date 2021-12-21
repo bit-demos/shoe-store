@@ -1,22 +1,17 @@
 ---
-description: 'A ShoeCartContext component'
+description: 'Context for the shoe cart'
 labels: ['label1', 'label2', 'label3']
 ---
 
 import { ShoeCartContext } from './shoe-cart-context';
 
-## React Component for rendering text
+Context component that uses the generic cart context from the eccommerce scope which includes the item as well as the add Product and remove product functionality.
 
-A basic div that renders some text
+This component can be used in any other component that needs to access the cart and should be used at the top of the component tree.
 
-### Component usage
 ```js
-<ShoeCartContext text="hello from ShoeCartContext" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<ShoeCartContext text="hello from ShoeCartContext" />
+<ShoeCartContextProvider>
+  <Component1>
+  <Component2>
+</ShoeCartContextProvider>
 ```

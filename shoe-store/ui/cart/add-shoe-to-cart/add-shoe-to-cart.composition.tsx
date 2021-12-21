@@ -1,20 +1,60 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AddShoeToCart } from './add-shoe-to-cart';
+import {
+  ShoeCartContext,
+  ShoeCartContextProvider
+} from '@learn-bit-react/shoe-store.ui.cart.shoe-cart-context';
 
-const shoe = {
-  id: 'm-15',
-  title: 'Camper',
-  text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
-  alt: 'Pair of Converse 2 in black with red heart',
-  src: 'https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-  price: 280,
-  rating: 5,
-  size: 37,
-  color: 'red'
+import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
+
+const MockUpdateContextComponent = () => {
+  const context = useContext(ShoeCartContext);
+
+  const catalogShoe = allShoes[Math.floor(Math.random() * 9)];
+
+  return (
+    <div>
+      <AddShoeToCart
+        item={{
+          ...catalogShoe.shoe,
+          size: 36,
+          color: 'red'
+        }}
+        quantity={1}
+      />
+    </div>
+  );
 };
 
-export const BasicAddShoeToCart = () => (
-  <div>
-    <AddShoeToCart item={{ ...shoe }} quantity={1} />
-  </div>
-);
+const MockCartDisplay = () => {
+  const context = useContext(ShoeCartContext);
+
+  return (
+    <div>
+      <h2>Cart:</h2>
+      {context.cart.map((cartItem, index) => {
+        return (
+          <div key={index}>
+            <h2>{cartItem.item.title}</h2>
+            <p>$ {cartItem.item.price}</p>
+            <button
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded p-20"
+              onClick={() => context.removeProductFromCart(cartItem.item)}
+            >
+              Remove from Cart
+            </button>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export const BasicAddShoeToCart = () => {
+  return (
+    <ShoeCartContextProvider>
+      <MockCartDisplay />
+      <MockUpdateContextComponent />
+    </ShoeCartContextProvider>
+  );
+};
