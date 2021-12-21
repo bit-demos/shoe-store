@@ -1,6 +1,6 @@
-import { Product } from './product';
+import { ProductFromApi } from './product';
 
-export const mockProductList: Product[] = [
+export const mockProductFromApi: ProductFromApi[] = [
   {
     id: 's-1',
     title: 'Nike Air',

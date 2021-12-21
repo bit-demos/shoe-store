@@ -1,4 +1,4 @@
-import React, { useState, useContext, useReducer, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
 import { Heading } from '@learn-bit-react/base-ui.ui.heading';

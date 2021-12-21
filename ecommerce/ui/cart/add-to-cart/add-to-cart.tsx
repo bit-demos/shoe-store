@@ -4,12 +4,12 @@ import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 
 import styles from './add-to-cart.module.scss';
 
-export type AddToCartProps = {
+export type AddToCartProps<TItemType> = {
   // generic type
   /**
    * product
    */
-  product: Object; // change type
+  product: TItemType; // change type
   // /**
   //  * selected size
   //  */
@@ -24,13 +24,13 @@ export type AddToCartProps = {
   // selectedQuantity: number;
 };
 
-export function AddToCart({
+export function AddToCart<ATCItemType>({
   product
 }: // selectedSize,
 // selectedColor,
 // selectedQuantity
-AddToCartProps) {
-  const context = useContext(CartContext);
+AddToCartProps<ATCItemType>) {
+  const context = useContext(CartContext<ATCItemType>());
 
   return (
     <Button

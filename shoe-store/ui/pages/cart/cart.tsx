@@ -7,7 +7,7 @@ import styles from './cart.module.scss';
 export type CartProps = {} & React.HTMLAttributes<HTMLElement>;
 
 export function Cart({ children }: CartProps) {
-  const context = useContext(CartContext);
+  const context = useContext(CartContext());
   return (
     <main>
       {context.cart.length <= 0 && <p>No Item in the Cart!</p>}

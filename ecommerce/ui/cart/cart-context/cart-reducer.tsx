@@ -1,5 +1,5 @@
-import React from 'react';
-import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
+//import React from 'react';
+//import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
 export const ADD_PRODUCT = 'ADD_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
@@ -7,18 +7,18 @@ export type CartContextProps = {};
 
 const addProductToCart = (
   product, // should be just product
-  selectedSize,
-  selectedColor,
-  selectedQuantity,
+  // selectedSize,
+  // selectedColor,
+  // selectedQuantity,
   state
 ) => {
   const updatedCart = [...state.cart];
 
   updatedCart.push({
-    ...product,
-    quantity: selectedQuantity,
-    selectedSize,
-    selectedColor
+    product,
+    quantity: 1
+    // selectedSize,
+    // selectedColor
   });
 
   return { ...state, cart: updatedCart };
@@ -47,9 +47,9 @@ export const cartReducer = (state, action) => {
     case ADD_PRODUCT:
       return addProductToCart(
         action.product,
-        action.selectedSize,
-        action.selectedColor,
-        action.selectedQuantity,
+        // action.selectedSize,
+        // action.selectedColor,
+        // action.selectedQuantity,
         state
       );
     case REMOVE_PRODUCT:

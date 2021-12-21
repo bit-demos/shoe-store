@@ -1,22 +1,17 @@
 ---
-description: 'A AddToCart component'
-labels: ['label1', 'label2', 'label3']
+description: 'A button component that adds items to the cart'
+labels: ['button', 'cart']
 ---
 
 import { AddToCart } from './add-to-cart';
 
-## React Component for rendering text
-
-A basic div that renders some text
+Uses the design button from base-ui and onClick uses cart context to add an item to the cart.
 
 ### Component usage
+
 ```js
-<AddToCart text="hello from AddToCart" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<AddToCart text="hello from AddToCart" />
+<RemoveFromCart product={{"id": "1", "name": "Product 1", "price": "10.00"}} />
+    selectedSize={40}
+    selectedColor="red"
+    selectedQuantity={3}  />
 ```
