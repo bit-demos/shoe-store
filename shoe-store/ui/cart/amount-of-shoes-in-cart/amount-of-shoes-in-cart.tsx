@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { CreateCartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
-import styles from './cart-amount.module.scss';
+import { ShoeCartContext } from '@learn-bit-react/shoe-store.ui.cart.shoe-cart-context';
+import styles from './amount-of-shoes-in-cart.module.scss';
 
-export function CartAmount() {
-  const context = useContext(CreateCartContext());
+export function AmountOfShoesInCart() {
+  const context = useContext(ShoeCartContext);
 
   return (
     <div className={styles.cartAmount}>

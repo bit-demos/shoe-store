@@ -80,7 +80,8 @@ export const mockProductFromApi: ProductFromApi[] = [
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air Force 1 in red and white',
     src: 'https://images.unsplash.com/photo-1571601035754-5c927f2d7edc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2432&q=80',
-    price: 280
+    price: 280,
+    rating: 4
   },
   {
     id: 's-10',

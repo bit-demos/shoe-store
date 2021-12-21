@@ -1,18 +1,16 @@
 import React from 'react';
-import styles from './shoe-cart-context.module.scss';
+import {
+  CartContextProvider,
+  CreateCartContext
+} from '@learn-bit-react/ecommerce.ui.cart.cart-context';
+import { Shoe } from '@learn-bit-react/shoe-store.entity.shoes';
 
+export const ShoeCartContext = CreateCartContext<Shoe>();
 
-export type ShoeCartContextProps = {
-  /**
-   * a text to be rendered in the component.
-   */
-  text: string
-};
-
-export function ShoeCartContext({ text }: ShoeCartContextProps) {
+export function ShoeCartContextProvider({ children }) {
   return (
-    <div className={styles.shoe-cart-context}>
-      {text}
-    </div>
+    <CartContextProvider<Shoe> context={ShoeCartContext}>
+      {children}
+    </CartContextProvider>
   );
 }

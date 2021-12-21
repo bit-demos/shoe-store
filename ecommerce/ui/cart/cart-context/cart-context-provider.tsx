@@ -1,6 +1,6 @@
 import React, { useReducer, useState, HTMLAttributes } from 'react';
 import {
-  CartContext,
+  CreateCartContext,
   CartContextType,
   CartListItem,
   CartItemBase
@@ -50,11 +50,11 @@ export function CartContextProvider<TItemType extends CartItemBase>({
       setProducts([...products, product]);
     }
   };
-  const removeProductFromCart = (product: CartListItem<TItemType>) => {
+  const removeProductFromCart = (product: TItemType) => {
     // const updatedItemIndex = products.findIndex(
     //   (p) => p.item.id === product.item.id
     // );
-    const newProducts = products.filter((p) => p.item.id !== product.item.id);
+    const newProducts = products.filter((p) => p.item.id !== product.id);
 
     console.log(newProducts);
     setProducts(newProducts);

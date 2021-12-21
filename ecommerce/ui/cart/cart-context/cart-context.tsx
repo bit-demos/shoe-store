@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 export interface CartItemBase {
   id?: string;
 }
@@ -15,10 +15,6 @@ export type CartListItem<TItemType extends CartItemBase> = {
 };
 
 export type CartContextType<TItemType extends CartItemBase> = {
-  // /**
-  //  * products in cart
-  //  */
-  // products: [];
   /**
    * products in cart
    */
@@ -30,23 +26,15 @@ export type CartContextType<TItemType extends CartItemBase> = {
   /**
    * removes products from cart
    */
-  removeProductFromCart: (item: CartListItem<TItemType>) => void;
+  removeProductFromCart: (item: TItemType) => void;
 };
 
 const defaultContext: CartContextType<any> = {
-  //products: [],
   cart: [],
   addProductToCart: () => {},
   removeProductFromCart: () => {}
 };
 
-export function CartContext<TItemType extends CartItemBase>() {
+export function CreateCartContext<TItemType extends CartItemBase>() {
   return createContext<CartContextType<TItemType>>(defaultContext);
 }
-
-// export const CartContext = React.createContext({
-//   // products: [],
-//   cart: [],
-//   addProductToCart: (product) => {},
-//   removeProductFromCart: (id) => {}
-// });

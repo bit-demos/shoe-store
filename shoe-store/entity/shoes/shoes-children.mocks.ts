@@ -1,4 +1,4 @@
-import { Shoes } from './shoes';
+import { CatalogShoe } from './shoes';
 
 export const mockShoesDataChildren = [
   {
@@ -10,7 +10,7 @@ export const mockShoesDataChildren = [
     price: 80,
     rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['navy'],
+    availableColors: ['navy']
   },
   {
     id: 'c-2',
@@ -21,7 +21,7 @@ export const mockShoesDataChildren = [
     price: 90,
     rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'beige', 'white', 'brown'],
+    availableColors: ['black', 'beige', 'white', 'brown']
   },
   {
     id: 'c-3',
@@ -32,7 +32,7 @@ export const mockShoesDataChildren = [
     price: 60,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'beige'],
+    availableColors: ['black', 'pink', 'beige']
   },
   {
     id: 'c-4',
@@ -43,7 +43,7 @@ export const mockShoesDataChildren = [
     price: 50,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'c-5',
@@ -54,7 +54,7 @@ export const mockShoesDataChildren = [
     price: 90,
     rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'c-6',
@@ -65,7 +65,7 @@ export const mockShoesDataChildren = [
     price: 80,
     rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
 
   {
@@ -77,7 +77,7 @@ export const mockShoesDataChildren = [
     price: 70,
     rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'c-8',
@@ -88,7 +88,7 @@ export const mockShoesDataChildren = [
     price: 110,
     rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'brown', 'white'],
+    availableColors: ['black', 'brown', 'white']
   },
   {
     id: 'c-9',
@@ -99,7 +99,7 @@ export const mockShoesDataChildren = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white'],
+    availableColors: ['black', 'pink', 'white']
   },
   {
     id: 'c-10',
@@ -110,7 +110,7 @@ export const mockShoesDataChildren = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white'],
+    availableColors: ['black', 'pink', 'white']
   },
   {
     id: 'c-11',
@@ -121,7 +121,7 @@ export const mockShoesDataChildren = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'navy'],
+    availableColors: ['black', 'pink', 'white', 'navy']
   },
   {
     id: 'c-12',
@@ -132,7 +132,7 @@ export const mockShoesDataChildren = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'brown'],
+    availableColors: ['black', 'pink', 'white', 'brown']
   },
   {
     id: 'c-13',
@@ -143,7 +143,7 @@ export const mockShoesDataChildren = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'c-14',
@@ -154,7 +154,7 @@ export const mockShoesDataChildren = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'c-15',
@@ -165,12 +165,12 @@ export const mockShoesDataChildren = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
-  },
+    availableColors: ['black', 'pink', 'white', 'blue']
+  }
 ];
 
 export function mockShoesChildren() {
   return mockShoesDataChildren.map((plainShoes) => {
-    return Shoes.from(plainShoes);
+    return CatalogShoe.from(plainShoes);
   });
 }

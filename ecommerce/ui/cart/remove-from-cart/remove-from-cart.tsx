@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
-import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
+import { CreateCartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 
 import styles from './remove-from-cart.module.scss';
 
@@ -14,7 +14,7 @@ export type RemoveFromCartProps<TItemType> = {
 export function RemoveFromCart<RFCItemType>({
   cartItem
 }: RemoveFromCartProps<RFCItemType>) {
-  const context = useContext(CartContext<RFCItemType>());
+  const context = useContext(CreateCartContext<RFCItemType>());
   return (
     <Button
       className={styles.removeFromCart}

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { CartContext } from './cart-context';
+import { CreateCartContext } from './cart-context';
 import {
   Product,
   mockProductFromApi
 } from '@learn-bit-react/ecommerce.entity.product';
 import { CartContextProvider } from './cart-context-provider';
 
-const contextObject = CartContext<Product>();
+const contextObject = CreateCartContext<Product>();
 
 const MockUpdateContextComponent = () => {
   const context = useContext(contextObject);
@@ -20,7 +20,7 @@ const MockUpdateContextComponent = () => {
   return (
     <div>
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-20"
+        className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-20"
         onClick={() => addProductToCart()}
       >
         Add to Cart
@@ -41,8 +41,8 @@ const MockCartDisplay = () => {
             <h2>{cartItem.item.title}</h2>
             <p> {cartItem.item.price}</p>
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-20"
-              onClick={() => context.removeProductFromCart(cartItem)}
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded p-20"
+              onClick={() => context.removeProductFromCart(cartItem.item)}
             >
               Remove from Cart
             </button>

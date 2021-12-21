@@ -1,12 +1,6 @@
+import { Product } from '@learn-bit-react/ecommerce.entity.product';
+
 export type Shoe = {
   size: number;
   color: string;
-  title: string;
-  price: number;
-  quantity: number;
-  src: string;
-  alt: string;
-  id: string;
-  rating: number;
-  text: string;
-};
+} & Product;

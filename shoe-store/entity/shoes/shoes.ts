@@ -8,9 +8,9 @@ export type PlainShoes = {
   availableColors: string[];
 } & ProductFromApi;
 
-export class Shoes {
+export class CatalogShoe {
   constructor(
-    readonly product: Product,
+    readonly shoe: Product,
     /**
      * size of the shoe
      */
@@ -33,7 +33,7 @@ export class Shoes {
    */
   toObject() {
     return {
-      ...this.product,
+      ...this.shoe,
       availableSizes: this.availableSizes,
       availableColors: this.availableColors
     };
@@ -50,7 +50,7 @@ export class Shoes {
    * factory method for instantiating shoe objects.
    */
   static from(plainShoes: PlainShoes) {
-    const shoes = new Shoes(
+    const shoes = new CatalogShoe(
       Product.fromApiObject(plainShoes),
       plainShoes.availableSizes,
       plainShoes.availableColors

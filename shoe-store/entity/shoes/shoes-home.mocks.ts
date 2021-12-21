@@ -1,4 +1,4 @@
-import { Shoes } from './shoes';
+import { CatalogShoe } from './shoes';
 
 export const mockShoesDataHome = [
   {
@@ -10,7 +10,7 @@ export const mockShoesDataHome = [
     price: 110,
     rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['navy'],
+    availableColors: ['navy']
   },
   {
     id: 'h-2',
@@ -21,7 +21,7 @@ export const mockShoesDataHome = [
     price: 140,
     rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'beige', 'white', 'brown'],
+    availableColors: ['black', 'beige', 'white', 'brown']
   },
   {
     id: 'h-3',
@@ -32,7 +32,7 @@ export const mockShoesDataHome = [
     price: 180,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'beige'],
+    availableColors: ['black', 'pink', 'beige']
   },
   {
     id: 'h-4',
@@ -43,7 +43,7 @@ export const mockShoesDataHome = [
     price: 90,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'h-5',
@@ -54,7 +54,7 @@ export const mockShoesDataHome = [
     price: 150,
     rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'h-6',
@@ -65,7 +65,7 @@ export const mockShoesDataHome = [
     price: 120,
     rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
 
   {
@@ -77,7 +77,7 @@ export const mockShoesDataHome = [
     price: 90,
     rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'h-8',
@@ -88,12 +88,12 @@ export const mockShoesDataHome = [
     price: 110,
     rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'brown', 'white'],
-  },
+    availableColors: ['black', 'brown', 'white']
+  }
 ];
 
 export function mockShoesHome() {
   return mockShoesDataHome.map((plainShoes) => {
-    return Shoes.from(plainShoes);
+    return CatalogShoe.from(plainShoes);
   });
 }
