@@ -1,21 +1,40 @@
-import React from 'react';
-import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
+import { createContext } from 'react';
+export interface CartItemBase {
+  id: string;
+}
 
-export type CartContextProps = {
+export type CartListItem<TItemType extends CartItemBase> = {
   /**
-   * a text to be rendered in the component.
+   * item in cart
    */
-  text: string;
+  item: TItemType;
+  /**
+   * quantity of item in cart
+   */
+  quantity: number;
 };
 
-export const CartContext = React.createContext({
-  products: allShoes,
+export type CartContextType<TItemType extends CartItemBase> = {
+  /**
+   * items in cart
+   */
+  cart: CartListItem<TItemType>[];
+  /**
+   * adds products to cart
+   */
+  addProductToCart: (item: CartListItem<TItemType>) => void;
+  /**
+   * removes products from cart
+   */
+  removeProductFromCart: (item: TItemType) => void;
+};
+
+const defaultContext: CartContextType<any> = {
   cart: [],
-  addProductToCart: (
-    product,
-    selectedSize,
-    selectedColor,
-    selectedQuantity
-  ) => {},
-  removeProductFromCart: (productId) => {}
-});
+  addProductToCart: () => {},
+  removeProductFromCart: () => {}
+};
+
+export function CreateCartContext<TItemType extends CartItemBase>() {
+  return createContext<CartContextType<TItemType>>(defaultContext);
+}

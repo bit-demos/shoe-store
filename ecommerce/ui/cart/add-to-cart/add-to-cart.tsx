@@ -1,49 +1,30 @@
 import React, { useContext } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
-import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
-
+import { CreateCartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 import styles from './add-to-cart.module.scss';
 
-export type AddToCartProps = {
-  // generic type
+export type AddToCartProps<ItemType> = {
   /**
    * product
    */
-  product: Object; // change type
-  /**
-   * selected size
-   */
-  selectedSize: number; // remove
-  /**
-   * selected color
-   */
-  selectedColor: string;
+  item: ItemType;
   /**
    * quantity
    */
-  selectedQuantity: number;
+  quantity: number;
 };
 
-export function AddToCart({
-  product,
-  selectedSize,
-  selectedColor,
-  selectedQuantity
-}: AddToCartProps) {
-  const context = useContext(CartContext);
+export function AddToCart<ATCItemType>({
+  item,
+  quantity
+}: AddToCartProps<ATCItemType>) {
+  const context = useContext(CreateCartContext<ATCItemType>());
 
   return (
     <Button
       className={styles.addToCart}
       primary
-      onClick={() =>
-        context.addProductToCart(
-          product,
-          selectedSize,
-          selectedColor,
-          selectedQuantity
-        )
-      }
+      onClick={() => context.addProductToCart({ item, quantity })}
     >
       Add to Cart
     </Button>

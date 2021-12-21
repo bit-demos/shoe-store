@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
-import { CartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
+import { CreateCartContext } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
 import styles from './cart-amount.module.scss';
 
-export type CartAmountProps = {};
-
-export function CartAmount({}: CartAmountProps) {
-  const context = useContext(CartContext);
+export function CartAmount() {
+  const context = useContext(CreateCartContext());
 
   return (
     <div className={styles.cartAmount}>

@@ -1,0 +1,17 @@
+---
+description: 'Context for the shoe cart'
+labels: ['label1', 'label2', 'label3']
+---
+
+import { ShoeCartContext } from './shoe-cart-context';
+
+Context component that uses the generic cart context from the eccommerce scope which includes the item as well as the add Product and remove product functionality.
+
+This component can be used in any other component that needs to access the cart and should be used at the top of the component tree.
+
+```js
+<ShoeCartContextProvider>
+  <Component1>
+  <Component2>
+</ShoeCartContextProvider>
+```

@@ -1,22 +1,14 @@
 ---
-description: 'A RemoveFromCart component'
-labels: ['label1', 'label2', 'label3']
+description: 'A button to remove items from the cart'
+labels: ['button', 'cart']
 ---
 
-import { RemoveFromCart } from './remove-from-cart';
+// import { RemoveFromCart } from './remove-from-cart';
 
-## React Component for rendering text
-
-A basic div that renders some text
+Uses the design button from base-ui and onClick uses cart context to remove an item from the cart.
 
 ### Component usage
-```js
-<RemoveFromCart text="hello from RemoveFromCart" />
-```
 
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<RemoveFromCart text="hello from RemoveFromCart" />
-```
+<!-- ```js
+<RemoveFromCart cartItem="my-product-id" />
+``` -->

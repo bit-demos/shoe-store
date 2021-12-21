@@ -1,22 +1,14 @@
 ---
-description: 'A Cart component'
-labels: ['label1', 'label2', 'label3']
+description: 'A page component for the cart'
+labels: ['cart', 'page']
 ---
 
 import { Cart } from './cart';
 
-## React Component for rendering text
-
-A basic div that renders some text
+Renders the contents of the cart or a message saying there are no products in the cart.
 
 ### Component usage
+
 ```js
-<Cart text="hello from Cart" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<Cart text="hello from Cart" />
+<Cart>Cart Page</Cart>
 ```

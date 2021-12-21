@@ -1,4 +1,4 @@
-import { Shoes } from './shoes';
+import { CatalogShoe } from './shoes';
 
 export const mockShoesDataMen = [
   {
@@ -10,7 +10,7 @@ export const mockShoesDataMen = [
     price: 130,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['navy'],
+    availableColors: ['navy']
   },
   {
     id: 'm-2',
@@ -21,7 +21,7 @@ export const mockShoesDataMen = [
     price: 120,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'beige', 'white', 'brown'],
+    availableColors: ['black', 'beige', 'white', 'brown']
   },
   {
     id: 'm-3',
@@ -32,7 +32,7 @@ export const mockShoesDataMen = [
     price: 90,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'beige'],
+    availableColors: ['black', 'pink', 'beige']
   },
   {
     id: 'm-4',
@@ -43,7 +43,7 @@ export const mockShoesDataMen = [
     price: 120,
     rating: 5,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'm-5',
@@ -54,7 +54,7 @@ export const mockShoesDataMen = [
     price: 140,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'm-6',
@@ -65,7 +65,7 @@ export const mockShoesDataMen = [
     price: 190,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
 
   {
@@ -77,7 +77,7 @@ export const mockShoesDataMen = [
     price: 190,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'm-8',
@@ -88,7 +88,7 @@ export const mockShoesDataMen = [
     price: 110,
     rating: 3,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'brown', 'white'],
+    availableColors: ['black', 'brown', 'white']
   },
   {
     id: 'm-9',
@@ -99,7 +99,7 @@ export const mockShoesDataMen = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white'],
+    availableColors: ['black', 'pink', 'white']
   },
   {
     id: 'm-10',
@@ -110,7 +110,7 @@ export const mockShoesDataMen = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white'],
+    availableColors: ['black', 'pink', 'white']
   },
   {
     id: 'm-11',
@@ -121,7 +121,7 @@ export const mockShoesDataMen = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'navy'],
+    availableColors: ['black', 'pink', 'white', 'navy']
   },
   {
     id: 'm-12',
@@ -132,7 +132,7 @@ export const mockShoesDataMen = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'brown'],
+    availableColors: ['black', 'pink', 'white', 'brown']
   },
   {
     id: 'm-13',
@@ -143,7 +143,7 @@ export const mockShoesDataMen = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'm-14',
@@ -154,7 +154,7 @@ export const mockShoesDataMen = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
+    availableColors: ['black', 'pink', 'white', 'blue']
   },
   {
     id: 'm-15',
@@ -165,12 +165,12 @@ export const mockShoesDataMen = [
     price: 280,
     rating: 4,
     availableSizes: [36, 37, 38, 39],
-    availableColors: ['black', 'pink', 'white', 'blue'],
-  },
+    availableColors: ['black', 'pink', 'white', 'blue']
+  }
 ];
 
 export function mockShoesMen() {
   return mockShoesDataMen.map((plainShoes) => {
-    return Shoes.from(plainShoes);
+    return CatalogShoe.from(plainShoes);
   });
 }

@@ -1,5 +1,4 @@
-export { CartContext } from './cart-context';
-export { cartReducer, ADD_PRODUCT, REMOVE_PRODUCT } from './cart-reducer';
-export { CartState } from './cart-state';
+export { CreateCartContext } from './cart-context';
+export { CartContextProvider } from './cart-context-provider';
 
-export type { CartContextProps } from './cart-context';
+export type { CartContextType } from './cart-context';

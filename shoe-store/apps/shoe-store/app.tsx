@@ -13,16 +13,16 @@ import { Footer } from '@learn-bit-react/ecommerce.ui.footer';
 import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { Theme } from '@learn-bit-react/base-ui.themes.theme';
-import { CartState } from '@learn-bit-react/ecommerce.ui.cart.cart-context';
-import { CartAmount } from '@learn-bit-react/ecommerce.ui.cart.cart-amount';
-import styles from './shoe-store.module.scss';
+import { ShoeCartContextProvider } from '@learn-bit-react/shoe-store.ui.cart.shoe-cart-context';
+import { AmountOfShoesInCart } from '@learn-bit-react/shoe-store.ui.cart.amount-of-shoes-in-cart';
 
+import styles from './shoe-store.module.scss';
 // hack to use tailwindcss classes: remove when we can add tailwindcss to an app aspect
 import './tailwind-hack.scss';
 
 export function ShoeStoreApp() {
   return (
-    <CartState>
+    <ShoeCartContextProvider>
       <ReactRouterRoutingProvider useBrowserRouter>
         <Theme colors={styles.colors}>
           <Layout>
@@ -35,7 +35,7 @@ export function ShoeStoreApp() {
               <Link href="/women">Women</Link>
               <Link href="/children">Children</Link>
               <Link href="/cart">
-                <CartAmount />
+                <AmountOfShoesInCart />
               </Link>
             </Header>
 
@@ -74,6 +74,6 @@ export function ShoeStoreApp() {
           </Layout>
         </Theme>
       </ReactRouterRoutingProvider>
-    </CartState>
+    </ShoeCartContextProvider>
   );
 }

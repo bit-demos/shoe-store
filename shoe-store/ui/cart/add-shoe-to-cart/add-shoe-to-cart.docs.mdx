@@ -1,0 +1,31 @@
+---
+description: 'Component that adds a shoe to the cart'
+labels: ['button', 'cart']
+---
+
+import { AddShoeToCart } from './add-shoe-to-cart';
+
+Uses the design button from base-ui scope along with functionality to add a shoe to the cart.
+
+### Component Properties
+
+Includes an item with the following properties:
+
+- a shoe which contains all properties found in the Shoe entity component
+- size selected
+- color selected
+
+Inculdes the quantity of shoes to be added to cart. This can be replaced with value from a counter component if being used.
+
+### Component usage
+
+```js
+<AddShoeToCart
+  item={{
+    ...catalogShoe.shoe,
+    size: 36,
+    color: 'red'
+  }}
+  quantity={1}
+/>
+```
