@@ -1,24 +1,28 @@
 ---
-description: 'A SelectSize component'
+description: 'A Select component for selecting sizes of products.'
 labels: ['select', 'size', 'form']
 ---
 
 import { SelectSize } from './select-size';
+import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
 
-## React Component for rendering text
+- Uses the label and select components to form the selected size component.
+- Select element accepts an array of numbers.
+- OnChange function saves the selected size so it can be used in another component.
 
-A basic div that renders some text
+### Set the availabe Sizes and the selected size
 
-### Component usage
-
-```js
-<SelectSize sizes={[45, 46, 47]} />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
+Function for size selected so as size can be updated or saved when using in another component.
 
 ```js live
-<SelectSize sizes={[45, 46, 47]} />
+<SelectSize
+  sizeSelected={(size) => {
+    return size;
+  }}
+  availableSizes={[45, 46, 47]}
+/>
 ```
+
+### Design
+
+<FigmaEmbed src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYOdxHWPVnxBcTAYw0zPyXf%2Fproduct%3Fnode-id%3D1351%253A3539" />

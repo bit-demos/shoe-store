@@ -4,6 +4,7 @@ labels: ['input']
 ---
 
 import { Input } from './input';
+import { Label } from '@learn-bit-react/base-ui.ui.forms.label';
 
 ## Input Component
 
@@ -25,7 +26,7 @@ All props from the `<input>` element are supported. See compositions to see an e
 
 ```js live
 <>
-  <label htmlFor="input">Input</label>
-  <Input placeholder="write something here" id="input" />
+  <Label htmlFor="my-input">Input Label</Label>
+  <Input placeholder="write something here" id="my-input" />
 </>
 ```

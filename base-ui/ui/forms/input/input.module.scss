@@ -2,4 +2,9 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   min-height: 26px;
+  padding: 6px 8px;
+}
+
+:placeholder-shown {
+  padding-left: 8px;
 }

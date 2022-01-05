@@ -14,10 +14,12 @@ export type SelectProps = {
 
 export function Select({ className, options, children, ...rest }: SelectProps) {
   return (
-    <select className={classNames(styles.select, className)} {...rest}>
-      {options.map((option, index) => (
-        <option key={index}>{option}</option>
-      ))}
-    </select>
+    <div className={classNames(styles.selectWrapper, className)}>
+      <select className={classNames(styles.select, className)} {...rest}>
+        {options.map((option, index) => (
+          <option key={index}>{option}</option>
+        ))}
+      </select>
+    </div>
   );
 }

@@ -1,4 +1,12 @@
-.select-size {
- color: red;
- font-weight: bold;
+.selectSize {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  max-width: 72px;
+}
+
+.label {
+  margin-bottom: 15px;
 }

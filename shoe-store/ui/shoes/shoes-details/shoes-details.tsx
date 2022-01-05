@@ -72,11 +72,9 @@ export function ShoesDetails({ catalogShoe }: ShoesDetailsProps) {
           <div>
             <Counter quantitySelected={quantityChanged} className="my-4" />
             <div className="my-4">
-              <label htmlFor="size">Choose a size: </label>
               <SelectSize
                 id="size"
                 sizeSelected={sizeChanged}
-                className={styles.select}
                 availableSizes={catalogShoe.availableSizes}
               />
             </div>

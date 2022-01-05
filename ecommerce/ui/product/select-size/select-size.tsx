@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Select } from '@learn-bit-react/base-ui.ui.forms.select';
-
+import { Label } from '@learn-bit-react/base-ui.ui.forms.label';
 import styles from './select-size.module.scss';
 
 export type SelectSizeProps = {
   /**
-   * a text to be rendered in the component.
+   * sizes as an array of numbers
    */
   availableSizes: number[];
   /**
@@ -27,11 +27,16 @@ export function SelectSize({
   }
 
   return (
-    <Select
-      className={styles.select}
-      options={availableSizes}
-      onChange={handleChange}
-      {...rest}
-    />
+    <div className={styles.selectSize}>
+      <Label className={styles.label} htmlFor="size">
+        Choose a size:
+      </Label>
+      <Select
+        className={styles.select}
+        options={availableSizes}
+        onChange={handleChange}
+        {...rest}
+      />
+    </div>
   );
 }

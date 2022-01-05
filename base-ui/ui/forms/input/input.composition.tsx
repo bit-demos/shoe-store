@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Label } from '@learn-bit-react/base-ui.ui.forms.label';
 import { Input } from './input';
 
 export const BasicInput = () => <Input />;
@@ -9,7 +10,7 @@ export const InputWithPlaceholder = () => (
 
 export const InputWithLabel = () => (
   <>
-    <label htmlFor="input">Label for Input</label>
+    <Label htmlFor="input">Label for Input</Label>
     <Input placeholder="write something here" id="input" />
   </>
 );
@@ -28,7 +29,7 @@ export function InputWithState() {
         id="input"
         onChange={handleClick}
       />
-      {inputValue}
+      <p>{inputValue}</p>
     </>
   );
 }
