@@ -1,0 +1,27 @@
+---
+description: 'A CSS Component -  Button'
+labels: ['CSS', 'CSS Modules', 'Sass']
+---
+
+import { button } from './index';
+import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
+
+CSS component can be reused across multiple components by importing it and then using it like you would any css class.
+
+## Adds class of Button to button element
+
+```js live
+<button className={button}>Hello</button>
+```
+
+## Adds class of Button to an link element
+
+```js live
+<a href="/" className={button}>
+  Hello
+</a>
+```
+
+## Design
+
+<FigmaEmbed src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDaShaxpMbyWlvOGMFFUHCl%2Fbutton%3Fnode-id%3D0%253A1" />

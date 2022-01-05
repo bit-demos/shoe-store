@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/ {
+ **/{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -42,9 +42,7 @@
         "@bit-foundations/styling.tailwind.webpack-transformer": "0.0.2",
         "@learn-bit-react/base-ui.env.learn-bit-react": "1.0.13",
         "@learn-bit-react/base-ui.figma.figma-embed": "0.0.4",
-        "@learn-bit-react/base-ui.styles.button": "0.0.8",
         "@learn-bit-react/base-ui.styles.colors": "1.0.4",
-        "@learn-bit-react/base-ui.themes.theme": "1.0.7",
         "@learn-bit-react/base-ui.ui.hero": "1.0.12",
         "@learn-bit-react/base-ui.ui.img-grid": "1.0.14",
         "@learn-bit-react/base-ui.ui.layout": "1.0.10",
@@ -87,7 +85,9 @@
       }
     },
     "packageManagerArgs": [],
-    "devFilePatterns": ["**/*.spec.ts"],
+    "devFilePatterns": [
+      "**/*.spec.ts"
+    ],
     "strictPeerDependencies": true,
     "installFromBitDevRegistry": true,
     "savePrefix": ""
@@ -100,7 +100,9 @@
    * Generator Aspects to generate custom components.
    **/
   "teambit.generator/generator": {
-    "aspects": ["learn-bit-react.base-ui/component-generator"]
+    "aspects": [
+      "learn-bit-react.base-ui/component-generator"
+    ]
   },
   "learn-bit-react.base-ui/component-generator": {},
   /**
