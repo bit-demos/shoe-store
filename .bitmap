@@ -62,12 +62,12 @@
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/theme"
     },
-    "themes/theme-provider": {
+    "ui/banner": {
         "scope": "",
         "version": "",
-        "defaultScope": "learn-bit-react.base-ui",
+        "defaultScope": "learn-bit-react.marketing",
         "mainFile": "index.ts",
-        "rootDir": "base-ui/themes/theme-provider"
+        "rootDir": "marketing/ui/banner"
     },
     "ui/button": {
         "scope": "learn-bit-react.base-ui",
@@ -110,6 +110,20 @@
         "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/cart/shoe-cart-context"
+    },
+    "ui/featured-card": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "learn-bit-react.marketing",
+        "mainFile": "index.ts",
+        "rootDir": "marketing/ui/featured-card"
+    },
+    "ui/featured-card-grid": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "learn-bit-react.marketing",
+        "mainFile": "index.ts",
+        "rootDir": "marketing/ui/featured-card-grid"
     },
     "ui/footer": {
         "scope": "learn-bit-react.ecommerce",
@@ -224,6 +238,13 @@
         "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/select-size"
+    },
+    "ui/reviews": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "learn-bit-react.marketing",
+        "mainFile": "index.ts",
+        "rootDir": "marketing/ui/reviews"
     },
     "ui/shoes/shoes-card": {
         "scope": "learn-bit-react.shoe-store",

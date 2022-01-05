@@ -132,6 +132,9 @@ importers:
   base-ui/themes/theme:
     specifiers: {}
 
+  base-ui/themes/theme-provider:
+    specifiers: {}
+
   base-ui/ui/button:
     specifiers: {}
 

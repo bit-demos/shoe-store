@@ -2,7 +2,7 @@ import { Product } from './product';
 
 export const mockProductList: Product[] = [
   {
-    id: 's-1',
+    id: 'm-1',
     title: 'Nike Air',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air trainers in pink, yellow and purple',
@@ -11,7 +11,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-2',
+    id: 'm-2',
     title: 'Converse',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse in red and black',
@@ -20,7 +20,7 @@ export const mockProductList: Product[] = [
     rating: 3
   },
   {
-    id: 's-3',
+    id: 'm-3',
     title: 'Yeezy',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Yeezy in white',
@@ -29,7 +29,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-4',
+    id: 'm-4',
     title: 'Nike M35',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike M35',
@@ -38,7 +38,7 @@ export const mockProductList: Product[] = [
     rating: 2
   },
   {
-    id: 's-5',
+    id: 'm-5',
     title: 'Nike Air Classic',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air Classic in white',
@@ -47,7 +47,7 @@ export const mockProductList: Product[] = [
     rating: 5
   },
   {
-    id: 's-6',
+    id: 'm-6',
     title: 'Adidas Ultra',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Adidas Ultra in yellow',
@@ -57,7 +57,7 @@ export const mockProductList: Product[] = [
   },
 
   {
-    id: 's-7',
+    id: 'm-7',
     title: 'Nike Air 2',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair Nike Air 2 in black and red',
@@ -66,7 +66,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-8',
+    id: 'm-8',
     title: 'Nike Louis',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Louis in beige nad brown',
@@ -75,7 +75,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-9',
+    id: 'm-9',
     title: 'Nike Air Force 1',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Air Force 1 in red and white',
@@ -84,7 +84,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-10',
+    id: 'm-10',
     title: 'Nike Magic',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Nike Nike Magic in black',
@@ -93,7 +93,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-11',
+    id: 'm-11',
     title: 'Nike Jordan',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair Nike Jordans in blue, black and white',
@@ -102,7 +102,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-12',
+    id: 'm-12',
     title: 'Converse 2',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse 2 in black with red heart',
@@ -111,7 +111,7 @@ export const mockProductList: Product[] = [
     rating: 5
   },
   {
-    id: 's-13',
+    id: 'm-13',
     title: 'Vans',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse 2 in black with red heart',
@@ -120,7 +120,7 @@ export const mockProductList: Product[] = [
     rating: 4
   },
   {
-    id: 's-14',
+    id: 'm-14',
     title: 'Yeezy 2',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse 2 in black with red heart',
@@ -129,7 +129,7 @@ export const mockProductList: Product[] = [
     rating: 6
   },
   {
-    id: 's-15',
+    id: 'm-15',
     title: 'Q Cors',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus',
     alt: 'Pair of Converse 2 in black with red heart',

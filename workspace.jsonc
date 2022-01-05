@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/{
+ **/ {
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -85,9 +85,7 @@
       }
     },
     "packageManagerArgs": [],
-    "devFilePatterns": [
-      "**/*.spec.ts"
-    ],
+    "devFilePatterns": ["**/*.spec.ts"],
     "strictPeerDependencies": true,
     "installFromBitDevRegistry": true,
     "savePrefix": ""
@@ -100,9 +98,7 @@
    * Generator Aspects to generate custom components.
    **/
   "teambit.generator/generator": {
-    "aspects": [
-      "learn-bit-react.base-ui/component-generator"
-    ]
+    "aspects": ["learn-bit-react.base-ui/component-generator"]
   },
   "learn-bit-react.base-ui/component-generator": {},
   /**
@@ -142,6 +138,9 @@
     },
     "{ui/product/hooks/use-product}": {
       "defaultScope": "learn-bit-react.ecommerce"
+    },
+    "marketing": {
+      "defaultScope": "learn-bit-react.marketing"
     }
   }
 }

@@ -6,7 +6,7 @@ import { mockShoesDataChildren } from './shoes-children.mocks';
 
 export { mockShoesWomen } from './shoes-women.mocks';
 export { mockShoesHome } from './shoes-home.mocks';
-export { mockShoesMen } from './shoes-men.mocks';
+export { mockShoesMen, mockShoesDataMen } from './shoes-men.mocks';
 export { mockShoesChildren } from './shoes-children.mocks';
 
 export { CatalogShoe } from './shoes';

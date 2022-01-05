@@ -1,0 +1,37 @@
+---
+description: 'A Featured Card component'
+labels: ['card', 'featured']
+---
+
+import { FeaturedCard } from './featured-card';
+import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
+
+A card component to render featured products. Uses Img, Heading, Currency and Button component from both base-ui scope and ecommerece scope.
+
+### Component usage
+
+```js
+<FeaturedCard
+  src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+  alt="image description"
+  title="Product name"
+  price={190}
+  id="m-1"
+/>
+```
+
+### Using props to customize the card
+
+```js live
+<FeaturedCard
+  src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+  alt="image description"
+  title="Product name"
+  price={190}
+  id="m-1"
+/>
+```
+
+### Designs
+
+<FigmaEmbed src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYOdxHWPVnxBcTAYw0zPyXf%2Fproduct%3Fnode-id%3D1328%253A2730" />

@@ -9,6 +9,7 @@ export type RemoveFromCartProps<TItemType> = {
    * item in cart
    */
   cartItem: TItemType;
+  quantity: number;
 };
 
 export function RemoveFromCart<RFCItemType>({

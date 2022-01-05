@@ -1,0 +1,27 @@
+.featuredCard {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  max-width: 260px;
+}
+.img {
+  max-height: 300px;
+  max-width: 260px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.price {
+  margin-bottom: 10px;
+}

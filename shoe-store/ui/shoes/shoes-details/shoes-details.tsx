@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { Img } from '@learn-bit-react/base-ui.ui.img';
 import { Heading } from '@learn-bit-react/base-ui.ui.heading';
 import { Text } from '@learn-bit-react/base-ui.ui.text';
+import { Label } from '@learn-bit-react/base-ui.ui.forms.label';
 import { AvailableColors } from '@learn-bit-react/ecommerce.ui.product.available-colors';
 import { Rating } from '@learn-bit-react/ecommerce.ui.product.rating';
 import { Currency } from '@learn-bit-react/ecommerce.ui.product.currency';
@@ -21,7 +22,7 @@ export type ShoesDetailsProps = {
   catalogShoe: CatalogShoe;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export function ShoesDetails({ catalogShoe }: ShoesDetailsProps) {
+export function ShoesDetails({ catalogShoe, className }: ShoesDetailsProps) {
   const context = useContext(ShoeCartContext);
   const [selectedSize, setSelectedSize] = useState(
     catalogShoe.availableSizes[0]
@@ -50,7 +51,7 @@ export function ShoesDetails({ catalogShoe }: ShoesDetailsProps) {
   }
 
   return (
-    <div className="flex flex-row">
+    <div className={classNames('flex flex-row', className)}>
       <div
         className={classNames(
           styles.productDetails,
@@ -79,7 +80,7 @@ export function ShoesDetails({ catalogShoe }: ShoesDetailsProps) {
               />
             </div>
           </div>
-          <Text>Choose a color: </Text>
+          <Label>Choose a color: </Label>
           <AvailableColors
             colorSelected={colorChanged}
             className={styles.availableColors}
