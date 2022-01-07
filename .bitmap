@@ -11,7 +11,7 @@
 {
     "apps/shoe-store": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.37",
+        "version": "1.0.38",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/apps/shoe-store"
     },
@@ -49,7 +49,12 @@
         "scope": "learn-bit-react.base-ui",
         "version": "0.0.10",
         "mainFile": "index.ts",
-        "rootDir": "base-ui/styles/button"
+        "rootDir": "base-ui/styles/button",
+        "config": {
+            "teambit.component/deprecation": {
+                "deprecate": true
+            }
+        }
     },
     "themes/theme": {
         "scope": "learn-bit-react.base-ui",
@@ -113,7 +118,7 @@
     },
     "ui/featured-card-grid": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/featured-card-grid"
     },
@@ -191,7 +196,7 @@
     },
     "ui/pages/product": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/product"
     },

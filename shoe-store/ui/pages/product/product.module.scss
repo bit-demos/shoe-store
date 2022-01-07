@@ -1,12 +1,31 @@
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin: 2rem;
+  }
+  .details {
+    margin-bottom: 0;
+  }
+  .banner {
+    margin: 0;
+  }
+  .reviews {
+    margin: 0;
+  }
+  .featuredCards {
+    margin: 48px 0;
+  }
+}
 .wrapper {
   margin: 0 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 .details {
   margin-bottom: 48px;
 }
 
 .banner {
-  margin: 96px 0 48px;
+  margin: 48px 0 24px 0;
 }
 
 .reviews {
