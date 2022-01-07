@@ -10,7 +10,6 @@ importers:
       '@learn-bit-react/base-ui.figma.figma-embed': 0.0.4
       '@learn-bit-react/base-ui.styles.colors': 1.0.4
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3
-      '@learn-bit-react/base-ui.themes.theme': 1.0.7
       '@learn-bit-react/base-ui.ui.card': 1.0.5
       '@learn-bit-react/base-ui.ui.heading': 1.0.5
       '@learn-bit-react/base-ui.ui.hero': 1.0.12
@@ -55,6 +54,7 @@ importers:
       autoprefixer: 10.4.0
       classnames: 2.3.1
       core-js: ^3.0.0
+      eslint-plugin-testing-library: 5.0.1
       postcss: 8.4.5
       react: 16.13.1
       react-dom: 16.13.1
@@ -68,7 +68,6 @@ importers:
       '@learn-bit-react/base-ui.env.learn-bit-react': 1.0.13_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.colors': 1.0.4_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.themes.theme': 1.0.7_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.card': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.heading': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.hero': 1.0.12_react-dom@16.13.1+react@16.13.1
@@ -107,6 +106,7 @@ importers:
       autoprefixer: registry.npmjs.org/autoprefixer/10.4.0_postcss@8.4.5
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.18.2
+      eslint-plugin-testing-library: registry.npmjs.org/eslint-plugin-testing-library/5.0.1
       postcss: registry.npmjs.org/postcss/8.4.5
       react: registry.npmjs.org/react/16.13.1
       react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
@@ -393,6 +393,18 @@ importers:
       '@types/react': registry.npmjs.org/@types/react/17.0.27
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.9
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
+
+  marketing/ui/banner:
+    specifiers: {}
+
+  marketing/ui/featured-card:
+    specifiers: {}
+
+  marketing/ui/featured-card-grid:
+    specifiers: {}
+
+  marketing/ui/reviews:
+    specifiers: {}
 
   readme:
     specifiers: {}
@@ -2936,6 +2948,12 @@ packages:
       pretty-format: registry.npmjs.org/pretty-format/26.6.2
     dev: true
 
+  registry.npmjs.org/@types/json-schema/7.0.9:
+    resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.9.tgz}
+    name: '@types/json-schema'
+    version: 7.0.9
+    dev: false
+
   registry.npmjs.org/@types/minimatch/3.0.5:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.5.tgz}
     name: '@types/minimatch'
@@ -3022,6 +3040,42 @@ packages:
     dependencies:
       '@types/yargs-parser': registry.npmjs.org/@types/yargs-parser/20.2.1
 
+  registry.npmjs.org/@typescript-eslint/experimental-utils/5.9.0:
+    resolution: {integrity: sha512-ZnLVjBrf26dn7ElyaSKa6uDhqwvAi4jBBmHK1VxuFGPRAxhdi18ubQYSGA7SRiFiES3q9JiBOBHEBStOFkwD2g==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@typescript-eslint/experimental-utils/-/experimental-utils-5.9.0.tgz}
+    name: '@typescript-eslint/experimental-utils'
+    version: 5.9.0
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      '@types/json-schema': registry.npmjs.org/@types/json-schema/7.0.9
+      '@typescript-eslint/scope-manager': registry.npmjs.org/@typescript-eslint/scope-manager/5.9.0
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.9.0
+      '@typescript-eslint/typescript-estree': registry.npmjs.org/@typescript-eslint/typescript-estree/5.9.0
+      eslint-scope: registry.npmjs.org/eslint-scope/5.1.1
+      eslint-utils: registry.npmjs.org/eslint-utils/3.0.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: false
+
+  registry.npmjs.org/@typescript-eslint/scope-manager/5.9.0:
+    resolution: {integrity: sha512-DKtdIL49Qxk2a8icF6whRk7uThuVz4A6TCXfjdJSwOsf+9ree7vgQWcx0KOyCdk0i9ETX666p4aMhrRhxhUkyg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-5.9.0.tgz}
+    name: '@typescript-eslint/scope-manager'
+    version: 5.9.0
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dependencies:
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.9.0
+      '@typescript-eslint/visitor-keys': registry.npmjs.org/@typescript-eslint/visitor-keys/5.9.0
+    dev: false
+
+  registry.npmjs.org/@typescript-eslint/types/5.9.0:
+    resolution: {integrity: sha512-mWp6/b56Umo1rwyGCk8fPIzb9Migo8YOniBGPAQDNC6C52SeyNGN4gsVwQTAR+RS2L5xyajON4hOLwAGwPtUwg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@typescript-eslint/types/-/types-5.9.0.tgz}
+    name: '@typescript-eslint/types'
+    version: 5.9.0
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
   registry.npmjs.org/@typescript-eslint/typescript-estree/2.34.0_typescript@3.9.10:
     resolution: {integrity: sha512-OMAr+nJWKdlVM9LOqCqh3pQQPwxHAN7Du8DR6dmwCrAmxtiXQnhHJ6tBNtf+cggqfo51SG/FCwnKhXCIM7hnVg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-2.34.0.tgz}
     id: registry.npmjs.org/@typescript-eslint/typescript-estree/2.34.0
@@ -3044,6 +3098,38 @@ packages:
       typescript: registry.npmjs.org/typescript/3.9.10
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  registry.npmjs.org/@typescript-eslint/typescript-estree/5.9.0:
+    resolution: {integrity: sha512-kxo3xL2mB7XmiVZcECbaDwYCt3qFXz99tBSuVJR4L/sR7CJ+UNAPrYILILktGj1ppfZ/jNt/cWYbziJUlHl1Pw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-5.9.0.tgz}
+    name: '@typescript-eslint/typescript-estree'
+    version: 5.9.0
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.9.0
+      '@typescript-eslint/visitor-keys': registry.npmjs.org/@typescript-eslint/visitor-keys/5.9.0
+      debug: registry.npmjs.org/debug/4.3.3
+      globby: registry.npmjs.org/globby/11.0.4
+      is-glob: registry.npmjs.org/is-glob/4.0.3
+      semver: registry.npmjs.org/semver/7.3.5
+      tsutils: registry.npmjs.org/tsutils/3.21.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  registry.npmjs.org/@typescript-eslint/visitor-keys/5.9.0:
+    resolution: {integrity: sha512-6zq0mb7LV0ThExKlecvpfepiB+XEtFv/bzx7/jKSgyXTFD7qjmSu1FoiS0x3OZaiS+UIXpH2vd9O89f02RCtgw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-5.9.0.tgz}
+    name: '@typescript-eslint/visitor-keys'
+    version: 5.9.0
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dependencies:
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.9.0
+      eslint-visitor-keys: registry.npmjs.org/eslint-visitor-keys/3.1.0
     dev: false
 
   registry.npmjs.org/acorn-node/1.8.2:
@@ -4026,11 +4112,60 @@ packages:
       source-map: registry.npmjs.org/source-map/0.6.1
     dev: false
 
+  registry.npmjs.org/eslint-plugin-testing-library/5.0.1:
+    resolution: {integrity: sha512-8ZV4HbbacvOwu+adNnGpYd8E64NRcil2a11aFAbc/TZDUB/xxK2c8Z+LoeoHUbxNBGbTUdpAE4YUugxK85pcwQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/eslint-plugin-testing-library/-/eslint-plugin-testing-library-5.0.1.tgz}
+    name: eslint-plugin-testing-library
+    version: 5.0.1
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
+    peerDependencies:
+      eslint: ^7.5.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/experimental-utils': registry.npmjs.org/@typescript-eslint/experimental-utils/5.9.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: false
+
+  registry.npmjs.org/eslint-scope/5.1.1:
+    resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/eslint-scope/-/eslint-scope-5.1.1.tgz}
+    name: eslint-scope
+    version: 5.1.1
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      esrecurse: registry.npmjs.org/esrecurse/4.3.0
+      estraverse: registry.npmjs.org/estraverse/4.3.0
+    dev: false
+
+  registry.npmjs.org/eslint-utils/3.0.0:
+    resolution: {integrity: sha512-uuQC43IGctw68pJA1RgbQS8/NP7rch6Cwd4j3ZBtgo4/8Flj4eGE7ZYSZRN3iq5pVUv6GPdW5Z1RFleo84uLDA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/eslint-utils/-/eslint-utils-3.0.0.tgz}
+    name: eslint-utils
+    version: 3.0.0
+    engines: {node: ^10.0.0 || ^12.0.0 || >= 14.0.0}
+    peerDependencies:
+      eslint: '>=5'
+    dependencies:
+      eslint-visitor-keys: registry.npmjs.org/eslint-visitor-keys/2.1.0
+    dev: false
+
   registry.npmjs.org/eslint-visitor-keys/1.3.0:
     resolution: {integrity: sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz}
     name: eslint-visitor-keys
     version: 1.3.0
     engines: {node: '>=4'}
+    dev: false
+
+  registry.npmjs.org/eslint-visitor-keys/2.1.0:
+    resolution: {integrity: sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz}
+    name: eslint-visitor-keys
+    version: 2.1.0
+    engines: {node: '>=10'}
+    dev: false
+
+  registry.npmjs.org/eslint-visitor-keys/3.1.0:
+    resolution: {integrity: sha512-yWJFpu4DtjsWKkt5GeNBBuZMlNcYVs6vRCLoCVEJrTjaSB6LC98gFipNK/erM2Heg/E8mIK+hXG/pJMLK+eRZA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.1.0.tgz}
+    name: eslint-visitor-keys
+    version: 3.1.0
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
   registry.npmjs.org/esprima/4.0.1:
@@ -4039,6 +4174,22 @@ packages:
     version: 4.0.1
     engines: {node: '>=4'}
     hasBin: true
+
+  registry.npmjs.org/esrecurse/4.3.0:
+    resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/esrecurse/-/esrecurse-4.3.0.tgz}
+    name: esrecurse
+    version: 4.3.0
+    engines: {node: '>=4.0'}
+    dependencies:
+      estraverse: registry.npmjs.org/estraverse/5.3.0
+    dev: false
+
+  registry.npmjs.org/estraverse/4.3.0:
+    resolution: {integrity: sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/estraverse/-/estraverse-4.3.0.tgz}
+    name: estraverse
+    version: 4.3.0
+    engines: {node: '>=4.0'}
+    dev: false
 
   registry.npmjs.org/estraverse/5.3.0:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/estraverse/-/estraverse-5.3.0.tgz}
@@ -4303,6 +4454,20 @@ packages:
       dir-glob: registry.npmjs.org/dir-glob/3.0.1
       fast-glob: registry.npmjs.org/fast-glob/3.2.7
       glob: registry.npmjs.org/glob/7.2.0
+      ignore: registry.npmjs.org/ignore/5.2.0
+      merge2: registry.npmjs.org/merge2/1.4.1
+      slash: registry.npmjs.org/slash/3.0.0
+    dev: false
+
+  registry.npmjs.org/globby/11.0.4:
+    resolution: {integrity: sha512-9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/globby/-/globby-11.0.4.tgz}
+    name: globby
+    version: 11.0.4
+    engines: {node: '>=10'}
+    dependencies:
+      array-union: registry.npmjs.org/array-union/2.1.0
+      dir-glob: registry.npmjs.org/dir-glob/3.0.1
+      fast-glob: registry.npmjs.org/fast-glob/3.2.7
       ignore: registry.npmjs.org/ignore/5.2.0
       merge2: registry.npmjs.org/merge2/1.4.1
       slash: registry.npmjs.org/slash/3.0.0
@@ -6400,6 +6565,17 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz}
     name: tslib
     version: 1.14.1
+    dev: false
+
+  registry.npmjs.org/tsutils/3.21.0:
+    resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/tsutils/-/tsutils-3.21.0.tgz}
+    name: tsutils
+    version: 3.21.0
+    engines: {node: '>= 6'}
+    peerDependencies:
+      typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
+    dependencies:
+      tslib: registry.npmjs.org/tslib/1.14.1
     dev: false
 
   registry.npmjs.org/tsutils/3.21.0_typescript@3.9.10:
