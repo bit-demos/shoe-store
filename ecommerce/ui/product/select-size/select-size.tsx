@@ -32,6 +32,7 @@ export function SelectSize({
         Choose a size:
       </Label>
       <Select
+        id="size"
         className={styles.select}
         options={availableSizes}
         onChange={handleChange}

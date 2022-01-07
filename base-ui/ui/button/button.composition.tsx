@@ -25,9 +25,9 @@ export const WhiteButtonDisabled = () => (
   </Button>
 );
 
-export const ButtonAsInternalLink = () => (
+export const ButtonAsLink = () => (
   <Button primary link href="/">
-    Internal Link
+    Link
   </Button>
 );
 export const CounterButton = () => <Button counter>+</Button>;
