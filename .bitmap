@@ -11,7 +11,7 @@
 {
     "apps/shoe-store": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.41",
+        "version": "1.0.42",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/apps/shoe-store"
     },
@@ -196,7 +196,7 @@
     },
     "ui/pages/product": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.16",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/product"
     },
@@ -214,13 +214,13 @@
     },
     "ui/product/counter": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.10",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/counter"
     },
     "ui/product/product-details": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/product-details"
     },
@@ -256,7 +256,7 @@
     },
     "ui/shoes/shoes-details": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/shoes/shoes-details"
     },
