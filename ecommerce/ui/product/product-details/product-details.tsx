@@ -46,7 +46,7 @@ export function ProductDetails({ catalogProduct }: ProductDetailsProps) {
           <Currency price={catalogProduct.price} className="mb-4 text-2xl" />
           <Text className="mb-4">{catalogProduct.text}</Text>
           <div>
-            <Counter quantitySelected={quantityChanged} className="my-4" />
+            <Counter onCountChange={quantityChanged} className="my-4" />
           </div>
 
           {/* <AddToCart item={catalogProduct} quantity={selectedQuantity} /> */}

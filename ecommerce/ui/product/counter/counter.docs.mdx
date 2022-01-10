@@ -6,26 +6,16 @@ labels: ['counter', 'state']
 import { Counter } from './counter';
 import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
 
-Counter increments and decrements by 1.
+- Counter increments and decrements by a value, 1 being the default.
+- Max and min values can be set.
+- OnCountChange function registers the count so it can be retrieved in another component.
 
 ### Simple Counter
 
 Uses default values.
 
 ```js live
-<Counter quantitySelected={(count) => null} />
-```
-
-### Alets everytime counter is clicked
-
-`quantitySelected` prop is included to pass the state of the component to the parent component
-
-```js live
-<Counter
-  quantitySelected={(count) => {
-    alert(count);
-  }}
-/>
+<Counter onCountChange={(count) => null} />
 ```
 
 ### Sets the min and max Values
@@ -33,7 +23,7 @@ Uses default values.
 `min` and `max` prop to change what number counter starts at and ends at.
 
 ```js live
-<Counter min={4} max={10} quantitySelected={(count) => null} />
+<Counter min={4} max={10} onCountChange={(count) => null} />
 ```
 
 ### Sets the increment and decrement Values
@@ -46,8 +36,23 @@ Uses default values.
   decrement={5}
   min={0}
   max={50}
-  quantitySelected={(count) => null}
+  onCountChange={(count) => null}
 />
+```
+
+### Shows how to retrieve Count value and use in another component
+
+`onCountChange` prop is included to pass the state of the component to the parent component
+
+```js
+const [count, setCount] = useState(1);
+
+<Counter
+  onCountChange={(count) => {
+    setCount(count);
+  }}
+/>
+<p>Count is: {count}</p>
 ```
 
 ### Designs

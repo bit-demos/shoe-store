@@ -5,6 +5,7 @@ labels: ['select', 'form']
 
 import { Select } from './select';
 import { Label } from '@learn-bit-react/base-ui.ui.forms.label';
+import { FigmaEmbed } from '@learn-bit-react/base-ui.figma.figma-embed';
 
 ## Select with an array of options as numbers
 
@@ -22,10 +23,14 @@ import { Label } from '@learn-bit-react/base-ui.ui.forms.label';
 
 ```js live
 <>
-  <label htmlFor="fruit-select">Choose a fruit:</label>
+  <Label htmlFor="fruit-select">Choose a fruit:</Label>
   <Select
     id="fruit-select"
     options={['--Please choose an option--', 'apple', 'banana', 'orange']}
   />
 </>
 ```
+
+### Design
+
+<FigmaEmbed src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYOdxHWPVnxBcTAYw0zPyXf%2Fproduct%3Fnode-id%3D1351%253A3539" />

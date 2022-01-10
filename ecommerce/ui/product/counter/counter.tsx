@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { Input } from '@learn-bit-react/base-ui.ui.forms.input';
 import styles from './counter.module.scss';
-import classNames from 'classnames';
 
 export type CounterProps = {
   /**
@@ -23,9 +22,9 @@ export type CounterProps = {
    */
   decrement?: number;
   /**
-   * a function that registers the quantity
+   * a function that registers the count when changed
    */
-  quantitySelected: (count: number) => void;
+  onCountChange: (count: number) => void;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export function Counter({
@@ -33,26 +32,26 @@ export function Counter({
   max = 20,
   increment = 1,
   decrement = 1,
-  quantitySelected // oncountchange
+  onCountChange
 }: CounterProps) {
   const [count, setCount] = useState(min);
 
   function handleClickAdd() {
     if (count < max) {
       setCount(count + increment);
-      quantitySelected(count + increment);
+      onCountChange(count + increment);
     }
   }
   function handleClickSubtract() {
     if (count > min) {
       setCount(count - decrement);
-      quantitySelected(count - decrement);
+      onCountChange(count - decrement);
     }
   }
 
   function handleClick(e) {
     setCount(e.target.valueAsNumber);
-    quantitySelected(e.target.valueAsNumber);
+    onCountChange(e.target.valueAsNumber);
   }
 
   return (
@@ -61,12 +60,12 @@ export function Counter({
         -
       </Button>
       <Input
-        className={styles.input}
+        className={styles.counterInput}
         type="number"
         min={min}
         max={max}
         value={count}
-        width="100px"
+        width="80px"
         onChange={handleClick}
       />
       <Button counter onClick={handleClickAdd}>

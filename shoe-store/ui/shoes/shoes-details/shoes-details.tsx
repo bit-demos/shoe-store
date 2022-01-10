@@ -71,10 +71,9 @@ export function ShoesDetails({ catalogShoe, className }: ShoesDetailsProps) {
           <Currency price={price} className="mb-4 text-2xl" />
           <Text className="mb-4">{text}</Text>
           <div>
-            <Counter quantitySelected={quantityChanged} className="my-4" />
+            <Counter onCountChange={quantityChanged} className="my-4" />
             <div className="my-4">
               <SelectSize
-                id="size"
                 sizeSelected={sizeChanged}
                 availableSizes={catalogShoe.availableSizes}
               />

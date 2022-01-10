@@ -7,6 +7,7 @@
   // Remove focus outline, will add on alternate element
   outline: none;
   border: 0;
+  padding-right: 20px;
 }
 
 .selectWrapper {
@@ -24,8 +25,8 @@
 
   border: 1px solid var(--select-border, #ededed);
   border-radius: 0.5em;
-  padding: 0.5em 1em;
-  height: 40px;
+  padding: 0.75rem;
+  height: auto;
   font-size: 14px;
   cursor: pointer;
 
