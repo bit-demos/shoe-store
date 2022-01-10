@@ -1,5 +1,7 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
 import {
   BasicSelectSize,
   SelectSizeAndShowSelectedSize
@@ -19,6 +21,6 @@ it('checks value changes when user chooses a new size', () => {
     name: /choose a size/i
   });
   expect(selectSizeAndShowSelectedSize).toHaveValue('36');
-  fireEvent.change(selectSizeAndShowSelectedSize, { target: { value: '45' } });
+  userEvent.selectOptions(selectSizeAndShowSelectedSize, '45');
   expect(selectSizeAndShowSelectedSize).toHaveValue('45');
 });

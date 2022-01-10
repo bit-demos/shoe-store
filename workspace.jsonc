@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/{
+ **/ {
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -67,8 +67,9 @@
         "@teambit/ui-foundation.ui.react-router.nav-link": "0.0.481",
         "@teambit/ui.mdx-layout": "0.0.346",
         "@teambit/ui.react-router.link": "0.0.368",
+        "@testing-library/dom": "8.11.1",
         "@testing-library/jest-dom": "5.12.0",
-        "@testing-library/react": "11.2.6",
+        "@testing-library/react": "12.1.2",
         "@testing-library/react-hooks": "5.1.1",
         "@testing-library/user-event": "13.5.0",
         "autoprefixer": "10.4.0",
@@ -82,13 +83,13 @@
       },
       "peerDependencies": {
         "react": "16.13.1",
-        "react-dom": "16.13.1"
+        "react-dom": "16.13.1",
+        "@testing-library/dom": "8.11.1",
+        "@testing-library/user-event": "13.5.0"
       }
     },
     "packageManagerArgs": [],
-    "devFilePatterns": [
-      "**/*.spec.ts"
-    ],
+    "devFilePatterns": ["**/*.spec.ts"],
     "strictPeerDependencies": true,
     "installFromBitDevRegistry": true,
     "savePrefix": ""
@@ -101,9 +102,7 @@
    * Generator Aspects to generate custom components.
    **/
   "teambit.generator/generator": {
-    "aspects": [
-      "learn-bit-react.base-ui/component-generator"
-    ]
+    "aspects": ["learn-bit-react.base-ui/component-generator"]
   },
   "learn-bit-react.base-ui/component-generator": {},
   /**

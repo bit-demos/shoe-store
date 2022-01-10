@@ -36,7 +36,8 @@ export function Theme({
         fonts || bookFont,
         lightTheme,
         darkTheme
-      )}>
+      )}
+    >
       {children}
     </div>
   );

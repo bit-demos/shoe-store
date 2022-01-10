@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { BasicCounter } from './counter.composition';
 
 let basicCounter;
@@ -19,19 +20,19 @@ it('should render a counter with value of 1', () => {
 
 it('should increase count when plus button is clicked', () => {
   expect(basicCounter).toHaveValue(1);
-  fireEvent.click(increaseCount);
+  userEvent.click(increaseCount);
   expect(basicCounter).toHaveValue(2);
 });
 
 it('should decrease count when minus button is clicked', () => {
-  fireEvent.click(increaseCount);
+  userEvent.click(increaseCount);
   expect(basicCounter).toHaveValue(2);
-  fireEvent.click(decreaseCount);
+  userEvent.click(decreaseCount);
   expect(basicCounter).toHaveValue(1);
 });
 
 it('should not decrease to less than 1', () => {
   expect(basicCounter).toHaveValue(1);
-  fireEvent.click(decreaseCount);
+  userEvent.click(decreaseCount);
   expect(basicCounter).toHaveValue(1);
 });
