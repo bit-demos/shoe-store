@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BasicLabel } from './label.composition';
 
-it('should render with the correct text', () => {
-  const { getByText } = render(<BasicLabel />);
-  const rendered = getByText('Choose a size');
-  expect(rendered).toBeTruthy();
+it('checks label has a text and for attribute', () => {
+  render(<BasicLabel />);
+  const basicLabel = screen.getByText(/choose a size/i);
+  expect(basicLabel).toHaveAttribute('for', 'size');
 });

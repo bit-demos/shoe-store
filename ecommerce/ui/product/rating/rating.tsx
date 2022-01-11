@@ -35,12 +35,14 @@ export function Rating({
               onMouseEnter={() => setHover(index)}
               onMouseLeave={() => setHover(rating)}
             >
-              <span className="star">&#9733;</span>
+              <span aria-label="star" className="star">
+                &#9733;
+              </span>
             </button>
           );
         } else {
           return (
-            <span key={index} className={styles.rating}>
+            <span aria-label="star" key={index} className={styles.rating}>
               &#9733;
             </span>
           );
