@@ -1,9 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { BasicAddShoeToCart } from './add-shoe-to-cart.composition';
 
-it.skip('should render with the correct text', () => {
-  const { getByText } = render(<BasicAddShoeToCart />);
-  const rendered = getByText('hello from AddShoeToCart');
-  expect(rendered).toBeTruthy();
+it('should add a product to cart', () => {
+  render(<BasicAddShoeToCart />);
+  const button = screen.getByRole('button', { name: /add to cart/i });
+  expect(button).toBeInTheDocument();
+  fireEvent.click(button);
+  const cart = screen.getByTestId('cart');
+  expect(cart).toBeInTheDocument();
 });

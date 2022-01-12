@@ -6,7 +6,6 @@ import {
 
 import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
 import { RemoveShoeFromCart } from './remove-shoe-from-cart';
-import { createWriteStream } from 'fs';
 
 const MockUpdateContextComponent = () => {
   const context = useContext(ShoeCartContext);
@@ -44,7 +43,7 @@ const MockCartDisplay = () => {
       <h2>Cart:</h2>
       {context.cart.map((cartItem, index) => {
         return (
-          <div key={index}>
+          <div key={index} data-testid="cart">
             <h2>{cartItem.item.title}</h2>
             <p>$ {cartItem.item.price}</p>
             <RemoveShoeFromCart cartItem={cartItem.item} />

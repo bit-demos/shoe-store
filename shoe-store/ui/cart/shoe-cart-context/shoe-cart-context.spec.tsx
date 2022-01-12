@@ -1,9 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { BasicShoeCartContext } from './shoe-cart-context.composition';
 
-it.skip('should render with the correct text', () => {
-  const { getByText } = render(<BasicShoeCartContext />);
-  const rendered = getByText('hello from ShoeCartContext');
-  expect(rendered).toBeTruthy();
+it('adds a product to cart context and removes it', () => {
+  render(<BasicShoeCartContext />);
+  const cartItems = screen.getByText('Cart (0)');
+
+  const buttonAdd = screen.getByRole('button', { name: /add to cart/i });
+  fireEvent.click(buttonAdd);
+  expect(cartItems).toHaveTextContent('Cart (1)');
+
+  const buttonRemove = screen.getByRole('button', { name: /x/i });
+  fireEvent.click(buttonRemove);
+  expect(cartItems).toHaveTextContent('Cart (0)');
 });

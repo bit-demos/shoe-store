@@ -8,8 +8,6 @@ import {
 import { allShoes } from '@learn-bit-react/shoe-store.entity.shoes';
 
 const MockUpdateContextComponent = () => {
-  const context = useContext(ShoeCartContext);
-
   const catalogShoe = allShoes[Math.floor(Math.random() * 9)];
 
   return (
@@ -34,8 +32,8 @@ const MockCartDisplay = () => {
       <h2>Cart:</h2>
       {context.cart.map((cartItem, index) => {
         return (
-          <div key={index}>
-            <h2>{cartItem.item.title}</h2>
+          <div key={index} data-testid="cart">
+            <h3>{cartItem.item.title}</h3>
             <p>$ {cartItem.item.price}</p>
             <button
               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded p-20"

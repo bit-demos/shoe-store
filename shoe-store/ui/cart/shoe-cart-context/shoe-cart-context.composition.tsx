@@ -36,17 +36,17 @@ const MockCartDisplay = () => {
 
   return (
     <div>
-      <h2>Cart:</h2>
+      <h2>Cart ({context.cart.length})</h2>
       {context.cart.map((cartItem, index) => {
         return (
           <div key={index}>
             <h2>{cartItem.item.title}</h2>
             <p>$ {cartItem.item.price}</p>
             <button
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded p-20"
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded p-20"
               onClick={() => context.removeProductFromCart(cartItem.item)}
             >
-              Remove from Cart
+              x
             </button>
           </div>
         );
