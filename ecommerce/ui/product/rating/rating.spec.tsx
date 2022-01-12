@@ -19,18 +19,13 @@ it('checks 3 stars are rendered', () => {
   expect(threeStarRating).toEqual(3);
 });
 
-it('checks stars change styles when clicked', () => {
+it('checks stars change styles when clicked or on hover', () => {
   render(<SetStarRating />);
   const button = screen.getAllByRole('button')[0];
   expect(button).toHaveClass('off');
   userEvent.click(button);
   expect(button).toHaveClass('on');
-});
-
-it('checks stars change styles on hover', () => {
-  render(<SetStarRating />);
-  const button = screen.getAllByRole('button')[0];
-  expect(button).toHaveClass('off');
+  userEvent.click(button);
   userEvent.hover(button);
   expect(button).toHaveClass('on');
 });

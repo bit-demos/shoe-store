@@ -1,9 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BasicReviews } from './reviews.composition';
 
-it('should render with the correct text', () => {
-  const { getByText } = render(<BasicReviews />);
-  const rendered = getByText('This is the review of');
-  expect(rendered).toBeTruthy();
+it('checks reviews has a heading', () => {
+  render(<BasicReviews />);
+  const heading = screen.getByRole('heading', { name: /Reviews/i });
+  expect(heading).toBeInTheDocument();
+  const stars = screen.getAllByLabelText('star')[0];
+  expect(stars).toBeInTheDocument();
+  const text = screen.getByText('This is the review of');
+  expect(text).toBeInTheDocument();
 });

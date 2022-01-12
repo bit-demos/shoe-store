@@ -11,7 +11,7 @@ export type ReviewsProps = {
    */
   rating: number;
   /**
-   * rating of the product
+   * review of the product
    */
   review: string;
 } & React.HTMLAttributes<HTMLDivElement>;
