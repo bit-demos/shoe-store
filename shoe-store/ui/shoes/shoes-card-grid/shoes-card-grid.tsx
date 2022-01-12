@@ -23,7 +23,7 @@ export function ShoesCardGrid({ list, className }: ShoesCardGridProps) {
           ))}
         </div>
       ) : (
-        'No products to display'
+        <p>No products to display</p>
       )}
     </>
   );
