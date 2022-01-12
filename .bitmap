@@ -11,7 +11,7 @@
 {
     "apps/shoe-store": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.44",
+        "version": "1.0.45",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/apps/shoe-store"
     },
@@ -41,7 +41,7 @@
     },
     "readme": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "readme"
     },
@@ -53,7 +53,7 @@
     },
     "ui/banner": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/banner"
     },
@@ -101,13 +101,13 @@
     },
     "ui/featured-card": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/featured-card"
     },
     "ui/featured-card-grid": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/featured-card-grid"
     },
@@ -185,7 +185,7 @@
     },
     "ui/pages/product": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.19",
+        "version": "0.0.20",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/product"
     },
@@ -209,13 +209,13 @@
     },
     "ui/product/product-details": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/product-details"
     },
     "ui/product/rating": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/rating"
     },
@@ -227,7 +227,7 @@
     },
     "ui/reviews": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/reviews"
     },
@@ -245,7 +245,7 @@
     },
     "ui/shoes/shoes-details": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.11",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/shoes/shoes-details"
     },

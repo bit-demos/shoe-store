@@ -1,23 +1,22 @@
-# E-commerce Components
+# Shoe Store App
 
-This scope contains a collection of components that could be used to create e-commerce sites or applications. The objective is that any new store could easily be built using these components. This allows you to scale faster as you can build a new store without having to re-invent the wheel and in the future when you want to add new features to your store, you can simply remove these components and use your own product components for example. The idea of this scope is to give you a starting place when creating ecommerce stores and a consistent structure across stores.
+The Shoe store is built as an app using the app aspect of Bit. The app is made up of components from the base-ui scope and the e-commerce scope.
 
 Github: [shoe store repo](https://github.com/bit-demos/shoe-store)
 
-## Content
+## The shoe-store scope contains the following
 
-Contains markdown components that could be used to create a store's content especially for pages that might be re-used across stores such as private pages, about pages, etc.
+### apps
+
+This is the main app aspect. The `app.tsx` file contains the main application logic including the `<Head>` tags and the Router. It is in this file that you would add fonts to your head tag as well as configure meta tags. You can also use your Theme component here to wrap everything in the theme provider.
 
 ## Entity
 
-An array of mock data to show some products according to the data structure. This data structure can be used by all stores to ensure the correct data is being passed and can also be extended incase new types need to be added.
+An array of mock data to show some products according to the data structure. This data structure extends the e-commerce entity and adds the extra types of available colors and shoe size to the data structure.
 
 ## UI Components
 
 UI components that could be used to create a store's UI. These include but are not limited to:
 
-- A header and footer component so all stores have consistency.
-- A logo component that could be used to display a store's logo.
-- A pages folder with page templates for the home page and about page (if needed). This allows white label brands with the same design to be built very quickly and easily.
-- Product components that include components specific to the product such as a product card, price, available colors, etc.
-- A store hero component to show at the top of the store page.
+- A pages folder with pages for the home page and about page. These page components are then used inside the main app.
+- A shoes folder which contains all domain components specific to shoes. By creating a custom product card component we have the flexibility of making this component different to the basic e-commerce component and add extra functionality etc. This gives us complete ownership over the component. However the components here are still made up from the smaller components of the base-ui scope as well as some of the components from the e-commerce scope.
