@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { Input } from '@learn-bit-react/base-ui.ui.forms.input';
 import styles from './counter.module.scss';

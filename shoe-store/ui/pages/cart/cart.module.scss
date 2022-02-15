@@ -1,21 +1,24 @@
 .cart {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) repeat(3, 0.5fr);
+  grid-row-gap: 20px;
+  margin-bottom: 20px;
 }
 
 .img {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  margin-right: 20px;
-  margin-bottom: 20px;
 }
 .product {
   margin-right: 20px;
 }
 .button {
-  margin-left: 20px;
+  text-align: center;
+}
+.center {
+  text-align: center;
 }
 
 ul {

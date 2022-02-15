@@ -20,7 +20,7 @@ export function RemoveShoeFromCart({ cartItem }: RemoveShoeFromCartProps) {
       secondary
       onClick={() => context.removeProductFromCart(cartItem)}
     >
-      Remove from Cart
+      X
     </Button>
   );
 }

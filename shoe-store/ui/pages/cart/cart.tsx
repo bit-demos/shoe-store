@@ -14,9 +14,22 @@ export function Cart({}: CartProps) {
   return (
     <main>
       {context.cart.length <= 0 && <EmptyCart />}
-      <ul>
+      <>
+        <div className={styles.cart}>
+          <div></div>
+          <div className={styles.product}>
+            <Heading element="h2">Product Details</Heading>
+          </div>
+          <div className={styles.center}>
+            <Heading element="h4">Quantity</Heading>
+          </div>
+          <div className={styles.center}>
+            <Heading element="h4">Price</Heading>
+          </div>
+          <div></div>
+        </div>
         {context.cart.map((cartItem, index) => (
-          <li key={cartItem.item.id + index}>
+          <div key={cartItem.item.id + index}>
             <div className={styles.cart}>
               <Img
                 className={styles.img}
@@ -24,23 +37,27 @@ export function Cart({}: CartProps) {
                 alt={cartItem.item.alt}
               />
               <div className={styles.product}>
-                <Heading element="h3">{cartItem.item.title}</Heading>
-                <Currency price={cartItem.item.price} />
-              </div>
-              <div>
                 <ul>
+                  <li>
+                    <Heading element="h3">{cartItem.item.title}</Heading>
+                  </li>
                   <li>size: {cartItem.item.size}</li>
                   <li>color: {cartItem.item.color}</li>
-                  <li>quantity: {cartItem.quantity}</li>
                 </ul>
+              </div>
+              <div className={styles.center}>
+                <span> {cartItem.quantity}</span>
+              </div>
+              <div className={styles.center}>
+                <Currency price={cartItem.item.price} />
               </div>
               <div className={styles.button}>
                 <RemoveShoeFromCart cartItem={{ ...cartItem.item }} />
               </div>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </>
     </main>
   );
 }
