@@ -19,6 +19,7 @@ export function RemoveShoeFromCart({ cartItem }: RemoveShoeFromCartProps) {
       className={styles.removeFromCart}
       secondary
       onClick={() => context.removeProductFromCart(cartItem)}
+      aria-label="Remove from Cart"
     >
       X
     </Button>

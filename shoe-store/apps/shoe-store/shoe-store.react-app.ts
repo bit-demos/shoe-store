@@ -10,7 +10,7 @@ const netlify = new Netlify(
 export const ShoeStoreApp: ReactAppOptions = {
   name: 'shoe-store',
   entry: [require.resolve('./shoe-store.app-root')],
-  deploy: netlify.deploy.bind(netlify),
-  prerenderRoutes: ['/products', '/cart']
+  deploy: netlify.deploy.bind(netlify)
+  // prerenderRoutes: ['/products', '/cart']
 };
 export default ShoeStoreApp;
