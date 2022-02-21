@@ -59,6 +59,7 @@
         "@teambit/base-react.navigation.router-context": "1.23.1",
         "@teambit/base-ui.routing.link": "1.0.0",
         "@teambit/base-ui.routing.routing-provider": "1.0.0",
+        "@teambit/cloud-providers.deployers.netlify": "0.0.7",
         "@teambit/dependencies.modules.packages-excluder": "0.0.47",
         "@teambit/design.ui.avatar": "0.0.446",
         "@teambit/design.ui.owner-avatar": "0.0.446",

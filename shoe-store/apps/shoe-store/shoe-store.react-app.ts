@@ -1,16 +1,24 @@
 import { ReactAppOptions } from '@teambit/react';
-import { Netlify } from '@teambit/apps.netlify';
+import {
+  Netlify,
+  NetlifyOptions
+} from '@teambit/cloud-providers.deployers.netlify';
 
-const netlify = new Netlify(
-  process.env.NETLIFY_AUTH_TOKEN as string,
-  'bit-shoe-store',
-  'yona'
-);
+const netlifyConfig: NetlifyOptions = {
+  team: 'teambit',
+  accessToken: process.env.NETLIFY_AUTH_TOKEN,
+  siteName: 'bit-shoe-store'
+};
+
+export const netlify = new Netlify(netlifyConfig);
 
 export const ShoeStoreApp: ReactAppOptions = {
   name: 'shoe-store',
   entry: [require.resolve('./shoe-store.app-root')],
-  deploy: netlify.deploy.bind(netlify)
+  prerender: {
+    routes: ['/']
+  },
   // prerenderRoutes: ['/products', '/cart']
+  deploy: netlify.deploy.bind(netlify)
 };
 export default ShoeStoreApp;

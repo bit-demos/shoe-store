@@ -32,6 +32,7 @@ importers:
       '@teambit/base-react.navigation.router-context': 1.23.1
       '@teambit/base-ui.routing.link': 1.0.0
       '@teambit/base-ui.routing.routing-provider': 1.0.0
+      '@teambit/cloud-providers.deployers.netlify': 0.0.7
       '@teambit/dependencies.modules.packages-excluder': 0.0.47
       '@teambit/design.ui.avatar': 0.0.446
       '@teambit/design.ui.owner-avatar': 0.0.446
@@ -92,6 +93,7 @@ importers:
       '@teambit/base-react.navigation.router-context': 1.23.1_fa774ea24e2532894cbb8d4947e68551
       '@teambit/base-ui.routing.link': registry.npmjs.org/@teambit/base-ui.routing.link/1.0.0_react-dom@16.13.1+react@16.13.1
       '@teambit/base-ui.routing.routing-provider': registry.npmjs.org/@teambit/base-ui.routing.routing-provider/1.0.0_react-dom@16.13.1+react@16.13.1
+      '@teambit/cloud-providers.deployers.netlify': 0.0.7
       '@teambit/dependencies.modules.packages-excluder': registry.npmjs.org/@teambit/dependencies.modules.packages-excluder/0.0.47_react@16.13.1
       '@teambit/design.ui.avatar': registry.npmjs.org/@teambit/design.ui.avatar/0.0.446_react-dom@16.13.1+react@16.13.1
       '@teambit/design.ui.owner-avatar': registry.npmjs.org/@teambit/design.ui.owner-avatar/0.0.446_react-dom@16.13.1+react@16.13.1
@@ -1131,6 +1133,14 @@ packages:
       core-js: registry.npmjs.org/core-js/3.18.2
       react: registry.npmjs.org/react/16.13.1
       react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
+    dev: false
+
+  /@teambit/cloud-providers.deployers.netlify/0.0.7:
+    resolution: {integrity: sha1-PwqH5bGmFjNF32uT1F5HwJDMLFw=, tarball: '@teambit/cloud-providers.deployers.netlify/-/@teambit-cloud-providers.deployers.netlify-0.0.7.tgz'}
+    dependencies:
+      netlify: registry.npmjs.org/netlify/6.1.29
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@teambit/ui-foundation.ui.navigation.react-router.link-anchor/1.23.1_react-dom@16.13.1+react@16.13.1:
