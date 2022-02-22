@@ -6,7 +6,7 @@ import {
 
 const netlifyConfig: NetlifyOptions = {
   team: 'teambit',
-  accessToken: process.env.NETLIFY_AUTH_TOKEN,
+  accessToken: process.env.NETLIFY_AUTH_TOKEN as string,
   siteName: 'bit-shoe-store'
 };
 
