@@ -11,7 +11,7 @@
 {
     "apps/shoe-store": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.47",
+        "version": "1.0.48",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/apps/shoe-store"
     },
@@ -89,7 +89,7 @@
     },
     "ui/cart/remove-shoe-from-cart": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/cart/remove-shoe-from-cart"
     },
@@ -155,7 +155,7 @@
     },
     "ui/pages/cart": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.10",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/cart"
     },
@@ -185,7 +185,7 @@
     },
     "ui/pages/product": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.22",
+        "version": "0.0.23",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/product"
     },
@@ -203,13 +203,13 @@
     },
     "ui/product/counter": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.13",
+        "version": "0.0.14",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/counter"
     },
     "ui/product/product-details": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.16",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/product-details"
     },
@@ -245,7 +245,7 @@
     },
     "ui/shoes/shoes-details": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.14",
+        "version": "0.0.15",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/shoes/shoes-details"
     },
