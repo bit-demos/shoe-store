@@ -4,7 +4,7 @@ import { purpleTheme } from './purple-theme-tokens';
 
 export const PurpleTheme = ({ children }) => {
   return (
-    <Theme.ThemeProvider overrides={purpleTheme}>
+    <Theme.ThemeProvider overrides={purpleTheme} data-testid="theme-provider">
       {children}
     </Theme.ThemeProvider>
   );

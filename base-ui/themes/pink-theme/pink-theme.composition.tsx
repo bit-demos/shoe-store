@@ -4,7 +4,7 @@ import { pinkTheme } from './pink-theme-tokens';
 
 export const PinkThemeCCSVars = () => {
   return (
-    <PinkTheme>
+    <PinkTheme data-testid="theme-provider">
       <p
         style={{
           color: 'var(--primary-color)',
@@ -19,10 +19,10 @@ export const PinkThemeCCSVars = () => {
 
 export const PinkThemeCSSJS = () => {
   return (
-    <PinkTheme>
+    <PinkTheme data-testid="theme-provider">
       <p
         style={{
-          color: pinkTheme.primary - color,
+          color: pinkTheme.primaryColor,
           backgroundColor: pinkTheme.bgColor
         }}
       >
@@ -34,7 +34,7 @@ export const PinkThemeCSSJS = () => {
 
 export const PinkThemeDefaultFontSize = () => {
   return (
-    <PinkTheme>
+    <PinkTheme data-testid="theme-provider">
       <p
         style={{
           color: 'var(--primary-color)',

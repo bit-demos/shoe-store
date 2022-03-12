@@ -4,6 +4,8 @@ import { darkTheme } from './dark-theme-tokens';
 
 export const DarkTheme = ({ children }) => {
   return (
-    <Theme.ThemeProvider overrides={darkTheme}>{children}</Theme.ThemeProvider>
+    <Theme.ThemeProvider overrides={darkTheme} data-testid="theme-provider">
+      {children}
+    </Theme.ThemeProvider>
   );
 };

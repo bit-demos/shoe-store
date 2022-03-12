@@ -4,7 +4,7 @@ import { purpleTheme } from './purple-theme-tokens';
 
 export const PurpleThemeCCSVars = () => {
   return (
-    <PurpleTheme>
+    <PurpleTheme data-testid="theme-provider">
       <p
         style={{
           color: 'var(--primary-color)',
@@ -19,7 +19,7 @@ export const PurpleThemeCCSVars = () => {
 
 export const PurpleThemeCSSJS = () => {
   return (
-    <PurpleTheme>
+    <PurpleTheme data-testid="theme-provider">
       <p
         style={{
           color: purpleTheme.primaryColor,
@@ -34,7 +34,7 @@ export const PurpleThemeCSSJS = () => {
 
 export const PurpleThemeDefaultFontSize = () => {
   return (
-    <PurpleTheme>
+    <PurpleTheme data-testid="theme-provider">
       <p
         style={{
           color: 'var(--primary-color)',

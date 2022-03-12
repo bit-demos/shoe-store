@@ -4,6 +4,8 @@ import { pinkTheme } from './pink-theme-tokens';
 
 export const PinkTheme = ({ children }) => {
   return (
-    <Theme.ThemeProvider overrides={pinkTheme}>{children}</Theme.ThemeProvider>
+    <Theme.ThemeProvider overrides={pinkTheme} data-testid="theme-provider">
+      {children}
+    </Theme.ThemeProvider>
   );
 };

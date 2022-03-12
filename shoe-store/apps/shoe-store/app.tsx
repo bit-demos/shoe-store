@@ -28,7 +28,7 @@ import {
 import styles from './shoe-store.module.scss';
 // hack to use tailwindcss classes: remove when we can add tailwindcss to an app aspect
 import './tailwind-hack.scss';
-export function ShoeStoreApp({ theme = pinkTheme }) {
+export function ShoeStoreApp({ theme = purpleTheme }) {
   return (
     <ShoeCartContextProvider>
       <ReactRouterRoutingProvider useBrowserRouter>
