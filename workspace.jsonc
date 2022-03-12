@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "learn-bit-react.shoe-store"
+    "defaultScope": "learn-bit-react.base-ui"
   },
   /**
    * main configuration for component dependency resolution.
@@ -47,16 +47,15 @@
         "@learn-bit-react/base-ui.ui.hero": "1.0.12",
         "@learn-bit-react/base-ui.ui.img-grid": "1.0.14",
         "@learn-bit-react/base-ui.ui.layout": "1.0.10",
-        "@learn-bit-react/ecommerce.ui.header": "1.0.12",
         "@learn-bit-react/ecommerce.ui.logo-text": "1.0.9",
         "@learn-bit-react/ecommerce.ui.product.currency": "0.0.1",
         "@learn-bit-react/ecommerce.ui.product.price": "1.0.8",
         "@learn-bit-react/ecommerce.ui.product.product-card": "1.0.13",
         "@learn-bit-react/ecommerce.ui.product.product-card-grid": "1.0.10",
-        "@learn-bit-react/ecommerce.ui.store-hero": "0.0.12",
         "@teambit/apps.netlify": "0.0.2",
         "@teambit/base-react.navigation.link": "1.23.1",
         "@teambit/base-react.navigation.router-context": "1.23.1",
+        "@teambit/base-react.theme.theme-provider": "1.95.3",
         "@teambit/base-ui.routing.link": "1.0.0",
         "@teambit/base-ui.routing.routing-provider": "1.0.0",
         "@teambit/cloud-providers.deployers.netlify": "0.0.7",

@@ -1,2 +1,8 @@
-export { createTheme } from './create-theme';
-export type { CreateThemeOptions } from './create-theme';
+export {
+  Theme,
+  ThemeContextProvider,
+  ThemeContext,
+  useThemeContext
+} from './theme-provider';
+export type { ThemeSchema } from './theme-schema';
+export { defaultTheme } from './default-theme-tokens';

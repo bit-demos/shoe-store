@@ -5,6 +5,8 @@
 
 .select {
   max-width: 72px;
+  color: var(--text-color, #000);
+  background-color: var(--bg-color, #fff);
 }
 
 .label {

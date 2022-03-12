@@ -1,0 +1,41 @@
+---
+description: A PinkTheme component.
+---
+
+import { PinkTheme } from './pink-theme';
+
+A wrapper component that uses the theme provider and passes in the pink theme. You can then just wrap any component in the `<PinkTheme>` component for the pink theme to be applied.
+
+Alternatively you can import the pink theme and use the theme provider overrides prop to add the pink theme.
+
+The pink Theme uses all of the default tokens and values and overrides any values that have been set in the `pink-theme-token.tsx` file. Any new tokens can also be added here and used.
+
+### Component usage
+
+```js
+<PinkTheme>
+  <p
+    style={{ backgroundColor: 'var(--bg-color', color: 'var(--primary-color)' }}
+  >
+    hello world!
+  </p>
+</PinkTheme>
+```
+
+```js
+<Theme.ThemeProvider overrides="PinkTheme">
+  <p style={{ backgroundColor: 'var(--bg-color', color: 'var(--primary-color)' }}>hello world!</p>
+</Theme.ThemeProvier>
+```
+
+### Render hello world in pink Theme!
+
+```js live
+<PinkTheme>
+  <p
+    style={{ backgroundColor: 'var(--bg-color', color: 'var(--primary-color)' }}
+  >
+    hello world!
+  </p>
+</PinkTheme>
+```

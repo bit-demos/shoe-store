@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './button';
-
+import { PinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
 export const PrimaryButton = () => <Button primary>Primary</Button>;
 
 export const PrimaryButtonDisabled = () => (

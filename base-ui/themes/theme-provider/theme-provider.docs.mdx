@@ -1,20 +1,72 @@
 ---
-description: 'A CreateTheme component.'
-labels: ['label1', 'label2', 'label3']
+description: A ThemeProvider component.
 ---
 
-Theme
+import { Theme } from './theme-provider';
+import { defaultTheme } from './default-theme-tokens';
+import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
+import {
+  darkTheme,
+  DarkTheme
+} from '@learn-bit-react/base-ui.themes.dark-theme';
+import { Button } from '@learn-bit-react/base-ui.ui.button';
 
-### Component Usage
+Theme Provider component including design tokens and values for a default theme and possibilites to override these values with light/dark/custom themes.
 
-```js
-<CreateTheme text="hello from CreateTheme" />
+Design tokens are converted into CSS Vars and therefore can be used in your components using CSS Vars both inline or by adding a stylesheet to your component and referencing the CSS Var or in the style tag as CSS in JS. `primaryColor` will be converted into `--primary-color` and can be used in your component as `color: var(--primary-color)`.
+
+### Change the theme to see it change live
+
+Change the overrides value from `pinkTheme` to `darkTheme` to `defaultTheme` or remove to see the default theme.
+
+```js live
+<Theme.ThemeProvider overrides={defaultTheme}>
+  <div style={{ backgroundColor: 'var(--bg-color)', padding: '20px' }}>
+    <Button primary>Change the theme to see me change</Button>
+  </div>
+</Theme.ThemeProvider>
 ```
 
-### Using props to customize the text
+### Use the Default Theme
 
-Modify the text to see it change live:
+Use CSS vars or CSS in Js to style a paragraph tag
 
 ```js
-<CreateTheme text="hello from CreateTheme" />
+<Theme.ThemeProvider>
+  <p style={{ color: 'var(--primary-color' }}>Default Theme css vars</p>
+  <p style={{ color: defaultTheme.primaryColor }}>Default Theme js in css</p>
+</Theme.ThemeProvider>
 ```
+
+<!-- ### Override Default Theme with Pink Theme
+
+Use the overrides property to override the default theme with a custom theme.
+
+```js
+// import {pinkTheme} from '...'
+
+<Theme.ThemeProvider overrides="pinkTheme">
+  <p style={{ color: 'var(--primary-color' }}>Pink Theme css vars</p>
+  <p style={{ color: pinkTheme.primaryColor }}>Pink Theme</p>
+</Theme.ThemeProvider>
+```
+
+### CSS as Separate File
+
+Add your css to a separate file and reference it using the className prop.
+
+```css
+.text {
+  color: var(--primary-color);
+}
+```
+
+Import Style and add as a class.
+
+```js
+import style from './text.module.css';
+
+<Theme.ThemeProvider overrides={pinkTheme}>
+  <p className={style.text}>Default Theme css vars</p>
+</Theme.ThemeProvider>;
+``` -->

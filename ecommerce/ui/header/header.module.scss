@@ -1,0 +1,39 @@
+.header {
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2b2b;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  .img {
+    display: content;
+  }
+}
+
+.logoText {
+  color: #fff;
+  margin: 0 10px;
+}
+
+.nav {
+  display: flex;
+  margin: 0 20px;
+  font-size: 14px;
+  a {
+    margin-left: 20px;
+    color: #fff;
+    &:hover {
+      color: #e2e2e2;
+      text-decoration: none;
+    }
+  }
+}
+
+.avatar {
+  margin-left: 30px;
+}

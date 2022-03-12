@@ -1,0 +1,37 @@
+---
+description: A DarkTheme component.
+---
+
+import { DarkTheme } from './dark-theme';
+
+A wrapper component that uses the theme provider and passes in the dark theme. You can then just wrap any component in the `<DarkTheme>` component for the dark theme to be applied.
+
+Alternatively you can import the dark theme and use the theme provider overrides prop to add the dark theme.
+
+The Dark Theme uses all of the default tokens and values and overrides any values that have been set in the `dark-theme-token.tsx` file. Any new tokens can also be added here and used.
+
+### Component usage
+
+```js
+<DarkTheme>
+  <p style={{ backgroundColor: 'var(--bg-color', color: 'var(--text-color)' }}>
+    hello world!
+  </p>
+</DarkTheme>
+```
+
+```js
+<Theme.ThemeProvider overrides="darkTheme">
+  <p style={{ backgroundColor: 'var(--bg-color', color: 'var(--text-color)' }}>hello world!</p>
+</Theme.ThemeProvier>
+```
+
+### Render hello world in Dark Theme!
+
+```js live
+<DarkTheme>
+  <p style={{ backgroundColor: 'var(--bg-color', color: 'var(--text-color)' }}>
+    hello world!
+  </p>
+</DarkTheme>
+```

@@ -12,24 +12,22 @@ importers:
       '@learn-bit-react/base-ui.styles.colors': 1.0.4
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3
       '@learn-bit-react/base-ui.ui.card': 1.0.5
-      '@learn-bit-react/base-ui.ui.heading': 1.0.5
       '@learn-bit-react/base-ui.ui.hero': 1.0.12
       '@learn-bit-react/base-ui.ui.img': 1.0.5
       '@learn-bit-react/base-ui.ui.img-grid': 1.0.14
       '@learn-bit-react/base-ui.ui.layout': 1.0.10
       '@learn-bit-react/base-ui.ui.nav': 1.0.5
       '@learn-bit-react/ecommerce.content.about': 1.0.1
-      '@learn-bit-react/ecommerce.ui.header': 1.0.12
       '@learn-bit-react/ecommerce.ui.logo-text': 1.0.9
       '@learn-bit-react/ecommerce.ui.product.currency': 0.0.1
       '@learn-bit-react/ecommerce.ui.product.price': 1.0.8
       '@learn-bit-react/ecommerce.ui.product.product-card': 1.0.13
       '@learn-bit-react/ecommerce.ui.product.product-card-grid': 1.0.10
-      '@learn-bit-react/ecommerce.ui.store-hero': 0.0.12
       '@mdx-js/react': 1.6.22
       '@teambit/apps.netlify': 0.0.2
       '@teambit/base-react.navigation.link': 1.23.1
       '@teambit/base-react.navigation.router-context': 1.23.1
+      '@teambit/base-react.theme.theme-provider': 1.95.3
       '@teambit/base-ui.routing.link': 1.0.0
       '@teambit/base-ui.routing.routing-provider': 1.0.0
       '@teambit/cloud-providers.deployers.netlify': 0.0.7
@@ -73,24 +71,22 @@ importers:
       '@learn-bit-react/base-ui.styles.colors': 1.0.4_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.card': 1.0.5_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.ui.heading': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.hero': 1.0.12_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.img': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.img-grid': 1.0.14_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.layout': 1.0.10_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.nav': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/ecommerce.content.about': 1.0.1_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/ecommerce.ui.header': 1.0.12_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/ecommerce.ui.logo-text': 1.0.9_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/ecommerce.ui.product.currency': 0.0.1_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/ecommerce.ui.product.price': 1.0.8_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/ecommerce.ui.product.product-card': 1.0.13_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/ecommerce.ui.product.product-card-grid': 1.0.10_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/ecommerce.ui.store-hero': 0.0.12_react-dom@16.13.1+react@16.13.1
       '@mdx-js/react': registry.npmjs.org/@mdx-js/react/1.6.22_react@16.13.1
       '@teambit/apps.netlify': 0.0.2_react-dom@16.13.1+react@16.13.1
       '@teambit/base-react.navigation.link': 1.23.1_fa774ea24e2532894cbb8d4947e68551
       '@teambit/base-react.navigation.router-context': 1.23.1_fa774ea24e2532894cbb8d4947e68551
+      '@teambit/base-react.theme.theme-provider': 1.95.3_react-dom@16.13.1+react@16.13.1
       '@teambit/base-ui.routing.link': registry.npmjs.org/@teambit/base-ui.routing.link/1.0.0_react-dom@16.13.1+react@16.13.1
       '@teambit/base-ui.routing.routing-provider': registry.npmjs.org/@teambit/base-ui.routing.routing-provider/1.0.0_react-dom@16.13.1+react@16.13.1
       '@teambit/cloud-providers.deployers.netlify': 0.0.7
@@ -132,7 +128,22 @@ importers:
   base-ui/env/learn-bit-react:
     specifiers: {}
 
+  base-ui/themes/dark-theme:
+    specifiers: {}
+
+  base-ui/themes/light-theme:
+    specifiers: {}
+
+  base-ui/themes/pink-theme:
+    specifiers: {}
+
+  base-ui/themes/purple-theme:
+    specifiers: {}
+
   base-ui/themes/theme:
+    specifiers: {}
+
+  base-ui/themes/theme-provider:
     specifiers: {}
 
   base-ui/ui/button:
@@ -147,10 +158,16 @@ importers:
   base-ui/ui/forms/select:
     specifiers: {}
 
+  base-ui/ui/heading:
+    specifiers: {}
+
   base-ui/ui/link:
     specifiers: {}
 
   base-ui/ui/text:
+    specifiers: {}
+
+  base-ui/ui/theme-toggler:
     specifiers: {}
 
   ecommerce/entity/product:
@@ -163,6 +180,9 @@ importers:
     specifiers: {}
 
   ecommerce/ui/footer:
+    specifiers: {}
+
+  ecommerce/ui/header:
     specifiers: {}
 
   ecommerce/ui/product/available-colors:
@@ -178,6 +198,9 @@ importers:
     specifiers: {}
 
   ecommerce/ui/product/select-size:
+    specifiers: {}
+
+  ecommerce/ui/store-hero:
     specifiers: {}
 
   marketing/ui/banner:
@@ -308,17 +331,6 @@ packages:
       react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
     dev: false
 
-  /@learn-bit-react/base-ui.styles.button/0.0.5_react-dom@16.13.1+react@16.13.1:
-    resolution: {integrity: sha1-3FhiPQaYoTxgG0BKiqircSf+s+M=, tarball: '@learn-bit-react/base-ui.styles.button/-/@learn-bit-react-base-ui.styles.button-0.0.5.tgz'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      core-js: registry.npmjs.org/core-js/3.18.2
-      react: registry.npmjs.org/react/16.13.1
-      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
-    dev: false
-
   /@learn-bit-react/base-ui.styles.button/0.0.6_react-dom@16.13.1+react@16.13.1:
     resolution: {integrity: sha1-P8r178pgIS8HCPKMEfZZmQVvDPQ=, tarball: '@learn-bit-react/base-ui.styles.button/-/@learn-bit-react-base-ui.styles.button-0.0.6.tgz'}
     peerDependencies:
@@ -371,19 +383,6 @@ packages:
     dependencies:
       '@learn-bit-react/base-ui.styles.colors': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3_react-dom@16.13.1+react@16.13.1
-      classnames: registry.npmjs.org/classnames/2.3.1
-      core-js: registry.npmjs.org/core-js/3.18.2
-      react: registry.npmjs.org/react/16.13.1
-      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
-    dev: false
-
-  /@learn-bit-react/base-ui.ui.button/1.0.7_react-dom@16.13.1+react@16.13.1:
-    resolution: {integrity: sha1-bKOTMobiNYVqzqhrnzftSDR28aU=, tarball: '@learn-bit-react/base-ui.ui.button/-/@learn-bit-react-base-ui.ui.button-1.0.7.tgz'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      '@learn-bit-react/base-ui.styles.button': 0.0.5_react-dom@16.13.1+react@16.13.1
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.18.2
       react: registry.npmjs.org/react/16.13.1
@@ -516,18 +515,6 @@ packages:
       react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
     dev: false
 
-  /@learn-bit-react/base-ui.ui.theme-toggler/1.0.7_react-dom@16.13.1+react@16.13.1:
-    resolution: {integrity: sha1-qtmDuju5kNm2asXEnzq1Lo8ryRA=, tarball: '@learn-bit-react/base-ui.ui.theme-toggler/-/@learn-bit-react-base-ui.ui.theme-toggler-1.0.7.tgz'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      '@learn-bit-react/base-ui.ui.button': 1.0.7_react-dom@16.13.1+react@16.13.1
-      core-js: registry.npmjs.org/core-js/3.18.2
-      react: registry.npmjs.org/react/16.13.1
-      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
-    dev: false
-
   /@learn-bit-react/ecommerce.content.about/1.0.1_react-dom@16.13.1+react@16.13.1:
     resolution: {integrity: sha1-nsxT6KbAVWE7645HJ2xjmWT7B28=, tarball: '@learn-bit-react/ecommerce.content.about/-/@learn-bit-react-ecommerce.content.about-1.0.1.tgz'}
     peerDependencies:
@@ -549,38 +536,6 @@ packages:
 
   /@learn-bit-react/ecommerce.entity.product/1.0.3:
     resolution: {integrity: sha1-+WaPgYH0bXh6QPcpE0+6hixSvkI=, tarball: '@learn-bit-react/ecommerce.entity.product/-/@learn-bit-react-ecommerce.entity.product-1.0.3.tgz'}
-    dev: false
-
-  /@learn-bit-react/ecommerce.ui.header/1.0.12_react-dom@16.13.1+react@16.13.1:
-    resolution: {integrity: sha1-wnh72On2gtsyAdnTgWLltGVlwvo=, tarball: '@learn-bit-react/ecommerce.ui.header/-/@learn-bit-react-ecommerce.ui.header-1.0.12.tgz'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      '@learn-bit-react/base-ui.ui.img': 1.0.5_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.ui.link': 1.0.14_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.ui.nav': 1.0.5_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.ui.theme-toggler': 1.0.7_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/ecommerce.ui.logo-text': 1.0.8_react-dom@16.13.1+react@16.13.1
-      '@teambit/design.ui.avatar': registry.npmjs.org/@teambit/design.ui.avatar/0.0.446_react-dom@16.13.1+react@16.13.1
-      classnames: registry.npmjs.org/classnames/2.3.1
-      core-js: registry.npmjs.org/core-js/3.18.2
-      react: registry.npmjs.org/react/16.13.1
-      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
-    transitivePeerDependencies:
-      - '@teambit/legacy'
-    dev: false
-
-  /@learn-bit-react/ecommerce.ui.logo-text/1.0.8_react-dom@16.13.1+react@16.13.1:
-    resolution: {integrity: sha1-7hlcleCUiZiREjI8mFTI/0Owu20=, tarball: '@learn-bit-react/ecommerce.ui.logo-text/-/@learn-bit-react-ecommerce.ui.logo-text-1.0.8.tgz'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      classnames: registry.npmjs.org/classnames/2.3.1
-      core-js: registry.npmjs.org/core-js/3.18.2
-      react: registry.npmjs.org/react/16.13.1
-      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
     dev: false
 
   /@learn-bit-react/ecommerce.ui.logo-text/1.0.9_react-dom@16.13.1+react@16.13.1:
@@ -667,21 +622,6 @@ packages:
       react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
     dev: false
 
-  /@learn-bit-react/ecommerce.ui.store-hero/0.0.12_react-dom@16.13.1+react@16.13.1:
-    resolution: {integrity: sha1-Zj9YSfRV45XU00cMq3joszlj2EM=, tarball: '@learn-bit-react/ecommerce.ui.store-hero/-/@learn-bit-react-ecommerce.ui.store-hero-0.0.12.tgz'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      '@learn-bit-react/base-ui.ui.button': 2.0.1_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.ui.heading': 1.0.5_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.ui.hero': 1.0.12_react-dom@16.13.1+react@16.13.1
-      classnames: registry.npmjs.org/classnames/2.3.1
-      core-js: registry.npmjs.org/core-js/3.18.2
-      react: registry.npmjs.org/react/16.13.1
-      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
-    dev: false
-
   /@teambit/apps.netlify/0.0.2_react-dom@16.13.1+react@16.13.1:
     resolution: {integrity: sha1-1CbIhSQtmJfy2QezU0awpripzLs=, tarball: '@teambit/apps.netlify/-/@teambit-apps.netlify-0.0.2.tgz'}
     peerDependencies:
@@ -736,6 +676,17 @@ packages:
     dependencies:
       '@teambit/base-react.navigation.router-context': 1.23.1_fa774ea24e2532894cbb8d4947e68551
       '@testing-library/react': registry.npmjs.org/@testing-library/react/12.1.2_react-dom@16.13.1+react@16.13.1
+      core-js: registry.npmjs.org/core-js/3.18.2
+      react: registry.npmjs.org/react/16.13.1
+      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
+    dev: false
+
+  /@teambit/base-react.theme.theme-provider/1.95.3_react-dom@16.13.1+react@16.13.1:
+    resolution: {integrity: sha1-CBX15Vnm/ZI8JgjJKI170gnN0r8=, tarball: '@teambit/base-react.theme.theme-provider/-/@teambit-base-react.theme.theme-provider-1.95.3.tgz'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
       core-js: registry.npmjs.org/core-js/3.18.2
       react: registry.npmjs.org/react/16.13.1
       react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1

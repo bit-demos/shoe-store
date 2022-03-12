@@ -1,57 +1,44 @@
 import React from 'react';
-import { createTheme } from './create-theme';
+import { Theme } from './theme-provider';
+import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
+import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
+import { defaultTheme } from './default-theme-tokens';
 
-const BaseThemeSchema = {
-  backgroundColor: 'white',
-  textColor: 'navy'
-};
-
-const { ThemeProvider } = createTheme<typeof BaseThemeSchema>({
-  theme: BaseThemeSchema
-});
-
-export const BaseTheme = () => {
+export const ThemeProviderCSSVars = () => {
   return (
-    <ThemeProvider>
-      <div
-        data-testid="base-theme"
-        style={{
-          backgroundColor: 'var(--background-color)',
-          color: 'var(--text-color)'
-        }}
-      >
-        Base Theme
-      </div>
-    </ThemeProvider>
+    <Theme.ThemeProvider data-testid="theme-provider">
+      <p style={{ color: 'var(--primary-color)' }}>Default Theme</p>
+    </Theme.ThemeProvider>
   );
 };
 
-export const LightTheme = () => {
+export const ThemeProviderCSSJS = () => {
   return (
-    <ThemeProvider overrides={{ textColor: 'black' }}>
-      <div
-        style={{
-          backgroundColor: 'var(--background-color)',
-          color: 'var(--text-color)'
-        }}
-      >
-        Light Theme
-      </div>
-    </ThemeProvider>
+    <Theme.ThemeProvider data-testid="theme-provider">
+      <p style={{ color: defaultTheme.primaryColor }}>Default Theme</p>
+    </Theme.ThemeProvider>
   );
 };
 
-export const DarkTheme = () => {
+export const ThemeProviderDarkTheme = () => {
   return (
-    <ThemeProvider overrides={{ textColor: 'white', backgroundColor: 'black' }}>
-      <div
+    <Theme.ThemeProvider overrides={darkTheme} data-testid="theme-provider">
+      <p
         style={{
-          backgroundColor: 'var(--background-color)',
-          color: 'var(--text-color)'
+          backgroundColor: 'var(--bg-color)',
+          color: 'var(--primary-color)'
         }}
       >
         Dark Theme
-      </div>
-    </ThemeProvider>
+      </p>
+    </Theme.ThemeProvider>
+  );
+};
+
+export const ThemeProviderPinkTheme = () => {
+  return (
+    <Theme.ThemeProvider overrides={pinkTheme} data-testid="theme-provider">
+      <p style={{ color: 'var(--primary-color)' }}>Pink Theme</p>
+    </Theme.ThemeProvider>
   );
 };
