@@ -35,7 +35,14 @@ export type ShoesCardProps = {
   title: string;
 };
 
-export function ShoesCard({ alt, src, title, text, price, id }: ShoesCardProps) {
+export function ShoesCard({
+  alt,
+  src,
+  title,
+  text,
+  price,
+  id
+}: ShoesCardProps) {
   return (
     <Card>
       <div className={styles.card}>
@@ -50,7 +57,12 @@ export function ShoesCard({ alt, src, title, text, price, id }: ShoesCardProps) 
         </div>
         <div className={styles.footer}>
           <Currency price={price} className={styles.price} />
-          <Button link primary className={styles.button} href={`/product/${id}`}>
+          <Button
+            link
+            primary
+            className={styles.button}
+            href={`/product/${id}`}
+          >
             See Product Details
           </Button>
         </div>

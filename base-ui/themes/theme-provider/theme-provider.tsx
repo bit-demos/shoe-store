@@ -1,6 +1,6 @@
 import React, { useContext, createContext, ReactNode } from 'react';
 import { createTheme } from '@teambit/base-react.theme.theme-provider';
-import { defaultTheme } from './default-theme-tokens';
+import { baseTheme } from './base-theme-tokens';
 import { ThemeSchema } from './theme-schema';
 
 export type ThemeContextType = {
@@ -9,7 +9,7 @@ export type ThemeContextType = {
    */
   changeTheme: (theme: Partial<ThemeSchema>) => void;
   /**
-   * current theme value in the theme context
+   * current theme in the theme context
    */
   currentTheme: ThemeSchema;
 };
@@ -20,9 +20,10 @@ export type ThemeContextProviderProps = {
    */
   children: ReactNode;
   /**
-   * main theme to be used for example pink theme or purple theme
+   * customized theme that is merged with base theme for example pink theme
+   * any values that are the same are overridden by the customized theme
    */
-  mainTheme?: Partial<ThemeSchema>;
+  customizedTheme?: Partial<ThemeSchema>;
   /**
    * classes to be added
    */
@@ -38,38 +39,42 @@ export const ThemeContext = createContext<ThemeContextType>({
 // exports theme context
 export const useThemeProviderContext = () => useContext(ThemeContext);
 
-// uses CreateTheme to create a theme from teambits theme provider
+// uses CreateTheme to create a theme from teambit's theme provider
 const BaseTheme = createTheme({
-  theme: defaultTheme
+  theme: baseTheme
 });
 
-// ThemeContextProvider to be used to wrap any component that needs to use the theme context
+// Wrap any component to use the theme context
 export function ThemeContextProvider({
   children,
-  mainTheme = {},
+  customizedTheme = {},
   className
 }: ThemeContextProviderProps) {
-    
-  function addToBaseTheme(contextTheme: any){
-    return {...mainTheme, ...contextTheme}
+  function addToBaseTheme(contextTheme: any) {
+    return { ...customizedTheme, ...contextTheme };
   }
 
-  // sets the theme starting with the default theme as the current theme
-  const [mergeTheme, setTheme] = React.useState(addToBaseTheme(defaultTheme));
+  // sets the theme starting with the base theme as the default theme
+  const [customTheme, setCustomTheme] = React.useState(
+    addToBaseTheme(baseTheme)
+  );
 
-  // function to change the theme to the theme that is passed into it
+  // changes the theme adding the new theme to the base theme
   const changeTheme = (theme) => {
-    setTheme(addToBaseTheme(theme));
+    setCustomTheme(addToBaseTheme(theme));
   };
 
   // context value of type ThemeContextType with changeTheme function which sets the theme of type changeTheme
-  const contextValue: ThemeContextType = { changeTheme: changeTheme, currentTheme: mergeTheme };
+  const contextValue: ThemeContextType = {
+    changeTheme: changeTheme,
+    currentTheme: customTheme
+  };
 
   // changeTheme function is passed in as the value to the ThemeContext provider so any component under it can access this context
   // this allows it to then have a theme property which can be used to override the theme
   return (
     <ThemeContext.Provider value={contextValue}>
-      <BaseTheme.ThemeProvider overrides={mergeTheme} className={className}>
+      <BaseTheme.ThemeProvider overrides={customTheme} className={className}>
         {children}
       </BaseTheme.ThemeProvider>
     </ThemeContext.Provider>

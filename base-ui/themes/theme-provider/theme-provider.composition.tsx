@@ -1,28 +1,31 @@
 import React from 'react';
-import { Theme } from './theme-provider';
+import { ThemeContextProvider } from './theme-provider';
 import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
 import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
-import { defaultTheme } from './default-theme-tokens';
+import { baseTheme } from './base-theme-tokens';
 
 export const ThemeProviderCSSVars = () => {
   return (
-    <Theme.ThemeProvider data-testid="theme-provider">
+    <ThemeContextProvider data-testid="theme-provider">
       <p style={{ color: 'var(--primary-color)' }}>Default Theme</p>
-    </Theme.ThemeProvider>
+    </ThemeContextProvider>
   );
 };
 
 export const ThemeProviderCSSJS = () => {
   return (
-    <Theme.ThemeProvider data-testid="theme-provider">
-      <p style={{ color: defaultTheme.primaryColor }}>Default Theme</p>
-    </Theme.ThemeProvider>
+    <ThemeContextProvider data-testid="theme-provider">
+      <p style={{ color: baseTheme.primaryColor }}>Default Theme</p>
+    </ThemeContextProvider>
   );
 };
 
 export const ThemeProviderDarkTheme = () => {
   return (
-    <Theme.ThemeProvider overrides={darkTheme} data-testid="theme-provider">
+    <ThemeContextProvider
+      customizedTheme={darkTheme}
+      data-testid="theme-provider"
+    >
       <p
         style={{
           backgroundColor: 'var(--bg-color)',
@@ -31,14 +34,17 @@ export const ThemeProviderDarkTheme = () => {
       >
         Dark Theme
       </p>
-    </Theme.ThemeProvider>
+    </ThemeContextProvider>
   );
 };
 
 export const ThemeProviderPinkTheme = () => {
   return (
-    <Theme.ThemeProvider overrides={pinkTheme} data-testid="theme-provider">
+    <ThemeContextProvider
+      customizedTheme={pinkTheme}
+      data-testid="theme-provider"
+    >
       <p style={{ color: 'var(--primary-color)' }}>Pink Theme</p>
-    </Theme.ThemeProvider>
+    </ThemeContextProvider>
   );
 };

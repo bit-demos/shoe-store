@@ -11,7 +11,7 @@ export const LightThemeCCSVars = () => {
           backgroundColor: 'var(--bg-color)'
         }}
       >
-        Dark Theme
+        Light Theme
       </p>
     </LightTheme>
   );
@@ -26,7 +26,7 @@ export const LightThemeCSSJS = () => {
           backgroundColor: lightTheme.bgColor
         }}
       >
-        Dark Theme
+        Light Theme
       </p>
     </LightTheme>
   );
@@ -42,7 +42,7 @@ export const LightThemeDefaultFontSize = () => {
           fontSize: 'var(--font-size)'
         }}
       >
-        Dark Theme
+        Light Theme
       </p>
     </LightTheme>
   );

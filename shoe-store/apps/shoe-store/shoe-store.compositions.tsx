@@ -5,7 +5,7 @@ import { ShoeStoreApp } from './app';
 import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
 import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
 
-export const ShoeStoreDefaultTheme = () => {
+export const ShoeStoreBaseTheme = () => {
   return (
     <MemoryRouter>
       <ReactRouterRoutingProvider>
