@@ -15,13 +15,7 @@ import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { ShoeCartContextProvider } from '@learn-bit-react/shoe-store.ui.cart.shoe-cart-context';
 import { AmountOfShoesInCart } from '@learn-bit-react/shoe-store.ui.cart.amount-of-shoes-in-cart';
 import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
-import { Theme } from '@learn-bit-react/base-ui.themes.theme-provider';
 import {
-  PinkTheme,
-  pinkTheme
-} from '@learn-bit-react/base-ui.themes.pink-theme';
-import {
-  PurpleTheme,
   purpleTheme
 } from '@learn-bit-react/base-ui.themes.purple-theme';
 
