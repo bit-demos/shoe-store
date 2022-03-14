@@ -7,7 +7,7 @@ export type ThemeContextType = {
   /**
    * function that uses state to set the theme
    */
-  changeTheme: (theme: ThemeSchema) => void;
+  changeTheme: (theme: Partial<ThemeSchema>) => void;
   /**
    * current theme value in the theme context
    */
@@ -22,7 +22,7 @@ export type ThemeContextProviderProps = {
   /**
    * main theme to be used for example pink theme or purple theme
    */
-  mainTheme?: ThemeSchema;
+  mainTheme?: Partial<ThemeSchema>;
   /**
    * classes to be added
    */
