@@ -4,7 +4,7 @@ import { darkTheme } from './dark-theme-tokens';
 
 export const DarkThemeCCSVars = () => {
   return (
-    <DarkTheme data-testid="theme-provider">
+    <DarkTheme>
       <p
         style={{
           color: 'var(--text-color)',
@@ -19,27 +19,11 @@ export const DarkThemeCCSVars = () => {
 
 export const DarkThemeCSSJS = () => {
   return (
-    <DarkTheme data-testid="theme-provider">
+    <DarkTheme>
       <p
         style={{
           color: darkTheme.textColor,
           backgroundColor: darkTheme.bgColor
-        }}
-      >
-        Dark Theme
-      </p>
-    </DarkTheme>
-  );
-};
-
-export const DarkThemeDefaultFontSize = () => {
-  return (
-    <DarkTheme data-testid="theme-provider">
-      <p
-        style={{
-          color: 'var(--text-color)',
-          backgroundColor: 'var(--bg-color)',
-          fontSize: 'var(--font-size)'
         }}
       >
         Dark Theme

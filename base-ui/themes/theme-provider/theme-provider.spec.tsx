@@ -8,11 +8,11 @@ import {
 it('should have style with css var and correct color', () => {
   render(<ThemeProviderCSSVars />);
   const themeProviderCSSVars = screen.getByTestId('theme-provider');
-  expect(themeProviderCSSVars).toHaveStyle('--twitter:#1da1f2');
+  expect(themeProviderCSSVars).toHaveStyle('--primary-color: #6c5ce7');
 });
 
 it('should have style with css var and correct color', () => {
   render(<ThemeProviderCSSJS />);
   const themeProviderCSSJS = screen.getByTestId('theme-provider');
-  expect(themeProviderCSSJS).toHaveStyle('--twitter:#1da1f2');
+  expect(themeProviderCSSJS).toHaveStyle('--primary-color: #6c5ce7');
 });

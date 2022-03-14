@@ -6,5 +6,5 @@
   color: var(--tertiary-color);
   padding: 2rem 0 2rem 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--heading-sm, 1.25rem);
 }

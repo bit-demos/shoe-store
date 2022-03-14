@@ -18,7 +18,7 @@
 
 .title {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--heading-md, 1.5rem);
 }
 
 .img {

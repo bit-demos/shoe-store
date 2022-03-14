@@ -1,0 +1,46 @@
+---
+description: A GreenTheme component.
+---
+
+import { GreenTheme } from './green-theme';
+import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
+
+A wrapper component that uses the theme provider and passes in the green theme. You can then just wrap any component in the `<GreenTheme>` component for the green theme to be applied.
+
+Alternatively you can import the green theme and use the theme provider customizedTheme prop to add the green theme.
+
+The green Theme uses all of the default tokens and values and overrides any values that have been set in the `green-theme-token.tsx` file. Any new tokens can also be added here and used.
+
+### Component usage
+
+```js
+<GreenTheme>
+  <p
+    style={{ backgroundColor: 'var(--bg-color', color: 'var(--primary-color)' }}
+  >
+    hello world!
+  </p>
+</GreenTheme>
+```
+
+```js
+<ThemeContextProvider customizedTheme="GreenTheme">
+  <p
+    style={{ backgroundColor: 'var(--bg-color', color: 'var(--primary-color)' }}
+  >
+    hello world!
+  </p>
+</ThemeContextProvider>
+```
+
+### Render hello world in green Theme!
+
+```js live
+<GreenTheme>
+  <p
+    style={{ backgroundColor: 'var(--bg-color', color: 'var(--primary-color)' }}
+  >
+    hello world!
+  </p>
+</GreenTheme>
+```

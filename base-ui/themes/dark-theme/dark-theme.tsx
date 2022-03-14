@@ -1,11 +1,14 @@
 import React from 'react';
-import { Theme } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
 import { darkTheme } from './dark-theme-tokens';
 
 export const DarkTheme = ({ children }) => {
   return (
-    <Theme.ThemeProvider overrides={darkTheme} data-testid="theme-provider">
+    <ThemeContextProvider
+      customizedTheme={darkTheme}
+      data-testid="theme-provider"
+    >
       {children}
-    </Theme.ThemeProvider>
+    </ThemeContextProvider>
   );
 };

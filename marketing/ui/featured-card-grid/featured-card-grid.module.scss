@@ -10,6 +10,6 @@
 
 .heading {
   text-align: center;
-  font-size: 32px;
+  font-size: var(--heading-lg, 2rem);
   margin-bottom: 24px;
 }

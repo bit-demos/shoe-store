@@ -1,44 +1,54 @@
 import React from 'react';
-import { Theme } from './theme-provider';
+import { ThemeContextProvider } from './theme-provider';
 import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
 import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
-import { defaultTheme } from './default-theme-tokens';
+import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
+import { baseTheme } from './base-theme-tokens';
+import { greenTheme } from '@learn-bit-react/base-ui.themes.green-theme';
 
 export const ThemeProviderCSSVars = () => {
   return (
-    <Theme.ThemeProvider data-testid="theme-provider">
+    <ThemeContextProvider>
       <p style={{ color: 'var(--primary-color)' }}>Default Theme</p>
-    </Theme.ThemeProvider>
+    </ThemeContextProvider>
   );
 };
 
 export const ThemeProviderCSSJS = () => {
   return (
-    <Theme.ThemeProvider data-testid="theme-provider">
-      <p style={{ color: defaultTheme.primaryColor }}>Default Theme</p>
-    </Theme.ThemeProvider>
-  );
-};
-
-export const ThemeProviderDarkTheme = () => {
-  return (
-    <Theme.ThemeProvider overrides={darkTheme} data-testid="theme-provider">
-      <p
-        style={{
-          backgroundColor: 'var(--bg-color)',
-          color: 'var(--primary-color)'
-        }}
-      >
-        Dark Theme
-      </p>
-    </Theme.ThemeProvider>
+    <ThemeContextProvider>
+      <p style={{ color: baseTheme.primaryColor }}>Default Theme</p>
+    </ThemeContextProvider>
   );
 };
 
 export const ThemeProviderPinkTheme = () => {
   return (
-    <Theme.ThemeProvider overrides={pinkTheme} data-testid="theme-provider">
+    <ThemeContextProvider customizedTheme={pinkTheme}>
       <p style={{ color: 'var(--primary-color)' }}>Pink Theme</p>
-    </Theme.ThemeProvider>
+    </ThemeContextProvider>
+  );
+};
+
+export const ThemeProviderGreenTheme = () => {
+  return (
+    <ThemeContextProvider customizedTheme={greenTheme}>
+      <p style={{ color: 'var(--primary-color)' }}>Green Theme</p>
+    </ThemeContextProvider>
+  );
+};
+
+export const ThemeProviderDarkTheme = () => {
+  return (
+    <ThemeContextProvider customizedTheme={darkTheme}>
+      <p
+        style={{
+          backgroundColor: 'var(--bg-color)',
+          color: 'var(--text-color)'
+        }}
+      >
+        Dark Theme
+      </p>
+    </ThemeContextProvider>
   );
 };

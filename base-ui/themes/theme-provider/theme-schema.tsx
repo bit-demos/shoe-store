@@ -14,6 +14,15 @@ export type ThemeSchema = {
   bgColor?: string;
   borderColor?: string;
 
+  // heading sizes
+
+  headingXxs?: string;
+  headingXs?: string;
+  headingSm?: string;
+  headingMd?: string;
+  headingLg?: string;
+  headingXl?: string;
+  headingXxl?: string;
   // social colors
   twitter?: string;
   slack?: string;

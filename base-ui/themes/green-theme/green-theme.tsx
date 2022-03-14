@@ -1,11 +1,11 @@
 import React from 'react';
 import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
-import { lightTheme } from './light-theme-tokens';
+import { greenTheme } from './green-theme-tokens';
 
-export const LightTheme = ({ children }) => {
+export const GreenTheme = ({ children }) => {
   return (
     <ThemeContextProvider
-      customizedTheme={lightTheme}
+      customizedTheme={greenTheme}
       data-testid="theme-provider"
     >
       {children}
