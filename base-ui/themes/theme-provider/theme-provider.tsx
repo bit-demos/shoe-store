@@ -15,6 +15,14 @@ export type ThemeContextProviderProps = {
    * children to be rendered within this theme.
    */
   children: ReactNode;
+  /**
+   * main theme to be used for example pink theme or purple theme
+   */
+  mainTheme?: ThemeSchema;
+  /**
+   * classes to be added
+   */
+  className?: string;
 };
 
 // creates a theme context with changeTheme function
@@ -25,15 +33,19 @@ export const ThemeContext = createContext<ThemeContextType>({
 // exports theme context
 export const useThemeContext = () => useContext(ThemeContext);
 
-// uses CreateTheme to create a theme from teambits theme provider
-export const Theme = createTheme({
-  theme: defaultTheme
-});
-
 // ThemeContextProvider to be used to wrap any component that needs to use the theme context
-export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
+export function ThemeContextProvider({
+  children,
+  mainTheme = {},
+  className
+}: ThemeContextProviderProps) {
+  // uses CreateTheme to create a theme from teambits theme provider
+  const BaseTheme = createTheme({
+    theme: { ...defaultTheme, ...mainTheme }
+  });
+
   // sets the theme starting with the default theme as the current theme
-  const [theme, setTheme] = React.useState(defaultTheme);
+  const [mergeTheme, setTheme] = React.useState(defaultTheme);
 
   // function to change the theme to the theme that is passed into it
   const changeTheme = (theme) => {
@@ -47,7 +59,9 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   // this allows it to then have a theme property which can be used to override the theme
   return (
     <ThemeContext.Provider value={contextValue}>
-      <Theme.ThemeProvider overrides={theme}>{children}</Theme.ThemeProvider>
+      <BaseTheme.ThemeProvider overrides={mergeTheme} className={className}>
+        {children}
+      </BaseTheme.ThemeProvider>
     </ThemeContext.Provider>
   );
 }

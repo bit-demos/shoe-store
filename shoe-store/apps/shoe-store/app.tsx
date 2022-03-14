@@ -32,56 +32,54 @@ export function ShoeStoreApp({ theme = purpleTheme }) {
   return (
     <ShoeCartContextProvider>
       <ReactRouterRoutingProvider useBrowserRouter>
-        <ThemeContextProvider>
-          <Theme.ThemeProvider overrides={theme} className={theme.fontFamily}>
-            <Layout className={styles.layout}>
-              <Header
-                logoText="Bit Shoe Store"
-                src="https://static.bit.dev/bit-logo.svg"
-                alt="Bit Logo"
-              >
-                <Link href="/men">Men</Link>
-                <Link href="/women">Women</Link>
-                <Link href="/children">Children</Link>
-                <Link href="/cart">
-                  <AmountOfShoesInCart />
-                </Link>
-              </Header>
+        <ThemeContextProvider mainTheme={theme} className={theme.fontFamily}>
+          <Layout className={styles.layout}>
+            <Header
+              logoText="Bit Shoe Store"
+              src="https://static.bit.dev/bit-logo.svg"
+              alt="Bit Logo"
+            >
+              <Link href="/men">Men</Link>
+              <Link href="/women">Women</Link>
+              <Link href="/children">Children</Link>
+              <Link href="/cart">
+                <AmountOfShoesInCart />
+              </Link>
+            </Header>
 
-              <Switch>
-                <Route path="/about" exact>
-                  <About />
-                </Route>
-                <Route path="/women">
-                  <Women />
-                </Route>
-                <Route path="/children">
-                  <Children />
-                </Route>
-                <Route path="/men">
-                  <Men />
-                </Route>
-                <Route path="/product/:id">
-                  <Product />
-                </Route>
-                <Route path="/cart">
-                  <Cart />
-                </Route>
-                <Route path="/">
-                  <Home />
-                </Route>
-              </Switch>
-              <Footer
-                logoText="Bit Shoe Store"
-                src="https://static.bit.dev/bit-logo.svg"
-                alt="Bit Logo"
-              >
-                <Link href="/privacy">Privacy</Link>
-                <Link href="/contact">Contact</Link>
-                <Link href="/about">About</Link>
-              </Footer>
-            </Layout>
-          </Theme.ThemeProvider>
+            <Switch>
+              <Route path="/about" exact>
+                <About />
+              </Route>
+              <Route path="/women">
+                <Women />
+              </Route>
+              <Route path="/children">
+                <Children />
+              </Route>
+              <Route path="/men">
+                <Men />
+              </Route>
+              <Route path="/product/:id">
+                <Product />
+              </Route>
+              <Route path="/cart">
+                <Cart />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+            <Footer
+              logoText="Bit Shoe Store"
+              src="https://static.bit.dev/bit-logo.svg"
+              alt="Bit Logo"
+            >
+              <Link href="/privacy">Privacy</Link>
+              <Link href="/contact">Contact</Link>
+              <Link href="/about">About</Link>
+            </Footer>
+          </Layout>
         </ThemeContextProvider>
       </ReactRouterRoutingProvider>
     </ShoeCartContextProvider>

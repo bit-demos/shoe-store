@@ -12,18 +12,18 @@ export function ThemeToggler() {
     { theme: darkTheme, name: 'dark' },
     { theme: lightTheme, name: 'light' }
   ];
-
   const [theme, setTheme] = useState(themes[0]);
   const themeContext = useThemeContext();
-
   const toggleTheme = () => {
-    setTheme(theme.name === 'light' ? themes[0] : themes[1]);
+    setTheme(themes[(themes.indexOf(theme) + 1) % (themes.length - 1)]);
+
     themeContext.changeTheme(theme.theme);
+    console.log(theme.name);
   };
 
   return (
     <Button onClick={toggleTheme} secondary>
-      {`${theme.name} mode`}
+      {`${theme.name} mode hello`}
     </Button>
   );
 }
