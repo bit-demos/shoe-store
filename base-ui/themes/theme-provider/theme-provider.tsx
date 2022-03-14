@@ -51,7 +51,7 @@ export function ThemeContextProvider({
   className
 }: ThemeContextProviderProps) {
   function addToBaseTheme(contextTheme: any) {
-    return { ...customizedTheme, ...contextTheme };
+    return { ...contextTheme, ...customizedTheme };
   }
 
   // sets the theme starting with the base theme as the default theme
@@ -74,7 +74,11 @@ export function ThemeContextProvider({
   // this allows it to then have a theme property which can be used to override the theme
   return (
     <ThemeContext.Provider value={contextValue}>
-      <BaseTheme.ThemeProvider overrides={customTheme} className={className}>
+      <BaseTheme.ThemeProvider
+        overrides={customTheme}
+        className={className}
+        data-testid="theme-provider"
+      >
         {children}
       </BaseTheme.ThemeProvider>
     </ThemeContext.Provider>

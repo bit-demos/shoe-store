@@ -4,7 +4,7 @@ import { lightTheme } from './light-theme-tokens';
 
 export const LightThemeCCSVars = () => {
   return (
-    <LightTheme data-testid="theme-provider">
+    <LightTheme>
       <p
         style={{
           color: 'var(--text-color)',
@@ -19,7 +19,7 @@ export const LightThemeCCSVars = () => {
 
 export const LightThemeCSSJS = () => {
   return (
-    <LightTheme data-testid="theme-provider">
+    <LightTheme>
       <p
         style={{
           color: lightTheme.textColor,
@@ -34,7 +34,7 @@ export const LightThemeCSSJS = () => {
 
 export const LightThemeDefaultFontSize = () => {
   return (
-    <LightTheme data-testid="theme-provider">
+    <LightTheme>
       <p
         style={{
           color: 'var(--text-color)',

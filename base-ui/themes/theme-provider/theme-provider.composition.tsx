@@ -6,7 +6,7 @@ import { baseTheme } from './base-theme-tokens';
 
 export const ThemeProviderCSSVars = () => {
   return (
-    <ThemeContextProvider data-testid="theme-provider">
+    <ThemeContextProvider>
       <p style={{ color: 'var(--primary-color)' }}>Default Theme</p>
     </ThemeContextProvider>
   );
@@ -14,7 +14,7 @@ export const ThemeProviderCSSVars = () => {
 
 export const ThemeProviderCSSJS = () => {
   return (
-    <ThemeContextProvider data-testid="theme-provider">
+    <ThemeContextProvider>
       <p style={{ color: baseTheme.primaryColor }}>Default Theme</p>
     </ThemeContextProvider>
   );
@@ -22,14 +22,11 @@ export const ThemeProviderCSSJS = () => {
 
 export const ThemeProviderDarkTheme = () => {
   return (
-    <ThemeContextProvider
-      customizedTheme={darkTheme}
-      data-testid="theme-provider"
-    >
+    <ThemeContextProvider customizedTheme={darkTheme}>
       <p
         style={{
           backgroundColor: 'var(--bg-color)',
-          color: 'var(--primary-color)'
+          color: 'var(--text-color)'
         }}
       >
         Dark Theme
@@ -40,10 +37,7 @@ export const ThemeProviderDarkTheme = () => {
 
 export const ThemeProviderPinkTheme = () => {
   return (
-    <ThemeContextProvider
-      customizedTheme={pinkTheme}
-      data-testid="theme-provider"
-    >
+    <ThemeContextProvider customizedTheme={pinkTheme}>
       <p style={{ color: 'var(--primary-color)' }}>Pink Theme</p>
     </ThemeContextProvider>
   );
