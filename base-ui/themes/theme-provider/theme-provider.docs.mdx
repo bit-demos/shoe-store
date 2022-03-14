@@ -2,14 +2,13 @@
 description: A ThemeProvider component.
 ---
 
-import { ThemeContextProvider } from './theme-provider';
-import { baseTheme } from './default-theme-tokens';
 import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
-import {
-  darkTheme,
-  DarkTheme
-} from '@learn-bit-react/base-ui.themes.dark-theme';
+import { greenTheme } from '@learn-bit-react/base-ui.themes.green-theme';
+import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
+import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
+import { baseTheme } from './default-theme-tokens';
+import { ThemeContextProvider } from './theme-provider';
 
 Theme Provider component including design tokens and values for a default theme and possibilites to override these values with light/dark/custom themes.
 
@@ -17,10 +16,10 @@ Design tokens are converted into CSS Vars and therefore can be used in your comp
 
 ### Change the theme to see it change live
 
-Change the customizedTheme value from `pinkTheme` or `darkTheme` or remove to see the default theme.
+Change the customizedTheme value from `pinkTheme` or `darkTheme` or `greenTheme` or remove to see the default theme.
 
 ```js live
-<ThemeContextProvider customizedTheme={baseTheme}>
+<ThemeContextProvider customizedTheme={purpleTheme}>
   <div style={{ backgroundColor: 'var(--bg-color)', padding: '20px' }}>
     <Button primary>Change the theme to see me change</Button>
   </div>
@@ -38,7 +37,7 @@ Use CSS vars or CSS in Js to style a paragraph tag
 </ThemeContextProvider>
 ```
 
-<!-- ### Override Default Theme with Pink Theme
+### Override Default Theme with Pink Theme
 
 Use the customizedTheme property to override the default theme with a custom theme.
 
@@ -69,4 +68,4 @@ import style from './text.module.css';
 <ThemeContextProvider customizedTheme={pinkTheme}>
   <p className={style.text}>Default Theme css vars</p>
 </ThemeContextProvider>;
-``` -->
+```

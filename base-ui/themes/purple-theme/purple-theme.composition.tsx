@@ -31,19 +31,3 @@ export const PurpleThemeCSSJS = () => {
     </PurpleTheme>
   );
 };
-
-export const PurpleThemeDefaultFontSize = () => {
-  return (
-    <PurpleTheme>
-      <p
-        style={{
-          color: 'var(--primary-color)',
-          backgroundColor: 'var(--bg-color)',
-          fontSize: 'var(--font-size)'
-        }}
-      >
-        Purple Theme
-      </p>
-    </PurpleTheme>
-  );
-};

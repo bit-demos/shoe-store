@@ -31,19 +31,3 @@ export const PinkThemeCSSJS = () => {
     </PinkTheme>
   );
 };
-
-export const PinkThemeDefaultFontSize = () => {
-  return (
-    <PinkTheme>
-      <p
-        style={{
-          color: 'var(--primary-color)',
-          backgroundColor: 'var(--bg-color)',
-          fontSize: 'var(--font-size)'
-        }}
-      >
-        Pink Theme
-      </p>
-    </PinkTheme>
-  );
-};

@@ -10,8 +10,8 @@ export type PrintableTheme = {
 
 export function ThemeToggler() {
   const themes: PrintableTheme[] = [
-    { theme: darkTheme, name: 'dark' },
-    { theme: lightTheme, name: 'light' }
+    { theme: lightTheme, name: 'light' },
+    { theme: darkTheme, name: 'dark' }
   ];
 
   const [themeIndex, setThemeIndex] = useState(0);

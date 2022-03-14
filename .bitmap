@@ -51,6 +51,12 @@
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/dark-theme"
     },
+    "themes/green-theme": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/themes/green-theme"
+    },
     "themes/light-theme": {
         "scope": "learn-bit-react.base-ui",
         "version": "0.0.4",

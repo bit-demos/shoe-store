@@ -10,7 +10,7 @@ export const baseTheme: ThemeSchema = {
   headingXl: '3rem',
   headingXxl: '4rem',
 
-  // primary colors //
+  //  primary  //
   primaryColor: '#6c5ce7',
   primaryHeavy: '#5d4aec',
   primaryLight: '#897dec',
@@ -18,7 +18,7 @@ export const baseTheme: ThemeSchema = {
   primaryBg: '#eceaff',
   primaryBgHeavy: '#c9c3f6',
 
-  // secondary  colors //
+  //  secondary  //
   secondaryColor: '#ffffff',
   secondaryHeavy: '#ffffff',
   secondaryLight: '#ffffff',

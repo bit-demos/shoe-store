@@ -31,19 +31,3 @@ export const DarkThemeCSSJS = () => {
     </DarkTheme>
   );
 };
-
-export const DarkThemeDefaultFontSize = () => {
-  return (
-    <DarkTheme>
-      <p
-        style={{
-          color: 'var(--text-color)',
-          backgroundColor: 'var(--bg-color)',
-          fontSize: 'var(--font-size)'
-        }}
-      >
-        Dark Theme
-      </p>
-    </DarkTheme>
-  );
-};

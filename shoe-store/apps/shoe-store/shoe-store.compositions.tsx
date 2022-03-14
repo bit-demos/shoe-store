@@ -4,8 +4,9 @@ import { ReactRouterRoutingProvider } from '@teambit/ui-foundation.ui.navigation
 import { ShoeStoreApp } from './app';
 import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
 import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
+import { greenTheme } from '@learn-bit-react/base-ui.themes.green-theme';
 
-export const ShoeStoreBaseTheme = () => {
+export const ShoeStoreDefaultTheme = () => {
   return (
     <MemoryRouter>
       <ReactRouterRoutingProvider>
@@ -20,6 +21,16 @@ export const ShoeStorePinkTheme = () => {
     <MemoryRouter>
       <ReactRouterRoutingProvider>
         <ShoeStoreApp theme={pinkTheme}></ShoeStoreApp>
+      </ReactRouterRoutingProvider>
+    </MemoryRouter>
+  );
+};
+
+export const ShoeStoreGreenTheme = () => {
+  return (
+    <MemoryRouter>
+      <ReactRouterRoutingProvider>
+        <ShoeStoreApp theme={greenTheme}></ShoeStoreApp>
       </ReactRouterRoutingProvider>
     </MemoryRouter>
   );
