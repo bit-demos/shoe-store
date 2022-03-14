@@ -7,7 +7,15 @@ export type ThemeContextType = {
   /**
    * function that uses state to set the theme
    */
+<<<<<<< Updated upstream
   changeTheme: (theme: ThemeSchema) => void;
+=======
+  changeTheme: (theme: Partial<ThemeSchema>) => void;
+  /**
+   * current theme in the theme context
+   */
+  currentTheme: Partial<ThemeSchema>;
+>>>>>>> Stashed changes
 };
 
 export type ThemeContextProviderProps = {
@@ -19,7 +27,12 @@ export type ThemeContextProviderProps = {
 
 // creates a theme context with changeTheme function
 export const ThemeContext = createContext<ThemeContextType>({
+<<<<<<< Updated upstream
   changeTheme: () => {}
+=======
+  changeTheme: () => {},
+  currentTheme: {}
+>>>>>>> Stashed changes
 });
 
 // exports theme context

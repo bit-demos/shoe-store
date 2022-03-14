@@ -1,21 +1,21 @@
 import { ThemeSchema } from '@learn-bit-react/base-ui.themes.theme-provider';
 import { bookFont } from '@learn-bit-react/base-ui.styles.fonts.book';
 
-export const pinkTheme: Partial<ThemeSchema> = {
+export const greenTheme: Partial<ThemeSchema> = {
   fontFamily: bookFont,
-  //  primary  //
-  primaryColor: 'hotpink',
-  primaryHeavy: '#f7768d',
-  primaryLight: '#ff9aac',
-  textOnPrimary: '#ffffff',
-  primaryBg: '#ffe5ea',
-  primaryBgHeavy: 'hotpink',
+  // primary colors //
+  primaryColor: '#52B788',
+  primaryHeavy: '#1B4332',
+  primaryLight: '#B7E4C7',
+  textOnPrimary: '#fff',
+  primaryBg: '#D8F3DC',
+  primaryBgHeavy: '#1B4332',
 
-  //  secondary  //
+  // secondary  colors //
   secondaryColor: '#ffffff',
   secondaryHeavy: '#ffffff',
   secondaryLight: '#ffffff',
-  textOnSecondary: 'hotpink',
+  textOnSecondary: '2D6A4F',
   secondaryBg: '#ffffff',
   secondaryBgHeavy: '#ffffff'
 };
