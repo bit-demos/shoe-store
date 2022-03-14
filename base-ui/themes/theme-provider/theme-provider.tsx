@@ -8,6 +8,10 @@ export type ThemeContextType = {
    * function that uses state to set the theme
    */
   changeTheme: (theme: ThemeSchema) => void;
+  /**
+   * current theme value in the theme context
+   */
+  currentTheme: ThemeSchema;
 };
 
 export type ThemeContextProviderProps = {
@@ -27,11 +31,17 @@ export type ThemeContextProviderProps = {
 
 // creates a theme context with changeTheme function
 export const ThemeContext = createContext<ThemeContextType>({
-  changeTheme: () => {}
+  changeTheme: () => {},
+  currentTheme: null
 });
 
 // exports theme context
-export const useThemeContext = () => useContext(ThemeContext);
+export const useThemeProviderContext = () => useContext(ThemeContext);
+
+// uses CreateTheme to create a theme from teambits theme provider
+const BaseTheme = createTheme({
+  theme: defaultTheme
+});
 
 // ThemeContextProvider to be used to wrap any component that needs to use the theme context
 export function ThemeContextProvider({
@@ -39,21 +49,21 @@ export function ThemeContextProvider({
   mainTheme = {},
   className
 }: ThemeContextProviderProps) {
-  // uses CreateTheme to create a theme from teambits theme provider
-  const BaseTheme = createTheme({
-    theme: { ...defaultTheme, ...mainTheme }
-  });
+    
+  function addToBaseTheme(contextTheme: any){
+    return {...mainTheme, ...contextTheme}
+  }
 
   // sets the theme starting with the default theme as the current theme
-  const [mergeTheme, setTheme] = React.useState(defaultTheme);
+  const [mergeTheme, setTheme] = React.useState(addToBaseTheme(defaultTheme));
 
   // function to change the theme to the theme that is passed into it
   const changeTheme = (theme) => {
-    setTheme(theme);
+    setTheme(addToBaseTheme(theme));
   };
 
   // context value of type ThemeContextType with changeTheme function which sets the theme of type changeTheme
-  const contextValue: ThemeContextType = { changeTheme: changeTheme };
+  const contextValue: ThemeContextType = { changeTheme: changeTheme, currentTheme: mergeTheme };
 
   // changeTheme function is passed in as the value to the ThemeContext provider so any component under it can access this context
   // this allows it to then have a theme property which can be used to override the theme
