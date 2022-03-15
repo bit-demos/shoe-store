@@ -14,12 +14,22 @@ import { Layout } from '@learn-bit-react/base-ui.ui.layout';
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { ShoeCartContextProvider } from '@learn-bit-react/shoe-store.ui.cart.shoe-cart-context';
 import { AmountOfShoesInCart } from '@learn-bit-react/shoe-store.ui.cart.amount-of-shoes-in-cart';
-import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
+import {
+  ThemeContextProvider,
+  ThemeSchema
+} from '@learn-bit-react/base-ui.themes.theme-provider';
 import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
-
 import styles from './shoe-store.module.scss';
 // hack to use tailwindcss classes: remove when we can add tailwindcss to an app aspect
 import './tailwind-hack.scss';
+
+export type ThemeContextType = {
+  /**
+   * custom theme passed to the app which will merge with and override the base theme
+   */
+  theme: Partial<ThemeSchema>;
+};
+
 export function ShoeStoreApp({ theme = purpleTheme }) {
   return (
     <ShoeCartContextProvider>
