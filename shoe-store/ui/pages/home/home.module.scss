@@ -3,8 +3,8 @@
 }
 
 .heading {
-  color: var(--tertiary-color);
+  color: var(--primary-color, #6c5ce7);
   padding: 2rem 0 2rem 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--heading-lg, 2rem);
 }

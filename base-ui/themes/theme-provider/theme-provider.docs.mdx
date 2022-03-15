@@ -2,13 +2,10 @@
 description: A ThemeProvider component.
 ---
 
-import { Theme } from './theme-provider';
-import { defaultTheme } from './default-theme-tokens';
 import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
-import {
-  darkTheme,
-  DarkTheme
-} from '@learn-bit-react/base-ui.themes.dark-theme';
+import { greenTheme } from '@learn-bit-react/base-ui.themes.green-theme';
+import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
+import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { baseTheme } from './base-theme-tokens';
 import { ThemeContextProvider } from './theme-provider';
@@ -19,14 +16,14 @@ Design tokens are converted into CSS Vars and therefore can be used in your comp
 
 ### Change the theme to see it change live
 
-Change the overrides value from `pinkTheme` to `darkTheme` to `defaultTheme` or remove to see the default theme.
+Change the customizedTheme value from `pinkTheme` or `darkTheme` or `greenTheme` or remove to see the default theme.
 
 ```js live
-<Theme.ThemeProvider overrides={defaultTheme}>
+<ThemeContextProvider customizedTheme={purpleTheme}>
   <div style={{ backgroundColor: 'var(--bg-color)', padding: '20px' }}>
     <Button primary>Change the theme to see me change</Button>
   </div>
-</Theme.ThemeProvider>
+</ThemeContextProvider>
 ```
 
 ### Use the Default Theme
@@ -34,23 +31,23 @@ Change the overrides value from `pinkTheme` to `darkTheme` to `defaultTheme` or 
 Use CSS vars or CSS in Js to style a paragraph tag
 
 ```js
-<Theme.ThemeProvider>
+<ThemeContextProvider>
   <p style={{ color: 'var(--primary-color' }}>Default Theme css vars</p>
-  <p style={{ color: defaultTheme.primaryColor }}>Default Theme js in css</p>
-</Theme.ThemeProvider>
+  <p style={{ color: baseTheme.primaryColor }}>Default Theme js in css</p>
+</ThemeContextProvider>
 ```
 
-<!-- ### Override Default Theme with Pink Theme
+### Override Default Theme with Pink Theme
 
-Use the overrides property to override the default theme with a custom theme.
+Use the customizedTheme property to override the default theme with a custom theme.
 
 ```js
 // import {pinkTheme} from '...'
 
-<Theme.ThemeProvider overrides="pinkTheme">
+<ThemeContextProvider customizedTheme="pinkTheme">
   <p style={{ color: 'var(--primary-color' }}>Pink Theme css vars</p>
   <p style={{ color: pinkTheme.primaryColor }}>Pink Theme</p>
-</Theme.ThemeProvider>
+</ThemeContextProvider>
 ```
 
 ### CSS as Separate File
@@ -68,7 +65,7 @@ Import Style and add as a class.
 ```js
 import style from './text.module.css';
 
-<Theme.ThemeProvider overrides={pinkTheme}>
+<ThemeContextProvider customizedTheme={pinkTheme}>
   <p className={style.text}>Default Theme css vars</p>
-</Theme.ThemeProvider>;
-``` -->
+</ThemeContextProvider>;
+```

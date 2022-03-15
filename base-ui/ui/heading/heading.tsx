@@ -1,6 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
-import styles from './heading.module.scss';
 
 export type HeadingProps = {
   /**
@@ -11,9 +9,5 @@ export type HeadingProps = {
 
 export function Heading({ children, element, className }: HeadingProps) {
   const Element = element || 'h1';
-  return (
-    <Element className={classNames(styles.heading, className)}>
-      {children}
-    </Element>
-  );
+  return <Element className={className}>{children}</Element>;
 }

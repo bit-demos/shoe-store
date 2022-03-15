@@ -2,28 +2,34 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
 import { lightTheme } from '@learn-bit-react/base-ui.themes.light-theme';
-import { useThemeContext } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { useThemeProviderContext } from '@learn-bit-react/base-ui.themes.theme-provider';
 export type PrintableTheme = {
   theme: any;
   name: string;
 };
+
 export function ThemeToggler() {
   const themes: PrintableTheme[] = [
-    { theme: darkTheme, name: 'dark' },
-    { theme: lightTheme, name: 'light' }
+    { theme: lightTheme, name: 'light' },
+    { theme: darkTheme, name: 'dark' }
   ];
 
-  const [theme, setTheme] = useState(themes[0]);
-  const themeContext = useThemeContext();
+  const [themeIndex, setThemeIndex] = useState(0);
+  const { changeTheme } = useThemeProviderContext();
+
+  useEffect(() => {
+    changeTheme(themes[themeIndex].theme);
+  }, [themeIndex]);
 
   const toggleTheme = () => {
-    setTheme(theme.name === 'light' ? themes[0] : themes[1]);
-    themeContext.changeTheme(theme.theme);
+    setThemeIndex((themeIndex + 1) % themes.length);
   };
+
+  const nextTheme = themes[themeIndex].name === 'dark' ? 'light' : 'dark';
 
   return (
     <Button onClick={toggleTheme} secondary>
-      {`${theme.name} mode`}
+      {`${nextTheme} mode`}
     </Button>
   );
 }

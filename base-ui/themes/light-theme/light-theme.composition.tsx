@@ -4,14 +4,14 @@ import { lightTheme } from './light-theme-tokens';
 
 export const LightThemeCCSVars = () => {
   return (
-    <LightTheme data-testid="theme-provider">
+    <LightTheme>
       <p
         style={{
           color: 'var(--text-color)',
           backgroundColor: 'var(--bg-color)'
         }}
       >
-        Dark Theme
+        Light Theme
       </p>
     </LightTheme>
   );
@@ -19,30 +19,14 @@ export const LightThemeCCSVars = () => {
 
 export const LightThemeCSSJS = () => {
   return (
-    <LightTheme data-testid="theme-provider">
+    <LightTheme>
       <p
         style={{
           color: lightTheme.textColor,
           backgroundColor: lightTheme.bgColor
         }}
       >
-        Dark Theme
-      </p>
-    </LightTheme>
-  );
-};
-
-export const LightThemeDefaultFontSize = () => {
-  return (
-    <LightTheme data-testid="theme-provider">
-      <p
-        style={{
-          color: 'var(--text-color)',
-          backgroundColor: 'var(--bg-color)',
-          fontSize: 'var(--font-size)'
-        }}
-      >
-        Dark Theme
+        Light Theme
       </p>
     </LightTheme>
   );

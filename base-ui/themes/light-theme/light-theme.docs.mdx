@@ -3,12 +3,13 @@ description: A LightTheme component.
 ---
 
 import { LightTheme } from './light-theme';
+import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
 
 A wrapper component that uses the theme provider and passes in the dark theme. You can then just wrap any component in the `<LightTheme>` component for the dark theme to be applied.
 
 Alternatively you can import the dark theme and use the theme provider overrides prop to add the dark theme.
 
-The Dark Theme uses all of the default tokens and values and overrides any values that have been set in the `light-theme-token.tsx` file. Any new tokens can also be added here and used.
+The Dark Theme uses all of the default tokens and values and customizedTheme any values that have been set in the `light-theme-token.tsx` file. Any new tokens can also be added here and used.
 
 ### Component usage
 
@@ -21,9 +22,11 @@ The Dark Theme uses all of the default tokens and values and overrides any value
 ```
 
 ```js
-<Theme.ThemeProvider overrides="lightTheme">
-  <p style={{ backgroundColor: 'var(--bg-color', color: 'var(--text-color)' }}>hello world!</p>
-</Theme.ThemeProvier>
+<ThemeContextProvider customizedTheme="lightTheme">
+  <p style={{ backgroundColor: 'var(--bg-color', color: 'var(--text-color)' }}>
+    hello world!
+  </p>
+</ThemeContextProvider>
 ```
 
 ### Render hello world in Dark Theme!

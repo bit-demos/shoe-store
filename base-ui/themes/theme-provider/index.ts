@@ -1,8 +1,7 @@
 export {
-  Theme,
   ThemeContextProvider,
   ThemeContext,
-  useThemeContext
+  useThemeProviderContext
 } from './theme-provider';
 export type { ThemeSchema } from './theme-schema';
-export { defaultTheme } from './default-theme-tokens';
+export { baseTheme } from './base-theme-tokens';

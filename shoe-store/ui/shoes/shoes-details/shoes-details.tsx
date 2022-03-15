@@ -64,12 +64,12 @@ export function ShoesDetails({ catalogShoe, className }: ShoesDetailsProps) {
           alt={alt}
         />
         <div className={classNames(styles.details, 'xs:p-16 md:pl-16')}>
-          <Heading element="h2" className="text-5xl mb-8">
+          <Heading element="h2" className={styles.heading}>
             {title}
           </Heading>
           <Rating stars={rating} className="mb-4" />
           <Currency price={price} className="mb-4 text-2xl" />
-          <Text className="mb-4">{text}</Text>
+          <Text className={'mb-4'}>{text}</Text>
           <div>
             <Counter onCountChange={quantityChanged} className="my-4" />
             <div className="my-4">

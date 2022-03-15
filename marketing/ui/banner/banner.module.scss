@@ -1,7 +1,7 @@
 .heading {
   color: white;
   font-weight: bold;
-  font-size: 64px;
+  font-size: var(--heading-xxl, 4rem);
 }
 .hero {
   padding: 6rem;
