@@ -11,7 +11,7 @@
 {
     "apps/shoe-store": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.52",
+        "version": "1.0.53",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/apps/shoe-store"
     },
@@ -35,7 +35,7 @@
     },
     "env/learn-bit-react": {
         "scope": "learn-bit-react.base-ui",
-        "version": "1.0.22",
+        "version": "1.0.23",
         "mainFile": "index.ts",
         "rootDir": "base-ui/env/learn-bit-react"
     },
@@ -47,31 +47,31 @@
     },
     "themes/dark-theme": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/dark-theme"
     },
     "themes/green-theme": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/green-theme"
     },
     "themes/light-theme": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/light-theme"
     },
     "themes/pink-theme": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/pink-theme"
     },
     "themes/purple-theme": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/purple-theme"
     },
@@ -83,241 +83,241 @@
     },
     "themes/theme-provider": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/theme-provider"
     },
     "ui/banner": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/banner"
     },
     "ui/button": {
         "scope": "learn-bit-react.base-ui",
-        "version": "2.0.18",
+        "version": "2.0.19",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/button"
     },
     "ui/card": {
         "scope": "learn-bit-react.base-ui",
-        "version": "1.0.15",
+        "version": "1.0.16",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/card"
     },
     "ui/cart/add-shoe-to-cart": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/cart/add-shoe-to-cart"
     },
     "ui/cart/amount-of-shoes-in-cart": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/cart/amount-of-shoes-in-cart"
     },
     "ui/cart/cart-context": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/cart/cart-context"
     },
     "ui/cart/empty-cart": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/cart/empty-cart"
     },
     "ui/cart/remove-shoe-from-cart": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.13",
+        "version": "0.0.14",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/cart/remove-shoe-from-cart"
     },
     "ui/cart/shoe-cart-context": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/cart/shoe-cart-context"
     },
     "ui/featured-card": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/featured-card"
     },
     "ui/featured-card-grid": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/featured-card-grid"
     },
     "ui/footer": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "1.0.20",
+        "version": "1.0.21",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/footer"
     },
     "ui/forms/input": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.13",
+        "version": "0.0.14",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/forms/input"
     },
     "ui/forms/label": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/forms/label"
     },
     "ui/forms/select": {
         "scope": "learn-bit-react.base-ui",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/forms/select"
     },
     "ui/header": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "1.0.16",
+        "version": "1.0.17",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/header"
     },
     "ui/heading": {
         "scope": "learn-bit-react.base-ui",
-        "version": "1.0.15",
+        "version": "1.0.16",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/heading"
     },
     "ui/link": {
         "scope": "learn-bit-react.base-ui",
-        "version": "1.0.28",
+        "version": "1.0.29",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/link"
     },
     "ui/pages/about": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/about"
     },
     "ui/pages/about-shoes": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.25",
+        "version": "1.0.26",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/about-shoes"
     },
     "ui/pages/cart": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.14",
+        "version": "0.0.15",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/cart"
     },
     "ui/pages/children": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.19",
+        "version": "0.0.20",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/children"
     },
     "ui/pages/home": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.21",
+        "version": "0.0.22",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/home"
     },
     "ui/pages/home-shoes": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.35",
+        "version": "1.0.36",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/home-shoes"
     },
     "ui/pages/men": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.19",
+        "version": "0.0.20",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/men"
     },
     "ui/pages/product": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.26",
+        "version": "0.0.27",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/product"
     },
     "ui/pages/women": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.19",
+        "version": "0.0.20",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/pages/women"
     },
     "ui/product/available-colors": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.18",
+        "version": "0.0.19",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/available-colors"
     },
     "ui/product/counter": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.17",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/counter"
     },
     "ui/product/product-details": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.20",
+        "version": "0.0.21",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/product-details"
     },
     "ui/product/rating": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/rating"
     },
     "ui/product/select-size": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/product/select-size"
     },
     "ui/reviews": {
         "scope": "learn-bit-react.marketing",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "marketing/ui/reviews"
     },
     "ui/shoes/shoes-card": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.31",
+        "version": "1.0.32",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/shoes/shoes-card"
     },
     "ui/shoes/shoes-card-grid": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.33",
+        "version": "1.0.34",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/shoes/shoes-card-grid"
     },
     "ui/shoes/shoes-details": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "0.0.18",
+        "version": "0.0.19",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/ui/shoes/shoes-details"
     },
     "ui/store-hero": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/store-hero"
     },
     "ui/text": {
         "scope": "learn-bit-react.base-ui",
-        "version": "1.0.23",
+        "version": "1.0.24",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/text"
     },
     "ui/theme-toggler": {
         "scope": "learn-bit-react.base-ui",
-        "version": "1.0.18",
+        "version": "1.0.19",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/theme-toggler"
     },
