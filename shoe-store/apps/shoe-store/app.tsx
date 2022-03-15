@@ -23,7 +23,7 @@ import styles from './shoe-store.module.scss';
 // hack to use tailwindcss classes: remove when we can add tailwindcss to an app aspect
 import './tailwind-hack.scss';
 
-export type ThemeContextType = {
+export type ShoeStoreAppProps = {
   /**
    * custom theme passed to the app which will merge with and override the base theme
    */
