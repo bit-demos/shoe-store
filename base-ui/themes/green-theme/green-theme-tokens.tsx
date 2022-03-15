@@ -1,21 +1,13 @@
-import { ThemeSchema } from '@learn-bit-react/base-ui.themes.theme-provider';
-import { bookFont } from '@learn-bit-react/base-ui.styles.fonts.book';
+import { ThemeSchema } from '@learn-bit-react/base-ui.themes.base-theme';
+import { primaryColorTokens } from './design-tokens/primary-color-tokens';
+import { secondaryColorTokens } from './design-tokens/secondary-color-tokens';
 
-export const greenTheme: Partial<ThemeSchema> = {
-  fontFamily: bookFont,
-  // primary colors //
-  primaryColor: '#52B788',
-  primaryHeavy: '#1B4332',
-  primaryLight: '#B7E4C7',
-  textOnPrimary: '#fff',
-  primaryBg: '#D8F3DC',
-  primaryBgHeavy: '#1B4332',
+// this is needed as a bug in system prints the first tokens with all other token values.
+// adding an empty object first fixes this.
+const tokens = {};
 
-  // secondary  colors //
-  secondaryColor: '#ffffff',
-  secondaryHeavy: '#ffffff',
-  secondaryLight: '#ffffff',
-  textOnSecondary: '2D6A4F',
-  secondaryBg: '#ffffff',
-  secondaryBgHeavy: '#ffffff'
-};
+export const greenTheme: Partial<ThemeSchema> = Object.assign(
+  tokens,
+  primaryColorTokens,
+  secondaryColorTokens
+);

@@ -45,6 +45,18 @@
         "mainFile": "index.ts",
         "rootDir": "readme"
     },
+    "styles/colors": {
+        "scope": "learn-bit-react.base-ui",
+        "version": "1.0.6",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/styles/colors"
+    },
+    "themes/base-theme": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/themes/base-theme"
+    },
     "themes/dark-theme": {
         "scope": "learn-bit-react.base-ui",
         "version": "0.0.4",

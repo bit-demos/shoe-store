@@ -1,4 +1,4 @@
-import { ThemeSchema } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { ThemeSchema } from '@learn-bit-react/base-ui.themes.base-theme';
 
 export const lightTheme: Partial<ThemeSchema> = {
   bgColor: '#fff',

@@ -1,0 +1,262 @@
+// Color Palette
+
+:root {
+  // purple
+  --p70: #3e29df;
+  --p60: #5d4aec;
+  --p50: #6c5ce7;
+  --p40: #897dec;
+  --p30: #c9c3f6;
+  --p20: #eceaff;
+
+  // blue
+  --b70: #0d2de3;
+  --b60: #3d5afe;
+  --b50: #0984e3;
+  --b40: #95ccf5;
+  --b30: #d2ecfe;
+  --b20: #f3faff;
+
+  // green
+  --g70: #006644;
+  --g60: #2e945a;
+  --g50: #37b26c;
+  --g40: #94deb4;
+  --g30: #d0f1de;
+  --g20: #eefaf3;
+
+  // yellow
+  --y70: #ff8b00;
+  --y60: #ff991f;
+  --y50: #ffc640;
+  --y40: #ffe380;
+  --y30: #fff0b3;
+  --y20: #fff5dd;
+
+  // red
+  --r70: #8d1130;
+  --r60: #d31948;
+  --r50: #e62e5c;
+  --r40: #f086a0;
+  --r30: #f7bac9;
+  --r20: #fdeff2;
+
+  // dark
+  --d70: #0c0c0c; // lucifer
+  --d60: #2b2b2b; // doom
+  --d50: #414141; // darkness
+  --d40: #6c707c; // battleship
+  --d30: #878c9a; // steel
+  --d20: #babec9; // silver
+  --d15: #cccfd4; // light grey
+
+  // light
+  --l70: #6c707c;
+  --l60: #878c9a;
+  --l50: #babec9;
+  --l40: #ededed;
+  --l30: #f6f6f6;
+  --l20: #ffffff;
+
+  --d10: #ededed; // pearl
+  --w20: #f6f6f6; // cloud
+  --w10: #ffffff; // white
+
+  // pink
+  --pink70: #df083e;
+  --pink60: #f7174f;
+  --pink50: #f83d6c;
+  --pink40: #f96389;
+  --pink30: #fb9cb4;
+  --pink20: #ffe2ea;
+
+  // shadow
+  --s50: rgba(65, 65, 65, 0.5);
+  --s40: rgba(108, 112, 124, 0.5);
+  --s30: rgba(135, 140, 154, 0.5);
+  --s20: rgba(186, 190, 201, 0.5);
+  --s10: rgba(237, 237, 237, 0.5);
+
+  // background colors
+  --bg1: #f6f6f6;
+  --bg2: #ededed;
+  --bg3: #0a1821;
+  --bg4: #1e1e1e;
+  --bg5: #fdeff2;
+  --bg6: #2b2b2b;
+}
+
+// Light Theme
+
+body[data-theme='light'] .colors,
+.colors {
+  --primary-20: var(--p20);
+  --primary-50: var(--p50);
+  --primary-60: var(--p60);
+
+  --secondary-20: var(--w10);
+  --secondary-40: var(--w10);
+  --secondary-50: var(--w10);
+  --secondary-60: var(--w10);
+
+  --light-20: var(--w10);
+  --light-30: var(--w20);
+  --light-50: var(--d20);
+
+  --dark-20: var(--d20);
+  --dark-30: var(--d30);
+  --dark-50: var(--d50);
+
+  // text colors
+  --text-primary: var(--d60);
+  --text-secondary: var(--l70);
+  --text-disabled: var(--b50);
+  --text-error: var(--r50);
+  --text-link: var(--p50);
+  --border-card: var(--d15);
+
+  // social colors
+  --twitter: #1da1f2;
+  --slack: #4a154b;
+  --github: #24292e;
+
+  // old colors
+  --primary-color: var(--p50);
+  --secondary-color: var(--w10);
+  --tertiary-color: var(--pink50);
+  --complimentary-color: var(--d40);
+  --text-color: var(--d50);
+
+  // bit colors
+  --text-color: var(--d50);
+  --text-color-heavy: var(--d60);
+  --text-color-light: var(--d40);
+  --text-inactive: var(--d20);
+  --text-inactive-heavy: var(--d30);
+
+  --border-color: var(--d20);
+  --border-color-heavy: var(--d30);
+  --border-color-light: var(--d15);
+  --border-color-lightest: var(--d10);
+
+  // -- primary -- //
+  --primary-color: var(--p50);
+  --primary-heavy: var(--p60);
+  --primary-light: var(--p40);
+  --primary-text: var(--p50);
+  --primary-text-heavy: var(--p60);
+  --text-on-primary: var(--w10);
+  --primary-bg: var(--p20);
+  --primary-bg-heavy: var(--p30);
+
+  // -- secondary -- //
+  --secondary-color: var(--w10);
+  --secondary-heavy: var(--w10);
+  --secondary-light: var(--w10);
+  --secondary-text: var(--w10);
+  --secondary-text-heavy: var(--w10);
+  --text-on-secondary: var(--p50);
+  --secondary-bg: var(--w10);
+  --secondary-bg-heavy: var(--w10);
+
+  // -- background -- //
+  // // higher number = more important, and 'closer' to the user.
+  // --bg-01: var(--w10);
+  // --bg-03: var(--w20);
+  // --bg-05: var(--d10);
+  // --bg-07: var(--d15);
+  // --bg-09: var(--d20);
+  // --bg-11: var(--d30);
+
+  // intractable item
+  --bg-color: var(--w10); // when resting
+  --bg-heavy: var(--w20); // when hovering, focus
+  --bg-heaviest: var(--d10); // when active (clicked)
+
+  --bg-bedrock: var(--w10); // i.e. <body/> background
+  --bg-navigation: var(--w20); // i.e. <body/> background
+  --bg-overlay: var(--w10); // e.g. button, input, etc
+  --bg-modal: var(--w10); // e.g. button, input, etc
+  --bg-tooltip: var(--w10); // e.g. button, input, etc
+  --bg-tooltip-heavy: var(--w20);
+  --bg-dent: var(--w20);
+
+  // -- error -- //
+  // might replace with 'error' theme
+  --error-color: var(--r50);
+  --error-heavy: var(--r60);
+  --error-light: var(--r40);
+  --error-bg: var(--r20);
+  --error-bg-heavy: var(--r30);
+}
+
+// Dark Theme
+
+body[data-theme='dark'] .colors {
+  --light-10: var(--dark-10);
+  --light-30: var(--dark-30);
+  --light-50: var(--dark-50);
+
+  color: var(--d10);
+  --text-color: var(--d10);
+  --text-color-heavy: var(--w20);
+  --text-color-light: var(--d30);
+  --text-inactive: var(--d40);
+  --text-inactive-heavy: var(--d30);
+
+  --border-color: var(--d50);
+  --border-color-heavy: var(--d40);
+  --border-color-light: var(--d60);
+  --border-color-lightest: var(--d60); //TBD
+
+  // -- primary -- //
+  --primary-color: var(--p30);
+  --primary-heavy: var(--p20);
+  --primary-light: var(--p40);
+  --primary-text: var(--p30);
+  --primary-text-heavy: var(--p20);
+  --text-on-primary: var(--w10);
+  --text-color: var(--d10);
+  --primary-bg: var(--p50);
+  --primary-bg-heavy: var(--p40);
+
+  // -- secondary -- //
+  --secondary-color: var(--w10);
+  --secondary-heavy: var(--w10);
+  --secondary-light: var(--w10);
+  --secondary-text: var(--w10);
+  --secondary-text-heavy: var(--w10);
+  --text-on-secondary: var(--p50);
+  --secondary-bg: var(--w10);
+  --secondary-bg-heavy: var(--w10);
+
+  // -- background -- //
+  // // higher number = more important, and 'closer' to the user.
+  // --bg-01: var(--d70);
+  // --bg-03: var(--w20);
+  // --bg-05: var(--d10);
+  // --bg-07: var(--d15);
+  // --bg-09: var(--d20);
+  // --bg-11: var(--d30);
+  --bg-color: var(--d70); // default background
+  --bg-heavy: var(--d60); // e.g. when active hovering
+  --bg-bedrock: var(--d70); // i.e. <body/> background
+  --navigation: var(--d60); // i.e. <body/> background
+  --bg-overlay: var(--d60); // e.g. button, input, etc
+  --bg-modal: var(--d60); // e.g. button, input, etc
+  --bg-tooltip: var(--d60); // e.g. button, input, etc
+  --bg-tooltip-heavy: var(--d50);
+  --bg-dent: var(--d60);
+
+  // -- error -- //
+  --error-color: var(--r30);
+  --error-heavy: var(--r20);
+  --error-light: var(--r40);
+  --error-bg: var(--r70);
+  --error-bg-heavy: var(--r60);
+
+  background-color: var(--background-color);
+  .content {
+    color: #fff;
+  }
+}

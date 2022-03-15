@@ -1,0 +1,35 @@
+---
+description: A BaseTheme component.
+---
+
+import { BaseTheme, baseTheme } from './base-theme';
+import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
+
+Base Theme included with the [Theme Provider component](https://bit.dev/learn-bit-react/base-ui/themes/theme-provider). This component contains a folder of design tokens which can be modified by designers. Developers can then see the changes directly in the compositions and use the tokens throughout their components via CSS variables or CSS in JS.
+
+Any customized theme is merged with the base theme adding the new design tokens or overriding any existing ones. This means you can easily change any of these tokens by creating a custom theme and applying it as a prop to the [Theme Provider](https://bit.dev/learn-bit-react/base-ui/themes/theme-provider).
+
+### Using the Base Theme Design Tokens
+
+Modify any of the design token values to see the theme in action. Remember to change from camelCase to kebab-case when using CSS variables.
+
+```js live
+<BaseTheme>
+  <div
+    style={{
+      fontFamily: 'var(--font-family-mono)',
+      padding: '0 20px',
+      borderStyle: 'solid',
+      borderSize: 'var(--border-size-1)',
+      borderColor: 'var(--border-color)',
+      borderRadius: 'var(--border-radius-medium)',
+      backgroundColor: 'var(--bg-color)',
+      color: 'var(--primary-color)',
+      fontSize: 'var(--font-lg)',
+      boxShadow: 'var(--box-shadow-x-large)'
+    }}
+  >
+    <p>hello world!</p>
+  </div>
+</BaseTheme>
+```

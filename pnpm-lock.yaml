@@ -11,7 +11,6 @@ importers:
       '@learn-bit-react/base-ui.styles.button': 0.0.11
       '@learn-bit-react/base-ui.styles.colors': 1.0.4
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3
-      '@learn-bit-react/base-ui.ui.card': 1.0.5
       '@learn-bit-react/base-ui.ui.hero': 1.0.12
       '@learn-bit-react/base-ui.ui.img': 1.0.5
       '@learn-bit-react/base-ui.ui.img-grid': 1.0.14
@@ -70,7 +69,6 @@ importers:
       '@learn-bit-react/base-ui.styles.button': 0.0.11_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.colors': 1.0.4_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.ui.card': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.hero': 1.0.12_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.img': 1.0.5_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.img-grid': 1.0.14_react-dom@16.13.1+react@16.13.1
@@ -128,7 +126,13 @@ importers:
   base-ui/env/learn-bit-react:
     specifiers: {}
 
+  base-ui/styles/colors:
+    specifiers: {}
+
   base-ui/themes/dark-theme:
+    specifiers: {}
+
+  base-ui/themes/green-theme:
     specifiers: {}
 
   base-ui/themes/light-theme:
@@ -147,6 +151,9 @@ importers:
     specifiers: {}
 
   base-ui/ui/button:
+    specifiers: {}
+
+  base-ui/ui/card:
     specifiers: {}
 
   base-ui/ui/forms/input:

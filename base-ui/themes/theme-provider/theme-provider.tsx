@@ -1,7 +1,7 @@
 import React, { useContext, createContext, ReactNode } from 'react';
 import { createTheme } from '@teambit/base-react.theme.theme-provider';
-import { baseTheme } from './base-theme-tokens';
-import { ThemeSchema } from './theme-schema';
+import { baseTheme } from '@learn-bit-react/base-ui.themes.base-theme';
+import { ThemeSchema } from '@learn-bit-react/base-ui.themes.base-theme';
 
 export type ThemeContextType = {
   /**

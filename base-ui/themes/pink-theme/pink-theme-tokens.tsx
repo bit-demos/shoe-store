@@ -1,4 +1,4 @@
-import { ThemeSchema } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { ThemeSchema } from '@learn-bit-react/base-ui.themes.base-theme';
 import { bookFont } from '@learn-bit-react/base-ui.styles.fonts.book';
 
 export const pinkTheme: Partial<ThemeSchema> = {
