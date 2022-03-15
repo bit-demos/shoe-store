@@ -11,7 +11,7 @@
 {
     "apps/shoe-store": {
         "scope": "learn-bit-react.shoe-store",
-        "version": "1.0.53",
+        "version": "1.0.54",
         "mainFile": "index.ts",
         "rootDir": "shoe-store/apps/shoe-store"
     },
@@ -179,7 +179,7 @@
     },
     "ui/header": {
         "scope": "learn-bit-react.ecommerce",
-        "version": "1.0.17",
+        "version": "1.0.18",
         "mainFile": "index.ts",
         "rootDir": "ecommerce/ui/header"
     },
@@ -317,7 +317,7 @@
     },
     "ui/theme-toggler": {
         "scope": "learn-bit-react.base-ui",
-        "version": "1.0.19",
+        "version": "1.0.20",
         "mainFile": "index.ts",
         "rootDir": "base-ui/ui/theme-toggler"
     },
