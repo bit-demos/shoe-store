@@ -34,10 +34,7 @@ export function ShoeStoreApp({ theme = purpleTheme as Partial<ThemeSchema> }) {
   return (
     <ShoeCartContextProvider>
       <ReactRouterRoutingProvider useBrowserRouter>
-        <ThemeContextProvider
-          customizedTheme={theme}
-          className={theme.fontFamily}
-        >
+        <ThemeContextProvider customizedTheme={theme}>
           <Layout className={styles.layout}>
             <Header
               logoText="Bit Shoe Store"

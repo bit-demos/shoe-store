@@ -80,7 +80,7 @@ export function ThemeContextProvider({
         className={className}
         data-testid="theme-provider"
       >
-        {children}
+        <div className={customTheme.fontFamily}>{children}</div>
       </BaseTheme.ThemeProvider>
     </ThemeContext.Provider>
   );
