@@ -30,7 +30,7 @@ export type ShoeStoreAppProps = {
   theme: Partial<ThemeSchema>;
 };
 
-export function ShoeStoreApp({ theme = purpleTheme }) {
+export function ShoeStoreApp({ theme = purpleTheme as any }) {
   return (
     <ShoeCartContextProvider>
       <ReactRouterRoutingProvider useBrowserRouter>

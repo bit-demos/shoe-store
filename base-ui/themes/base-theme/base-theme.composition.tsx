@@ -180,7 +180,7 @@ export const boxShadow = () => {
               style={{
                 width: 40,
                 height: 40,
-                boxShadow: value
+                boxShadow: `${value}`
               }}
             />
             <span>{key}</span>
@@ -224,7 +224,7 @@ export const fontWeights = () => {
           <p
             key={key}
             style={{
-              fontWeight: `${value}`
+              fontWeight: value as number
             }}
           >
             {key}:{' '}

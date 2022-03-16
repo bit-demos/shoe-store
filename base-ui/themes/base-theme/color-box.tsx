@@ -1,12 +1,11 @@
 import React from 'react';
 
-export function ColorBox({
-  colorName,
-  value
-}: {
+export type ColorBoxProps = {
+  value: string | number;
   colorName: string;
-  value: string;
-}) {
+};
+
+export function ColorBox({ colorName, value }: ColorBoxProps) {
   return (
     <>
       <div
