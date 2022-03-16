@@ -1,0 +1,18 @@
+---
+description: 'A DesignTokensViewer component'
+labels: ['design', 'tokens']
+---
+
+import { DesignTokensViewer } from './design-tokens-viewer';
+
+## Renders your design tokens
+
+Render your design tokens in your compositons for developers to easily see what design tokens are availble to use. Component shows the design token key and value as well as the CSS var property and shows you what it looks like when used.
+
+### Component usage
+
+```js
+export const BasicDesignTokensViewer = () => (
+  <DesignTokensViewer tokens={primaryColorTokens} />
+);
+```

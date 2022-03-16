@@ -1,21 +1,11 @@
 import { ThemeSchema } from '@learn-bit-react/base-ui.themes.base-theme';
-import { bookFont } from '@learn-bit-react/base-ui.styles.fonts.book';
+import { primaryColorTokens } from './design-tokens/primary-color-tokens';
+import { secondaryColorTokens } from './design-tokens/secondary-color-tokens';
 
-export const pinkTheme: Partial<ThemeSchema> = {
-  fontFamily: bookFont,
-  //  primary  //
-  primaryColor: 'hotpink',
-  primaryHeavy: '#f7768d',
-  primaryLight: '#ff9aac',
-  textOnPrimary: '#ffffff',
-  primaryBg: '#ffe5ea',
-  primaryBgHeavy: 'hotpink',
+const tokens = {};
 
-  //  secondary  //
-  secondaryColor: '#ffffff',
-  secondaryHeavy: '#ffffff',
-  secondaryLight: '#ffffff',
-  textOnSecondary: 'hotpink',
-  secondaryBg: '#ffffff',
-  secondaryBgHeavy: '#ffffff'
-};
+export const pinkTheme: Partial<ThemeSchema> = Object.assign(
+  tokens,
+  primaryColorTokens,
+  secondaryColorTokens
+);

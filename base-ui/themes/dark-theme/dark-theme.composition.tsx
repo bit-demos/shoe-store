@@ -1,33 +1,12 @@
 import React from 'react';
 import { DarkTheme } from './dark-theme';
-import { darkTheme } from './dark-theme-tokens';
+import { darkColorTokens } from './design-tokens/dark-color-tokens';
+import { DesignTokensViewer } from '@learn-bit-react/base-ui.figma.design-tokens-viewer';
 
-export const DarkThemeCCSVars = () => {
+export const DarkColors = () => {
   return (
     <DarkTheme>
-      <p
-        style={{
-          color: 'var(--text-color)',
-          backgroundColor: 'var(--bg-color)'
-        }}
-      >
-        Dark Theme
-      </p>
-    </DarkTheme>
-  );
-};
-
-export const DarkThemeCSSJS = () => {
-  return (
-    <DarkTheme>
-      <p
-        style={{
-          color: darkTheme.textColor,
-          backgroundColor: darkTheme.bgColor
-        }}
-      >
-        Dark Theme
-      </p>
+      <DesignTokensViewer tokens={darkColorTokens} />
     </DarkTheme>
   );
 };

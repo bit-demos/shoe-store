@@ -1,45 +1,21 @@
 import React from 'react';
 import { GreenTheme } from './green-theme';
-import { greenTheme } from './green-theme-tokens';
 import { primaryColorTokens } from './design-tokens/primary-color-tokens';
 import { secondaryColorTokens } from './design-tokens/secondary-color-tokens';
-import { ColorBox } from '@learn-bit-react/base-ui.themes.base-theme';
+import { DesignTokensViewer } from '@learn-bit-react/base-ui.figma.design-tokens-viewer';
 
-export const primaryColors = () => {
+export const PrimaryColors = () => {
   return (
     <GreenTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(primaryColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
+      <DesignTokensViewer tokens={primaryColorTokens} />
     </GreenTheme>
   );
 };
 
-export const secondaryColors = () => {
+export const SecondaryColors = () => {
   return (
     <GreenTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(secondaryColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
+      <DesignTokensViewer tokens={secondaryColorTokens} />
     </GreenTheme>
   );
-};
-
-const gridStyle = {
-  width: 'fit-content',
-  display: 'grid',
-  gridTemplateColumns: 'auto auto auto',
-  gap: '16px 4px'
 };

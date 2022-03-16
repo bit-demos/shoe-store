@@ -1,0 +1,14 @@
+.grid {
+  width: fit-content;
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 16px 16px;
+}
+
+.box {
+  width: 40px;
+  height: 40px;
+  border: solid black;
+  border-radius: 5px;
+}

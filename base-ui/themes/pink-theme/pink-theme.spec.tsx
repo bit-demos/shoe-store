@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { PinkThemeCCSVars, PinkThemeCSSJS } from './pink-theme.composition';
+import { PrimaryColors, SecondaryColors } from './pink-theme.composition';
 
 it('should have style with css var and correct color', () => {
-  render(<PinkThemeCCSVars />);
-  const pinkThemeCCSVars = screen.getByTestId('theme-provider');
-  expect(pinkThemeCCSVars).toHaveStyle('--primary-color:hotpink;');
+  render(<PrimaryColors />);
+  const primaryColors = screen.getByTestId('theme-provider');
+  expect(primaryColors).toHaveStyle('--primary-color:hotpink;');
 });
 
 it('should have style with css var and with correct color', () => {
-  render(<PinkThemeCSSJS />);
-  const pinkThemeCSSJS = screen.getByTestId('theme-provider');
-  expect(pinkThemeCSSJS).toHaveStyle('--primary-color:hotpink;');
+  render(<SecondaryColors />);
+  const secondaryColors = screen.getByTestId('theme-provider');
+  expect(secondaryColors).toHaveStyle('--primary-color:hotpink;');
 });

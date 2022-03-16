@@ -13,278 +13,94 @@ import { textColorTokens } from './design-tokens/text-color-tokens';
 import { backgroundColorTokens } from './design-tokens/background-color-tokens';
 import { boxShadowTokens } from './design-tokens/box-shadow-tokens';
 import { generalColorTokens } from './design-tokens/general-color-tokens';
-import { ColorBox } from './color-box';
+import { DesignTokensViewer } from '@learn-bit-react/base-ui.figma.design-tokens-viewer';
 
-export const primaryColors = () => {
-  return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(primaryColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
-    </BaseTheme>
-  );
+export const PrimaryColors = () => {
+  return <DesignTokensViewer tokens={primaryColorTokens} />;
 };
 
-export const secondaryColors = () => {
-  return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(secondaryColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
-    </BaseTheme>
-  );
+export const SecondaryColors = () => {
+  return <DesignTokensViewer tokens={secondaryColorTokens} />;
 };
 
 export const errorColors = () => {
-  return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(errorColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
-    </BaseTheme>
-  );
+  return <DesignTokensViewer tokens={errorColorTokens} />;
 };
 export const textColors = () => {
-  return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(textColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
-    </BaseTheme>
-  );
+  return <DesignTokensViewer tokens={textColorTokens} />;
 };
 export const generalColors = () => {
-  return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(generalColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
-    </BaseTheme>
-  );
+  return <DesignTokensViewer tokens={generalColorTokens} />;
 };
 
 export const backgroundColors = () => {
-  return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(backgroundColorTokens).map(([key, value]) => (
-          <ColorBox key={key} colorName={key} value={value} />
-        ))}
-      </div>
-    </BaseTheme>
-  );
+  return <DesignTokensViewer tokens={backgroundColorTokens} />;
 };
 
 export const borderRadius = () => {
   return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(borderRadiusTokens).map(([key, value]) => (
-          <>
-            <div
-              style={{
-                width: 40,
-                height: 40,
-                border: 'solid black',
-                borderRadius: value
-              }}
-            />
-            <span>{key}</span>
-            <div>
-              <code>{value}</code>
-            </div>
-          </>
-        ))}
-      </div>
-    </BaseTheme>
+    <DesignTokensViewer
+      tokens={borderRadiusTokens}
+      additionalStyles={{ borderRadius: 'none', border: 'solid black' }}
+      cssKey={'border-radius'}
+    />
   );
 };
 export const borderSize = () => {
   return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(borderSizeTokens).map(([key, value]) => (
-          <>
-            <div
-              style={{
-                width: 40,
-                height: 40,
-                border: value,
-                borderStyle: 'solid',
-                borderColor: 'black'
-              }}
-            />
-            <span>{key}</span>
-            <div>
-              <code>{value}</code>
-            </div>
-          </>
-        ))}
-      </div>
-    </BaseTheme>
+    <DesignTokensViewer
+      tokens={borderSizeTokens}
+      additionalStyles={{ border: 'solid black' }}
+      cssKey={'border-width'}
+    />
   );
 };
 export const boxShadow = () => {
   return (
-    <BaseTheme>
-      <div
-        style={{
-          ...gridStyle
-        }}
-      >
-        {Object.entries(boxShadowTokens).map(([key, value]) => (
-          <>
-            <div
-              style={{
-                width: 40,
-                height: 40,
-                boxShadow: `${value}`
-              }}
-            />
-            <span>{key}</span>
-            <div>
-              <code>{value}</code>
-            </div>
-          </>
-        ))}
-      </div>
-    </BaseTheme>
+    <DesignTokensViewer
+      tokens={boxShadowTokens}
+      additionalStyles={{ border: 'none' }}
+      cssKey={'box-shadow'}
+    />
   );
 };
 
 export const fontSizes = () => {
   return (
-    <BaseTheme>
-      <div>
-        {Object.entries(fontSizeTokens).map(([key, value]) => (
-          <p
-            key={key}
-            style={{
-              fontSize: `${value}`
-            }}
-          >
-            {key}:{' '}
-            <span style={{ marginLeft: '8px' }}>
-              <code>{value}</code>
-            </span>
-          </p>
-        ))}
-      </div>
-    </BaseTheme>
+    <DesignTokensViewer
+      tokens={fontSizeTokens}
+      cssKey={'font-size'}
+      box={false}
+    />
   );
 };
 
 export const fontWeights = () => {
   return (
-    <BaseTheme>
-      <div>
-        {Object.entries(fontWeightTokens).map(([key, value]) => (
-          <p
-            key={key}
-            style={{
-              fontWeight: value as number
-            }}
-          >
-            {key}:{' '}
-            <span style={{ marginLeft: '8px' }}>
-              <code>{value}</code>
-            </span>
-          </p>
-        ))}
-      </div>
-    </BaseTheme>
+    <DesignTokensViewer
+      tokens={fontWeightTokens}
+      cssKey={'font-weight'}
+      box={false}
+    />
   );
 };
 
 export const fontFamily = () => {
   return (
-    <BaseTheme>
-      <div style={{ maxWidth: '300px' }}>
-        {Object.entries(fontFamilyTokens).map(([key, value]) => (
-          <div style={{ borderBottom: '1px solid black', padding: '10px' }}>
-            <p
-              key={key}
-              style={{
-                fontFamily: `${value}`
-              }}
-            >
-              {key}:
-            </p>
-            <p>{value}</p>
-          </div>
-        ))}
-      </div>
-    </BaseTheme>
+    <DesignTokensViewer
+      tokens={fontFamilyTokens}
+      cssKey={'font-family'}
+      box={false}
+    />
   );
 };
 
 export const headingsSizes = () => {
   return (
-    <BaseTheme>
-      <div>
-        {Object.entries(headingsSizeTokens).map(([key, value]) => (
-          <p
-            key={key}
-            style={{
-              fontSize: `${value}`
-            }}
-          >
-            {key}:{' '}
-            <span style={{ marginLeft: '8px' }}>
-              <code>{value}</code>
-            </span>
-          </p>
-        ))}
-      </div>
-    </BaseTheme>
+    <DesignTokensViewer
+      tokens={headingsSizeTokens}
+      cssKey={'font-size'}
+      box={false}
+    />
   );
-};
-
-const gridStyle = {
-  width: 'fit-content',
-  display: 'grid',
-  gridTemplateColumns: 'auto auto auto',
-  gap: '16px 4px'
 };

@@ -1,33 +1,21 @@
 import React from 'react';
 import { PurpleTheme } from './purple-theme';
-import { purpleTheme } from './purple-theme-tokens';
+import { primaryColorTokens } from './design-tokens/primary-color-tokens';
+import { secondaryColorTokens } from './design-tokens/secondary-color-tokens';
+import { DesignTokensViewer } from '@learn-bit-react/base-ui.figma.design-tokens-viewer';
 
-export const PurpleThemeCCSVars = () => {
+export const PrimaryColors = () => {
   return (
     <PurpleTheme>
-      <p
-        style={{
-          color: 'var(--primary-color)',
-          backgroundColor: 'var(--bg-color)'
-        }}
-      >
-        Purple Theme
-      </p>
+      <DesignTokensViewer tokens={primaryColorTokens} />
     </PurpleTheme>
   );
 };
 
-export const PurpleThemeCSSJS = () => {
+export const SecondaryColors = () => {
   return (
     <PurpleTheme>
-      <p
-        style={{
-          color: purpleTheme.primaryColor,
-          backgroundColor: purpleTheme.bgColor
-        }}
-      >
-        Purple Theme
-      </p>
+      <DesignTokensViewer tokens={secondaryColorTokens} />
     </PurpleTheme>
   );
 };

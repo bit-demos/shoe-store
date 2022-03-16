@@ -1,8 +1,9 @@
 import { ThemeSchema } from '@learn-bit-react/base-ui.themes.base-theme';
+import { darkColorTokens } from './design-tokens/dark-color-tokens';
 
-export const darkTheme: Partial<ThemeSchema> = {
-  textColor: '#fff',
-  bgColor: '#000',
-  boxShadow: 'none',
-  borderColor: '#fff'
-};
+const tokens = {};
+
+export const darkTheme: Partial<ThemeSchema> = Object.assign(
+  tokens,
+  darkColorTokens
+);

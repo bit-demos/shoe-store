@@ -11,6 +11,29 @@ Alternatively you can import the dark theme and use the theme provider customize
 
 The Dark Theme uses all of the default tokens and values and overrides any values that have been set in the `dark-theme-token.tsx` file. Any new tokens can also be added here and used.
 
+### Render hello world in light Theme!
+
+```js live
+<DarkTheme>
+  <div
+    style={{
+      fontFamily: 'var(--font-family-mono)',
+      padding: '0 20px',
+      borderStyle: 'solid',
+      borderSize: 'var(--border-size-1)',
+      borderColor: 'var(--border-color)',
+      borderRadius: 'var(--border-radius-medium)',
+      backgroundColor: 'var(--bg-color)',
+      color: 'var(--text-color)',
+      fontSize: 'var(--font-lg)',
+      boxShadow: 'var(--box-shadow-x-large)'
+    }}
+  >
+    <p>hello world!</p>
+  </div>
+</DarkTheme>
+```
+
 ### Component usage
 
 ```js
@@ -27,14 +50,4 @@ The Dark Theme uses all of the default tokens and values and overrides any value
     hello world!
   </p>
 </ThemeContextProvider>
-```
-
-### Render hello world in Dark Theme!
-
-```js live
-<DarkTheme>
-  <p style={{ backgroundColor: 'var(--bg-color', color: 'var(--text-color)' }}>
-    hello world!
-  </p>
-</DarkTheme>
 ```

@@ -12,10 +12,11 @@ import { borderSizeTokens } from './design-tokens/border-size-tokens';
 import { backgroundColorTokens } from './design-tokens/background-color-tokens';
 import { boxShadowTokens } from './design-tokens/box-shadow-tokens';
 import { generalColorTokens } from './design-tokens/general-color-tokens';
+import { bookFont } from '@learn-bit-react/base-ui.styles.fonts.book';
 
 // this is needed as a bug in system prints the first tokens with all other token values.
 // adding an empty object first fixes this.
-const tokens = {};
+const tokens = { fontFamily: bookFont };
 
 export const baseTheme: Partial<ThemeSchema> = Object.assign(
   tokens,

@@ -1,33 +1,21 @@
 import React from 'react';
 import { PinkTheme } from './pink-theme';
-import { pinkTheme } from './pink-theme-tokens';
+import { primaryColorTokens } from './design-tokens/primary-color-tokens';
+import { secondaryColorTokens } from './design-tokens/secondary-color-tokens';
+import { DesignTokensViewer } from '@learn-bit-react/base-ui.figma.design-tokens-viewer';
 
-export const PinkThemeCCSVars = () => {
+export const PrimaryColors = () => {
   return (
     <PinkTheme>
-      <p
-        style={{
-          color: 'var(--primary-color)',
-          backgroundColor: 'var(--bg-color)'
-        }}
-      >
-        Pink Theme
-      </p>
+      <DesignTokensViewer tokens={primaryColorTokens} />
     </PinkTheme>
   );
 };
 
-export const PinkThemeCSSJS = () => {
+export const SecondaryColors = () => {
   return (
     <PinkTheme>
-      <p
-        style={{
-          color: pinkTheme.primaryColor,
-          backgroundColor: pinkTheme.bgColor
-        }}
-      >
-        Pink Theme
-      </p>
+      <DesignTokensViewer tokens={secondaryColorTokens} />
     </PinkTheme>
   );
 };
