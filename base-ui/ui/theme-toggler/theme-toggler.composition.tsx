@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeToggler } from './theme-toggler';
-import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-context-provider';
 export const BasicThemeToggler = () => {
   return (
     <ThemeContextProvider>

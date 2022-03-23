@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@learn-bit-react/base-ui.ui.button';
 import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
 import { lightTheme } from '@learn-bit-react/base-ui.themes.light-theme';
-import { useThemeProviderContext } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { useThemeProviderContext } from '@learn-bit-react/base-ui.themes.theme-context-provider';
 export type PrintableTheme = {
   theme: any;
   name: string;

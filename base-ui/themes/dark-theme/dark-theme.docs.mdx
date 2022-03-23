@@ -3,11 +3,11 @@ description: A DarkTheme component.
 ---
 
 import { DarkTheme } from './dark-theme';
-import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-context-provider';
 
 A wrapper component that uses the theme provider and passes in the dark theme. You can then just wrap any component in the `<DarkTheme>` component for the dark theme to be applied.
 
-Alternatively you can import the dark theme and use the theme provider customizedTheme prop to add the dark theme.
+Alternatively you can import the dark theme and use the theme provider `customizedTheme` prop to add the dark theme.
 
 The Dark Theme uses all of the default tokens and values and overrides any values that have been set in the `dark-theme-token.tsx` file. Any new tokens can also be added here and used.
 

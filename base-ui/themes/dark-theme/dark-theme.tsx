@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-provider';
+import { ThemeContextProvider } from '@learn-bit-react/base-ui.themes.theme-context-provider';
 import { darkTheme } from './dark-theme-tokens';
 
 export const DarkTheme = ({ children }) => {

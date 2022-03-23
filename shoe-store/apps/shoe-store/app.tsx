@@ -17,7 +17,7 @@ import { AmountOfShoesInCart } from '@learn-bit-react/shoe-store.ui.cart.amount-
 import {
   ThemeContextProvider,
   ThemeSchema
-} from '@learn-bit-react/base-ui.themes.theme-provider';
+} from '@learn-bit-react/base-ui.themes.theme-context-provider';
 import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
 import styles from './shoe-store.module.scss';
 // hack to use tailwindcss classes: remove when we can add tailwindcss to an app aspect

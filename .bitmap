@@ -99,11 +99,44 @@
         "mainFile": "index.ts",
         "rootDir": "base-ui/themes/theme"
     },
+    "themes/theme-context-provider": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "learn-bit-react.base-ui",
+        "mainFile": "index.ts",
+        "rootDir": "base-ui/themes/theme-context-provider",
+        "config": {
+            
+            "teambit.react/react": {},
+            "teambit.component/dev-files": {},
+            "teambit.compositions/compositions": {},
+            "teambit.docs/docs": {},
+            "teambit.envs/envs": {},
+            "teambit.dependencies/dependency-resolver": {},
+            "teambit.pipelines/builder": {},
+            "teambit.component/renaming": {
+                "renamedFrom": {
+                    "scope": "learn-bit-react.base-ui",
+                    "name": "themes/theme-provider",
+                    "version": "0.0.7"
+                }
+            }
+        }
+    },
     "themes/theme-provider": {
         "scope": "learn-bit-react.base-ui",
         "version": "0.0.7",
         "mainFile": "index.ts",
-        "rootDir": "base-ui/themes/theme-provider"
+        "rootDir": "base-ui/themes/theme-provider",
+        "config": {
+            "teambit.component/deprecation": {
+                "deprecate": true,
+                "newId": {
+                    "name": "themes/theme-context-provider",
+                    "scope": "base-ui"
+                }
+            }
+        }
     },
     "ui/banner": {
         "scope": "learn-bit-react.marketing",
