@@ -44,7 +44,7 @@ export function DesignTokensViewer({
 
           <div>
             <span style={{ display: 'block', marginBottom: '4px' }}>{key}</span>
-            <span>var(--{key.replace(/[A-Z]/g, '-$&').toLowerCase()})</span>
+            <span>--{key.replace(/[A-Z]/g, '-$&').toLowerCase()}</span>
           </div>
           <div>
             <code>{value}</code>
