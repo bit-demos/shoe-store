@@ -1,5 +1,6 @@
 .card {
   width: 100%;
+  background-color: var(--bg-color);
 }
 
 .header {
@@ -19,6 +20,7 @@
 .title {
   margin: 0;
   font-size: var(--heading-md, 1.5rem);
+  color: var(--text-muted, grey);
 }
 
 .img {
@@ -28,11 +30,12 @@
   object-position: center;
 }
 .text {
-  font-size: 0.875rem;
+  font-size: var(--font-sm, 1.5rem);
   margin-bottom: 0;
 }
 .price {
   font-size: 1.25rem;
+  color: var(--text-muted, grey);
 }
 ul {
   margin: 0;

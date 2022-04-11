@@ -1,5 +1,5 @@
 .text {
-  font-size: 0.875rem;
+  font-size: var(--font-sm, 0.875rem);
   color: var(--text-color, #718096);
   margin-top: 0.25rem;
   line-height: 21px;
