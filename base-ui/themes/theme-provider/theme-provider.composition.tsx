@@ -3,7 +3,7 @@ import { ThemeContextProvider } from './theme-provider';
 import { pinkTheme } from '@learn-bit-react/base-ui.themes.pink-theme';
 import { darkTheme } from '@learn-bit-react/base-ui.themes.dark-theme';
 import { purpleTheme } from '@learn-bit-react/base-ui.themes.purple-theme';
-import { baseTheme } from './base-theme-tokens';
+import { baseTheme } from '@learn-bit-react/base-ui.themes.base-theme';
 import { greenTheme } from '@learn-bit-react/base-ui.themes.green-theme';
 
 export const ThemeProviderCSSVars = () => {

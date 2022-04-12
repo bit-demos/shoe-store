@@ -7,8 +7,11 @@ import {
 } from '@learn-bit-react/ecommerce.ui.logo-text';
 import { Nav } from '@learn-bit-react/base-ui.ui.nav';
 import { ThemeToggler } from '@learn-bit-react/base-ui.ui.theme-toggler';
+
 import { Link } from '@learn-bit-react/base-ui.ui.link';
 import { UserAvatar } from '@teambit/design.ui.avatar';
+import { largeTheme } from '@learn-bit-react/base-ui.themes.large-theme';
+
 import styles from './header.module.scss';
 
 export type HeaderProps = {} & React.HTMLAttributes<HTMLElement>;
@@ -42,6 +45,7 @@ export function Header({
       <Nav className={classNames(styles.nav, className)}>{children}</Nav>
       <div>
         <ThemeToggler />
+
         <UserAvatar
           size={32}
           account={accounts.noPicOrgAccount}

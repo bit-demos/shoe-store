@@ -60,6 +60,7 @@
         "@teambit/cloud-providers.deployers.netlify": "0.0.7",
         "@teambit/dependencies.modules.packages-excluder": "0.0.47",
         "@teambit/design.ui.avatar": "0.0.446",
+        "@teambit/design.ui.input.toggle": "1.0.12",
         "@teambit/design.ui.owner-avatar": "0.0.446",
         "@teambit/documenter.theme.theme-context": "3.0.9",
         "@teambit/ui-foundation.ui.navigation.react-router.routing-adapter": "1.23.1",

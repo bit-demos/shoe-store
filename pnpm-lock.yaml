@@ -9,7 +9,6 @@ importers:
       '@learn-bit-react/base-ui.env.learn-bit-react': 1.0.13
       '@learn-bit-react/base-ui.figma.figma-embed': 0.0.4
       '@learn-bit-react/base-ui.styles.button': 0.0.11
-      '@learn-bit-react/base-ui.styles.colors': 1.0.4
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3
       '@learn-bit-react/base-ui.ui.hero': 1.0.12
       '@learn-bit-react/base-ui.ui.img': 1.0.5
@@ -32,6 +31,7 @@ importers:
       '@teambit/cloud-providers.deployers.netlify': 0.0.7
       '@teambit/dependencies.modules.packages-excluder': 0.0.47
       '@teambit/design.ui.avatar': 0.0.446
+      '@teambit/design.ui.input.toggle': 1.0.12
       '@teambit/design.ui.owner-avatar': 0.0.446
       '@teambit/documenter.theme.theme-context': 3.0.9
       '@teambit/harmony': 0.2.11
@@ -67,7 +67,6 @@ importers:
       '@bit-foundations/styling.tailwind.webpack-transformer': 0.0.2_16a290f6d0e3717bf6d2667234aebd30
       '@learn-bit-react/base-ui.env.learn-bit-react': 1.0.13_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.button': 0.0.11_react-dom@16.13.1+react@16.13.1
-      '@learn-bit-react/base-ui.styles.colors': 1.0.4_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.styles.fonts.book': 1.0.3_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.hero': 1.0.12_react-dom@16.13.1+react@16.13.1
       '@learn-bit-react/base-ui.ui.img': 1.0.5_react-dom@16.13.1+react@16.13.1
@@ -90,6 +89,7 @@ importers:
       '@teambit/cloud-providers.deployers.netlify': 0.0.7
       '@teambit/dependencies.modules.packages-excluder': registry.npmjs.org/@teambit/dependencies.modules.packages-excluder/0.0.47_react@16.13.1
       '@teambit/design.ui.avatar': registry.npmjs.org/@teambit/design.ui.avatar/0.0.446_react-dom@16.13.1+react@16.13.1
+      '@teambit/design.ui.input.toggle': registry.npmjs.org/@teambit/design.ui.input.toggle/1.0.12_react-dom@16.13.1+react@16.13.1
       '@teambit/design.ui.owner-avatar': registry.npmjs.org/@teambit/design.ui.owner-avatar/0.0.446_react-dom@16.13.1+react@16.13.1
       '@teambit/documenter.theme.theme-context': registry.npmjs.org/@teambit/documenter.theme.theme-context/3.0.9_react-dom@16.13.1+react@16.13.1
       '@teambit/harmony': registry.npmjs.org/@teambit/harmony/0.2.11
@@ -126,7 +126,13 @@ importers:
   base-ui/env/learn-bit-react:
     specifiers: {}
 
+  base-ui/figma/design-tokens-viewer:
+    specifiers: {}
+
   base-ui/styles/colors:
+    specifiers: {}
+
+  base-ui/themes/base-theme:
     specifiers: {}
 
   base-ui/themes/dark-theme:
@@ -147,7 +153,16 @@ importers:
   base-ui/themes/theme:
     specifiers: {}
 
+  base-ui/themes/theme-context-provider:
+    specifiers: {}
+
   base-ui/themes/theme-provider:
+    specifiers: {}
+
+  base-ui/themes/theme-slider:
+    specifiers: {}
+
+  base-ui/themes/theme-toggler:
     specifiers: {}
 
   base-ui/ui/button:
@@ -340,17 +355,6 @@ packages:
 
   /@learn-bit-react/base-ui.styles.button/0.0.6_react-dom@16.13.1+react@16.13.1:
     resolution: {integrity: sha1-P8r178pgIS8HCPKMEfZZmQVvDPQ=, tarball: '@learn-bit-react/base-ui.styles.button/-/@learn-bit-react-base-ui.styles.button-0.0.6.tgz'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      core-js: registry.npmjs.org/core-js/3.18.2
-      react: registry.npmjs.org/react/16.13.1
-      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
-    dev: false
-
-  /@learn-bit-react/base-ui.styles.colors/1.0.4_react-dom@16.13.1+react@16.13.1:
-    resolution: {integrity: sha1-Sb9IE0ceIMnYm8CKUGYd1CQ0Hmw=, tarball: '@learn-bit-react/base-ui.styles.colors/-/@learn-bit-react-base-ui.styles.colors-1.0.4.tgz'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
       react-dom: ^16.8.0 || ^17.0.0
@@ -960,6 +964,52 @@ packages:
       react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
     dev: false
 
+  registry.npmjs.org/@teambit/base-ui.input.checkbox.hidden/1.0.2_react-dom@16.13.1+react@16.13.1:
+    resolution: {integrity: sha512-S7hSTkGqj/ODMdhYD+y89U6ZyXiBXeQlPS/uy/cyD77X1Bk3CWnNg2dYKRbFLxDnlI/OsPDzI4cOLaGAT8oWWg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.input.checkbox.hidden/-/base-ui.input.checkbox.hidden-1.0.2.tgz}
+    id: registry.npmjs.org/@teambit/base-ui.input.checkbox.hidden/1.0.2
+    name: '@teambit/base-ui.input.checkbox.hidden'
+    version: 1.0.2
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      classnames: registry.npmjs.org/classnames/2.3.1
+      core-js: registry.npmjs.org/core-js/3.18.2
+      react: registry.npmjs.org/react/16.13.1
+      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
+    dev: false
+
+  registry.npmjs.org/@teambit/base-ui.input.checkbox.indicator/1.0.0_react-dom@16.13.1+react@16.13.1:
+    resolution: {integrity: sha512-yYnwY1ax6nF+HopiSmZe/4tPigdUb5CI2JstC67L+30fitfhtWDL1bO+A3OTJU62yV4XMGtALQbkulMDqazJwg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.input.checkbox.indicator/-/base-ui.input.checkbox.indicator-1.0.0.tgz}
+    id: registry.npmjs.org/@teambit/base-ui.input.checkbox.indicator/1.0.0
+    name: '@teambit/base-ui.input.checkbox.indicator'
+    version: 1.0.0
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      classnames: registry.npmjs.org/classnames/2.3.1
+      core-js: registry.npmjs.org/core-js/3.18.2
+      react: registry.npmjs.org/react/16.13.1
+      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
+    dev: false
+
+  registry.npmjs.org/@teambit/base-ui.input.checkbox.label/1.0.2_react-dom@16.13.1+react@16.13.1:
+    resolution: {integrity: sha512-Q4D4Nv6evhw4iM1F8obnMc9HwdlCoZJBceiWgtsitQJiodlcEt6N5x5/t2gKxyJtOBEB5EorOdslrPKCVrwneA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.input.checkbox.label/-/base-ui.input.checkbox.label-1.0.2.tgz}
+    id: registry.npmjs.org/@teambit/base-ui.input.checkbox.label/1.0.2
+    name: '@teambit/base-ui.input.checkbox.label'
+    version: 1.0.2
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      '@teambit/base-ui.input.checkbox.hidden': registry.npmjs.org/@teambit/base-ui.input.checkbox.hidden/1.0.2_react-dom@16.13.1+react@16.13.1
+      '@teambit/base-ui.input.checkbox.indicator': registry.npmjs.org/@teambit/base-ui.input.checkbox.indicator/1.0.0_react-dom@16.13.1+react@16.13.1
+      core-js: registry.npmjs.org/core-js/3.18.2
+      react: registry.npmjs.org/react/16.13.1
+      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
+    dev: false
+
   registry.npmjs.org/@teambit/base-ui.input.error/0.6.0_react-dom@16.13.1+react@16.13.1:
     resolution: {integrity: sha512-SSTQUPZ5uc6XSVUzjA/mSs/A103RdcYSvZs8flx6IHU/GQ1BiQgXGvoFVpDb4/14Ax/JYUdItrmM5hNKjfg8Wg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.input.error/-/base-ui.input.error-0.6.0.tgz}
     id: registry.npmjs.org/@teambit/base-ui.input.error/0.6.0
@@ -1424,6 +1474,22 @@ packages:
       uuid: registry.npmjs.org/uuid/3.4.0
     transitivePeerDependencies:
       - '@teambit/legacy'
+    dev: false
+
+  registry.npmjs.org/@teambit/design.ui.input.toggle/1.0.12_react-dom@16.13.1+react@16.13.1:
+    resolution: {integrity: sha512-9gQ0Pq9+R7RzsgoI3C++23KWOrODmtVFFLQbHtfPRwvd3iBR/sqhv8moyCHhXNitaV7svUuQaQf69IZvqZ9I/Q==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/design.ui.input.toggle/-/design.ui.input.toggle-1.0.12.tgz}
+    id: registry.npmjs.org/@teambit/design.ui.input.toggle/1.0.12
+    name: '@teambit/design.ui.input.toggle'
+    version: 1.0.12
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      '@teambit/base-ui.input.checkbox.label': registry.npmjs.org/@teambit/base-ui.input.checkbox.label/1.0.2_react-dom@16.13.1+react@16.13.1
+      classnames: registry.npmjs.org/classnames/2.3.1
+      core-js: registry.npmjs.org/core-js/3.18.2
+      react: registry.npmjs.org/react/16.13.1
+      react-dom: registry.npmjs.org/react-dom/16.13.1_react@16.13.1
     dev: false
 
   registry.npmjs.org/@teambit/design.ui.owner-avatar/0.0.446_react-dom@16.13.1+react@16.13.1:
